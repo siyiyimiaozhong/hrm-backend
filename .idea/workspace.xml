@@ -10,9 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="初始化项目">
+    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="更新readme">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
@@ -67,7 +74,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
-  <component name="RunManager" selected="JUnit.CompanyDaoTest.test">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hrm.common.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CompanyApplication">
     <configuration name="CompanyDaoTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hrm-company" />
       <extension name="coverage">
@@ -99,8 +111,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CompanyDaoTest.test" />
         <item itemvalue="Spring Boot.CompanyApplication" />
+        <item itemvalue="JUnit.CompanyDaoTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -122,7 +134,7 @@
       <workItem from="1642306170560" duration="175000" />
       <workItem from="1642306350434" duration="2219000" />
       <workItem from="1642317821688" duration="4730000" />
-      <workItem from="1642326864382" duration="11077000" />
+      <workItem from="1642326864382" duration="13648000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目，并实现企业信息CRUD">
       <created>1642328668483</created>
@@ -138,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642329190283</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="更新readme">
+      <created>1642349557091</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642349557091</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +177,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化项目，并实现企业信息CRUD" />
     <MESSAGE value="初始化项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化项目" />
+    <MESSAGE value="更新readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2506" y="198" key="#Inspections" timestamp="1642323860464">
@@ -215,10 +235,10 @@
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642328362981" />
     <state x="2386" y="329" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642329566183" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1642342998286">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1642349563390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642342998286" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642349563390" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642329665035" />
     <state x="2673" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642328511225">
       <screen x="1920" y="0" width="1920" height="1040" />

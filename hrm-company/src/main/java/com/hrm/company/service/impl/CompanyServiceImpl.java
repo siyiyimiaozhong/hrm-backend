@@ -1,6 +1,8 @@
 package com.hrm.company.service.impl;
 
+import com.hrm.common.constants.ResultCode;
 import com.hrm.common.constants.StateConstant;
+import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.IdWorker;
 import com.hrm.company.dao.CompanyDao;
 import com.hrm.company.service.CompanyService;
@@ -38,7 +40,7 @@ public class CompanyServiceImpl implements CompanyService {
     public void update(Long id, Company company) {
         Company temp = this.companyDao.findById(id).get();
         if (null == temp) {
-            throw new RuntimeException("参数验证失败");
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
         }
         temp.setName(company.getName());
         temp.setCompanyPhone(company.getCompanyPhone());
@@ -49,7 +51,7 @@ public class CompanyServiceImpl implements CompanyService {
     public void deleteById(Long id) {
         Company company = this.companyDao.findById(id).get();
         if (null == company) {
-            throw new RuntimeException("参数验证失败");
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
         }
         this.companyDao.deleteById(id);
     }

@@ -1,4 +1,4 @@
-package com.hrm.common.entity;
+package com.hrm.common.constants;
 
 /**
  * @Author: 敬学
@@ -16,8 +16,15 @@ public enum ResultCode {
      * 系统错误返回码
      */
     FAIL(false, 10001, "操作失败"),
-    UNAUTHENTICATED(false, 10002, "您还未登录"),
-    UNAUTHORISE(false, 10003, "权限不足"),
+    /**
+     * 参数验证失败
+     */
+    PARAMETER_VALIDATION_FAILED(false, 10002, "参数验证失败"),
+
+    UNAUTHENTICATED(false, 10003, "您还未登录"),
+
+    UNAUTHORISE(false, 10004, "权限不足"),
+
     SERVER_ERROR(false, 99999, "抱歉，系统繁忙，请稍后重试！"),
 
     /**
@@ -40,15 +47,15 @@ public enum ResultCode {
     /**
      * 操作是否成功
      */
-    boolean success;
+    public boolean success;
     /**
      * 操作代码
      */
-    int code;
+    public int code;
     /**
      * 提示信息
      */
-    String message;
+    public String message;
 
     ResultCode(boolean success, int code, String message) {
         this.success = success;

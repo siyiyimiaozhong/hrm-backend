@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
  * @CreateTime: Created in 2022-01-14 6:35
  * @Description:
  */
-@SpringBootApplication(scanBasePackages = "com.hrm.company")
+@SpringBootApplication(scanBasePackages = "com.hrm")
 @EntityScan(value = "com.hrm.domain.company")
 public class CompanyApplication {
     public static void main(String[] args) {

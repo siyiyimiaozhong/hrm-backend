@@ -1,5 +1,6 @@
 package com.hrm.common.entity;
 
+import com.hrm.common.constants.ResultCode;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -57,6 +58,14 @@ public class Result<T> {
 
     public static <T> Result<T> error() {
         return new Result<>(ResultCode.SERVER_ERROR);
+    }
+
+    public static <T> Result<T> error(ResultCode code) {
+        return new Result<>(code);
+    }
+
+    public static <T> Result<T> error(String message) {
+        return new Result<>(ResultCode.SERVER_ERROR.code, message, false);
     }
 
     public static <T> Result<T> fail() {
