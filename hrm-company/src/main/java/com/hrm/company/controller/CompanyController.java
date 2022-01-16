@@ -12,6 +12,7 @@ import java.util.List;
  * @CreateTime: Created in 2022-01-16 17:11
  * @Description: 企业信息控制器
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/company")
 public class CompanyController {
