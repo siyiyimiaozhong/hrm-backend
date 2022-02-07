@@ -12,32 +12,37 @@ import java.util.List;
 public interface CompanyService {
     /**
      * 保存企业信息
+     *
      * @param company
      */
     void save(Company company);
 
     /**
      * 更新企业信息
+     *
      * @param id
      * @param company
      */
-    void update(Long id, Company company);
+    void update(String id, Company company);
 
     /**
      * 删除企业信息
+     *
      * @param id
      */
-    void deleteById(Long id);
+    void deleteById(String id);
 
     /**
      * 根据id查询企业信息
+     *
      * @param id
      * @return 企业信息
      */
-    Company get(Long id);
+    Company get(String id);
 
     /**
      * 查询企业列表
+     *
      * @return 企业列表
      */
     List<Company> findAll();

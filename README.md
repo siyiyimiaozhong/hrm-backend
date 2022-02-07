@@ -3,13 +3,19 @@
 
 当前只是后端部分，前端部分请访问 [https://github.com/siyiyimiaozhong/hrm-web](https://github.com/siyiyimiaozhong/hrm-web)
 
-# 开发环境
+## 开发环境
 * jdk: 1.8.0_311
 * mysql: 5.7.27
 * idea: 2020.1
 * maven: 3.5.2
 
-# 模块说明
+## 技术选型
+* spring boot 2.4.1
+* fastjson 1.2.47
+* lombok 1.8.22
+
+
+## 模块说明
 * hrm-common: 公共子模块，用于放一些公共类，公共方法，公共常量
 * hrm-model: 公共实体类模块，用于存放pojo以及一些配置类
 * hrm-company: 企业信息管理模块

@@ -7,18 +7,34 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="更新readme">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java" afterDir="false" />
+    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="处理跨域问题">
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/controller/BaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/SpringContextUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/DepartmentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/vo/CompanyDepartmentListVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/CompanyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/CompanyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/CompanyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/test/java/com/hrm/company/CompanyDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/test/java/com/hrm/company/CompanyDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/Company.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,14 +82,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../work/patch/6.0.17.2.0_feiteng_2000_release_patch_20211215/WEB_SRC/cyberaudit" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -84,7 +104,7 @@
       <module name="hrm-company" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hrm.company.*" />
+          <option name="PATTERN" value="com.hrm.company.CompanyDaoTest" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +154,21 @@
       <workItem from="1642306170560" duration="175000" />
       <workItem from="1642306350434" duration="2219000" />
       <workItem from="1642317821688" duration="4730000" />
-      <workItem from="1642326864382" duration="13648000" />
+      <workItem from="1642326864382" duration="13838000" />
+      <workItem from="1642373777645" duration="629000" />
+      <workItem from="1642375896337" duration="30000" />
+      <workItem from="1642423918258" duration="1243000" />
+      <workItem from="1642461722544" duration="593000" />
+      <workItem from="1642520165958" duration="29000" />
+      <workItem from="1642522118909" duration="599000" />
+      <workItem from="1642546550101" duration="1277000" />
+      <workItem from="1642606779876" duration="604000" />
+      <workItem from="1642633109606" duration="1291000" />
+      <workItem from="1642685339772" duration="599000" />
+      <workItem from="1642763064709" duration="1312000" />
+      <workItem from="1642927370088" duration="330000" />
+      <workItem from="1643294128156" duration="149000" />
+      <workItem from="1644201338034" duration="5971000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目，并实现企业信息CRUD">
       <created>1642328668483</created>
@@ -157,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642349557091</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="新增统一异常处理">
+      <created>1642352191432</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1642352191432</updated>
+    </task>
+    <task id="LOCAL-00005" summary="处理跨域问题">
+      <created>1642352249810</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1642352249810</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,73 +221,104 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化项目，并实现企业信息CRUD" />
     <MESSAGE value="初始化项目" />
     <MESSAGE value="更新readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新readme" />
+    <MESSAGE value="新增统一异常处理" />
+    <MESSAGE value="处理跨域问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="处理跨域问题" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2772" y="409" key="#Assign_Data_Sources" timestamp="1644202082947">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2772" y="409" key="#Assign_Data_Sources/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644202082947" />
     <state x="2506" y="198" key="#Inspections" timestamp="1642323860464">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2506" y="198" key="#Inspections/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642323860464" />
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1642324104269">
+    <state x="2360" y="94" key="#Project_Structure" timestamp="1644207713475">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642324104269" />
+    <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644207713475" />
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1644207828976">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644207828976" />
+    <state x="2557" y="85" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1644202501062">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2557" y="85" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644202501062" />
     <state x="2104" y="86" key="DiffContextDialog" timestamp="1642326969716">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2104" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326969716" />
-    <state x="3204" y="393" key="FileChooserDialogImpl" timestamp="1642328543849">
+    <state x="3204" y="393" key="FileChooserDialogImpl" timestamp="1642520189223">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1284" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642254979648" />
-    <state x="3204" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642328543849" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1642326859566">
+    <state x="3204" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642520189223" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1644208773583">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1642326859566">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644208773583" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1644208773583">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1642326859566">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644208773583" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1644208773583">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1642326859566">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644208773583" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1644208773583">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1642326859567">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644208773583" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1642927702197">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859567" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1642326859566">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1642927702197">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1642326859566">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1642927702197">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859566" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1642326859567">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1642927702197">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642326859567" />
-    <state x="2386" y="329" key="SettingsEditor" timestamp="1642329566183">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1642927702198">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702198" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1642927702197">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1642927702197">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702197" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1642927702198">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642927702198" />
+    <state x="2386" y="329" key="SettingsEditor" timestamp="1642375916839">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642328362981" />
-    <state x="2386" y="329" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642329566183" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1642349563390">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2386" y="329" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642375916839" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1642352259071">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642349563390" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642329665035" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642352259071" />
     <state x="2673" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642328511225">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

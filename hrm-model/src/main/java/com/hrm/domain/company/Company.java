@@ -26,7 +26,7 @@ public class Company implements Serializable {
      * Id
      */
     @Id
-    private Long id;
+    private String id;
     /**
      * 公司名称
      */

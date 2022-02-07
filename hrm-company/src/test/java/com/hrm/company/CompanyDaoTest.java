@@ -21,8 +21,8 @@ public class CompanyDaoTest {
     private CompanyDao companyDao;
 
     @Test
-    public void test(){
-        Company company = companyDao.findById(1L).get();
+    public void test() {
+        Company company = companyDao.findById("1").get();
         System.out.println(company);
     }
 }

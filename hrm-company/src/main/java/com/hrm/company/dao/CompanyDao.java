@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @CreateTime: Created in 2022-01-14 7:18
  * @Description:
  */
-public interface CompanyDao extends JpaRepository<Company, Long>, JpaSpecificationExecutor<Company> {
+public interface CompanyDao extends JpaRepository<Company, String>, JpaSpecificationExecutor<Company> {
 }

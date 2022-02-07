@@ -30,14 +30,14 @@ public class CompanyServiceImpl implements CompanyService {
     public void save(Company company) {
         // 基本属性设置
         Long id = this.idWorker.nextId();
-        company.setId(id);
+        company.setId(id + "");
         company.setAuditState(StateConstant.FAIL);
         company.setState(StateConstant.ACTIVATION);
         this.companyDao.save(company);
     }
 
     @Override
-    public void update(Long id, Company company) {
+    public void update(String id, Company company) {
         Company temp = this.companyDao.findById(id).get();
         if (null == temp) {
             throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
@@ -48,7 +48,7 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(String id) {
         Company company = this.companyDao.findById(id).get();
         if (null == company) {
             throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
@@ -57,7 +57,7 @@ public class CompanyServiceImpl implements CompanyService {
     }
 
     @Override
-    public Company get(Long id) {
+    public Company get(String id) {
         Company company = this.companyDao.findById(id).get();
         if (null == company) {
             throw new RuntimeException("参数验证失败");

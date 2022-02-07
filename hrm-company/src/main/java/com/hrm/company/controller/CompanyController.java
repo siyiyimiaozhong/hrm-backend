@@ -29,19 +29,19 @@ public class CompanyController {
     }
 
     @DeleteMapping("/{id}")
-    public Result<Object> delete(@PathVariable("id") Long id) {
+    public Result<Object> delete(@PathVariable("id") String id) {
         this.companyService.deleteById(id);
         return Result.success();
     }
 
     @PutMapping("/{id}")
-    public Result<Object> update(@PathVariable("id") Long id, @RequestBody Company company) {
+    public Result<Object> update(@PathVariable("id") String id, @RequestBody Company company) {
         this.companyService.update(id, company);
         return Result.success();
     }
 
     @GetMapping("/{id}")
-    public Result<Company> get(@PathVariable("id") Long id) {
+    public Result<Company> get(@PathVariable("id") String id) {
         Company company = this.companyService.get(id);
         return Result.success(company);
     }
