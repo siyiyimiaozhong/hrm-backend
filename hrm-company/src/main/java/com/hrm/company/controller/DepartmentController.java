@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/department")
+@RequestMapping("/company/department")
 public class DepartmentController extends BaseController {
     private final DepartmentService departmentService;
 

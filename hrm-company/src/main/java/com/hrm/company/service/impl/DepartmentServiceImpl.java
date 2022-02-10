@@ -1,5 +1,6 @@
 package com.hrm.company.service.impl;
 
+import com.hrm.common.service.BaseService;
 import com.hrm.common.utils.IdWorker;
 import com.hrm.company.dao.DepartmentDao;
 import com.hrm.company.service.CompanyService;

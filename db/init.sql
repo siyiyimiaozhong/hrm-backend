@@ -47,7 +47,7 @@ INSERT INTO `bs_user` VALUES ('1063705482939731968', '13800000001', 'cgx', '8801
 
 DROP TABLE IF EXISTS `co_company`;
 CREATE TABLE `co_company` (
-  `id` bigint(20) NOT NULL COMMENT 'ID',
+  `id` varchar(40) NOT NULL COMMENT 'ID',
   `name` varchar(255) DEFAULT NULL COMMENT '公司名称',
   `manager_id` varchar(255) DEFAULT NULL COMMENT '企业登录账号ID',
   `version` varchar(255) DEFAULT NULL COMMENT '当前版本',

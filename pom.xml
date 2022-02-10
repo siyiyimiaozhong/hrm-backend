@@ -12,6 +12,7 @@
         <module>hrm-common</module>
         <module>hrm-model</module>
         <module>hrm-company</module>
+        <module>hrm-system</module>
     </modules>
 
     <parent>
