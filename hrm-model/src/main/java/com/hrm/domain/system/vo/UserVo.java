@@ -1,26 +1,27 @@
-package com.hrm.domain.system;
+package com.hrm.domain.system.vo;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
+import com.hrm.domain.system.Role;
+import com.hrm.domain.system.User;
+import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @Author: 敬学
- * @CreateTime: Created in 2022-02-07 18:07
- * @Description: 用户实体类
+ * @CreateTime: Created in 2022-02-13 22:05
+ * @Description: 用户信息vo
  */
-@Entity
-@Setter
-@Getter
-@Table(name = "bs_user")
-public class User implements Serializable {
-    private static final long serialVersionUID = 2663230499845964306L;
+@Data
+public class UserVo implements Serializable {
+    private static final long serialVersionUID = 2495228969858282808L;
+    /**
+     * ID
+     */
     @Id
     private String id;
     /**
@@ -91,11 +92,14 @@ public class User implements Serializable {
 
     private String departmentName;
 
+    private List<String> roleIds = new LinkedList<>();
 
-    @ManyToMany
-    @JsonIgnore
-    @JoinTable(name = "pe_user_role", joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")}
-    )
-    private Set<Role> roles = new HashSet<Role>();//用户与角色   多对多
+    public static UserVo toUserVo(User user) {
+        UserVo userVo = new UserVo();
+        BeanUtils.copyProperties(user, userVo);
+        for (Role role : user.getRoles()) {
+            userVo.roleIds.add(role.getId());
+        }
+        return userVo;
+    }
 }

@@ -10,4 +10,11 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
  * @Description: 用户持久层接口
  */
 public interface UserDao extends JpaRepository<User, String>, JpaSpecificationExecutor<User> {
+    /**
+     * 根据手机号码查询用户信息
+     *
+     * @param mobile
+     * @return
+     */
+    public User findByMobile(String mobile);
 }

@@ -3,7 +3,11 @@ package com.hrm.system.service;
 import com.hrm.common.entity.PageResult;
 import com.hrm.domain.system.User;
 import com.hrm.domain.system.dto.UserDto;
-import org.springframework.data.domain.Page;
+import com.hrm.domain.system.dto.UserRoleDto;
+import com.hrm.domain.system.vo.ProfileVo;
+import com.hrm.domain.system.vo.UserVo;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @Author: 敬学
@@ -31,7 +35,7 @@ public interface UserService {
      * @param id
      * @return
      */
-    User findById(String id);
+    UserVo findUserVoById(String id);
 
     /**
      * 根据id删除用户信息
@@ -47,4 +51,28 @@ public interface UserService {
      * @return
      */
     PageResult<User> findAll(UserDto userDto);
+
+    /**
+     * 添加角色信息
+     *
+     * @param userRoleDto
+     */
+    void assignRoles(UserRoleDto userRoleDto);
+
+    /**
+     * 登录
+     *
+     * @param mobile
+     * @param password
+     * @return
+     */
+    String login(String mobile, String password);
+
+    /**
+     * 获取用户信息
+     *
+     * @param request
+     * @return
+     */
+    ProfileVo profile(HttpServletRequest request);
 }

@@ -5,6 +5,8 @@ import com.hrm.common.entity.PageResult;
 import com.hrm.common.entity.Result;
 import com.hrm.domain.system.User;
 import com.hrm.domain.system.dto.UserDto;
+import com.hrm.domain.system.dto.UserRoleDto;
+import com.hrm.domain.system.vo.UserVo;
 import com.hrm.system.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,8 +58,8 @@ public class UserController extends BaseController {
      * @return
      */
     @GetMapping("/{id}")
-    public Result<User> get(@PathVariable("id") String id) {
-        User user = this.userService.findById(id);
+    public Result<UserVo> get(@PathVariable("id") String id) {
+        UserVo user = this.userService.findUserVoById(id);
         return Result.success(user);
     }
 
@@ -74,9 +76,27 @@ public class UserController extends BaseController {
         return Result.success();
     }
 
+    /**
+     * 根据id删除用户
+     *
+     * @param ids
+     * @return
+     */
     @DeleteMapping("/{ids}")
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.userService.delete(ids);
+        return Result.success();
+    }
+
+    /**
+     * 添加对应角色
+     *
+     * @param userRoleDto
+     * @return
+     */
+    @PutMapping("/assignRoles")
+    public Result<Object> assignRoles(@RequestBody UserRoleDto userRoleDto) {
+        this.userService.assignRoles(userRoleDto);
         return Result.success();
     }
 }

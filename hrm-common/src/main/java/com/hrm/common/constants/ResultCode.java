@@ -30,6 +30,10 @@ public enum ResultCode {
     /**
      * 用户操作返回码
      */
+    /**
+     * 用户名或者密码错误
+     */
+    WRONG_USERNAME_OR_PASSWORD(false, 20001, "用户名或者密码错误"),
 
     /**
      * 企业操作返回码

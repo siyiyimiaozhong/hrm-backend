@@ -34,14 +34,14 @@ public class Role implements Serializable {
     private String companyId;
 
     @JsonIgnore
-    @ManyToMany(mappedBy="roles")
+    @ManyToMany(mappedBy = "roles")
     private Set<User> users = new HashSet<User>(0);//角色与用户   多对多
 
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name="pe_role_permission",
-            joinColumns={@JoinColumn(name="role_id",referencedColumnName="id")},
-            inverseJoinColumns={@JoinColumn(name="permission_id",referencedColumnName="id")})
+    @JoinTable(name = "pe_role_permission",
+            joinColumns = {@JoinColumn(name = "role_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "permission_id", referencedColumnName = "id")})
     private Set<Permission> permissions = new HashSet<Permission>(0);//角色与模块  多对多
 }

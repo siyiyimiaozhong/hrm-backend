@@ -5,6 +5,7 @@ import com.hrm.common.entity.PageResult;
 import com.hrm.common.entity.Result;
 import com.hrm.domain.system.Role;
 import com.hrm.domain.system.dto.RoleDto;
+import com.hrm.domain.system.vo.RoleVo;
 import com.hrm.system.service.RoleService;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +28,7 @@ public class RoleController extends BaseController {
 
     /**
      * 分配权限
+     *
      * @param roleDto
      * @return
      */
@@ -38,6 +40,7 @@ public class RoleController extends BaseController {
 
     /**
      * 添加角色
+     *
      * @param role
      * @return
      */
@@ -49,7 +52,21 @@ public class RoleController extends BaseController {
     }
 
     /**
+     * 更新角色信息
+     *
+     * @param id
+     * @param role
+     * @return
+     */
+    @PutMapping("/{id}")
+    public Result<Object> update(@PathVariable("id") String id, @RequestBody Role role) {
+        this.roleService.checkAndUpdate(id, role);
+        return Result.success();
+    }
+
+    /**
      * 删除角色
+     *
      * @param ids
      * @return
      */
@@ -61,17 +78,19 @@ public class RoleController extends BaseController {
 
     /**
      * 根据id获取角色信息
+     *
      * @param id
      * @return
      */
     @GetMapping("/{id}")
-    public Result<Role> get(@PathVariable("id") String id) {
-        Role role = this.roleService.findById(id);
+    public Result<RoleVo> get(@PathVariable("id") String id) {
+        RoleVo role = this.roleService.findRoleVoById(id);
         return Result.success(role);
     }
 
     /**
      * 分页查询角色
+     *
      * @param page
      * @param size
      * @return
@@ -84,6 +103,7 @@ public class RoleController extends BaseController {
 
     /**
      * 查询全部角色
+     *
      * @return
      */
     @GetMapping("/list")

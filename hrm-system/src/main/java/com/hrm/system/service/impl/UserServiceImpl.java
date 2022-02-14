@@ -1,11 +1,20 @@
 package com.hrm.system.service.impl;
 
+import com.hrm.common.constants.ResultCode;
 import com.hrm.common.entity.PageResult;
+import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.IdWorker;
+import com.hrm.common.utils.JwtUtils;
+import com.hrm.domain.system.Role;
 import com.hrm.domain.system.User;
 import com.hrm.domain.system.dto.UserDto;
+import com.hrm.domain.system.dto.UserRoleDto;
+import com.hrm.domain.system.vo.ProfileVo;
+import com.hrm.domain.system.vo.UserVo;
+import com.hrm.system.dao.RoleDao;
 import com.hrm.system.dao.UserDao;
 import com.hrm.system.service.UserService;
+import io.jsonwebtoken.Claims;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
@@ -16,8 +25,8 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import java.util.LinkedList;
-import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 /**
  * @Author: 敬学
@@ -26,12 +35,17 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService {
-    private final UserDao userDao;
-    private final IdWorker idWorker;
 
-    public UserServiceImpl(UserDao userDao, IdWorker idWorker) {
-        this.userDao = userDao;
+    private final IdWorker idWorker;
+    private final JwtUtils jwtUtils;
+    private final UserDao userDao;
+    private final RoleDao roleDao;
+
+    public UserServiceImpl(IdWorker idWorker, JwtUtils jwtUtils, UserDao userDao, RoleDao roleDao) {
         this.idWorker = idWorker;
+        this.jwtUtils = jwtUtils;
+        this.userDao = userDao;
+        this.roleDao = roleDao;
     }
 
     @Override
@@ -56,8 +70,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findById(String id) {
-        return this.userDao.findById(id).get();
+    public UserVo findUserVoById(String id) {
+        User user = this.userDao.findById(id).get();
+        return UserVo.toUserVo(user);
     }
 
     @Override
@@ -98,5 +113,51 @@ public class UserServiceImpl implements UserService {
         };
         Page<User> userPage = this.userDao.findAll(specification, PageRequest.of(userDto.getPage() - 1, userDto.getSize()));
         return new PageResult<>(userPage.getTotalElements(), userPage.getContent());
+    }
+
+    @Override
+    public void assignRoles(UserRoleDto userRoleDto) {
+        User user = userDao.findById(userRoleDto.getId()).get();
+        if (null == user) {
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+        }
+        Set<Role> roles = new HashSet<>();
+        for (String roleId : userRoleDto.getRoleIds()) {
+            Role role = roleDao.findById(roleId).get();
+            roles.add(role);
+        }
+        user.setRoles(roles);
+        this.userDao.save(user);
+    }
+
+    @Override
+    public String login(String mobile, String password) {
+        User user = this.userDao.findByMobile(mobile);
+        if (null == user || !user.getPassword().equals(password)) {
+            throw new BusinessException(ResultCode.WRONG_USERNAME_OR_PASSWORD);
+        }
+        Map<String, Object> map = new HashMap<>();
+        map.put("companyId", user.getCompanyId());
+        map.put("companyName", user.getCompanyName());
+        return this.jwtUtils.createJwt(user.getId(), user.getUsername(), map);
+    }
+
+    @Override
+    public ProfileVo profile(HttpServletRequest request) {
+        //1.获取请求头信息：名称=Authorization
+        String authorization = request.getHeader("Authorization");
+        if (StringUtils.isEmpty(authorization)) {
+            throw new BusinessException(ResultCode.UNAUTHENTICATED);
+        }
+        //2.替换Bearer+空格
+        String token = authorization.replace("Bearer ", "");
+        //3.解析token
+        Claims claims = jwtUtils.parseJwt(token);
+        String userId = claims.getId();
+        User user = this.userDao.findById(userId).get();
+        if (null == user) {
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+        }
+        return new ProfileVo(user);
     }
 }

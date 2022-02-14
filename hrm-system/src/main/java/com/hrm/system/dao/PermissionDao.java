@@ -14,6 +14,7 @@ import java.util.List;
 public interface PermissionDao extends JpaRepository<Permission, String>, JpaSpecificationExecutor<Permission> {
     /**
      * 根据父id和类型查询API权限列表
+     *
      * @param type
      * @param pid
      * @return

@@ -8,6 +8,7 @@ import com.hrm.common.utils.IdWorker;
 import com.hrm.domain.system.Permission;
 import com.hrm.domain.system.Role;
 import com.hrm.domain.system.dto.RoleDto;
+import com.hrm.domain.system.vo.RoleVo;
 import com.hrm.system.constant.PermissionConstant;
 import com.hrm.system.dao.PermissionDao;
 import com.hrm.system.dao.RoleDao;
@@ -73,22 +74,33 @@ public class RoleServiceImpl extends BaseService<Role> implements RoleService {
     }
 
     @Override
-    public Role findById(String id) {
+    public RoleVo findRoleVoById(String id) {
         Role role = this.roleDao.findById(id).get();
         if (null == role) {
             throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
         }
-        return role;
+        return new RoleVo(role);
     }
 
     @Override
     public PageResult<Role> page(String companyId, int page, int size) {
         Page<Role> pageResult = this.roleDao.findAll(getSpec(companyId), PageRequest.of(page - 1, size));
-        return new PageResult<>(pageResult.getTotalElements(),pageResult.getContent());
+        return new PageResult<>(pageResult.getTotalElements(), pageResult.getContent());
     }
 
     @Override
     public List<Role> findAllByCompanyId(String companyId) {
         return this.roleDao.findAll(getSpec(companyId));
+    }
+
+    @Override
+    public void checkAndUpdate(String id, Role role) {
+        Role roleTmp = this.roleDao.findById(id).get();
+        if (null == roleTmp) {
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+        }
+        roleTmp.setDescription(role.getDescription());
+        roleTmp.setName(role.getName());
+        this.roleDao.save(roleTmp);
     }
 }

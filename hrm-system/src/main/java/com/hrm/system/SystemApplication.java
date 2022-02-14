@@ -1,6 +1,7 @@
 package com.hrm.system;
 
 import com.hrm.common.utils.IdWorker;
+import com.hrm.common.utils.JwtUtils;
 import com.hrm.common.utils.SpringContextUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,5 +25,10 @@ public class SystemApplication {
     @Bean
     public IdWorker idWorker() {
         return new IdWorker();
+    }
+
+    @Bean
+    public JwtUtils jwtUtils() {
+        return new JwtUtils();
     }
 }

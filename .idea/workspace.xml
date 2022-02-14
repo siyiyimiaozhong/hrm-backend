@@ -15,54 +15,43 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="新增对于部门CRUD操作">
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/hrm-system.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/constant/PermissionConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/PermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionApiDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionMenuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionPointDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/RoleDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/PermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="新增用户与角色管理">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/BeanMapUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/UserRoleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/LoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/ProfileVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/RoleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-common/hrm-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/hrm-common.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/service/BaseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/hrm-company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/hrm-company.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/service/BaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/DepartmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/CompanyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/CompanyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/dao/CompanyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/dao/CompanyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/CompanyService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/impl/CompanyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/impl/CompanyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/target/test-classes/com/hrm/company/CompanyDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/test-classes/com/hrm/company/CompanyDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/target/classes/com/hrm/domain/company/Company.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/target/classes/com/hrm/domain/company/Company.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/hrm-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/hrm-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/hrm-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/hrm-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/PermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/PermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/PermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +99,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hrm-system/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,6 +116,7 @@
       <recent name="com.hrm.common.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\java\com\hrm\common\utils" />
       <recent name="E:\project\IHRM\hrm-backend\hrm-system\src\main\resources" />
     </key>
   </component>
@@ -216,6 +206,11 @@
       <workItem from="1644201338034" duration="17964000" />
       <workItem from="1644398234696" duration="1191000" />
       <workItem from="1644446335844" duration="3604000" />
+      <workItem from="1644500564042" duration="4263000" />
+      <workItem from="1644678058718" duration="1276000" />
+      <workItem from="1644739125415" duration="11470000" />
+      <workItem from="1644795461888" duration="1368000" />
+      <workItem from="1644857026923" duration="1671000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目，并实现企业信息CRUD">
       <created>1642328668483</created>
@@ -259,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644208946433</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="新增用户与角色管理">
+      <created>1644500662683</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644500662683</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +286,8 @@
     <MESSAGE value="新增统一异常处理" />
     <MESSAGE value="处理跨域问题" />
     <MESSAGE value="新增对于部门CRUD操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增对于部门CRUD操作" />
+    <MESSAGE value="新增用户与角色管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增用户与角色管理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2772" y="409" key="#Assign_Data_Sources" timestamp="1644202082947">
@@ -303,18 +306,26 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644229891928" />
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1644447948819">
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1644858295208">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644447948819" />
-    <state x="2557" y="85" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1644202501062">
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644858295208" />
+    <state x="2581" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1644759792138">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2557" y="85" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644202501062" />
+    <state x="2581" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644759792138" />
     <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1644233461022">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644233461022" />
+    <state x="2426" y="255" width="880" height="596" key="#xdebugger.evaluate" timestamp="1644766603268">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2426" y="255" width="880" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644766603268" />
+    <state width="428" height="466" key="DebuggerActiveHint" timestamp="1644766777332">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="428" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644766777332" />
     <state x="2104" y="86" key="DiffContextDialog" timestamp="1642326969716">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -324,54 +335,58 @@
     </state>
     <state x="1284" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642254979648" />
     <state x="3204" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642520189223" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom" timestamp="1644857597426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1644739841553" />
+    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644857597426" />
+    <state width="1877" height="341" key="GridCell.Tab.0.center" timestamp="1644857597426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1644739841552" />
+    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644857597426" />
+    <state width="1877" height="341" key="GridCell.Tab.0.left" timestamp="1644857597426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1644739841552" />
+    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644857597426" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right" timestamp="1644857597426">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1644739841552" />
+    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644857597426" />
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.1.center" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.1.left" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1644245215417">
+    <state width="1877" height="341" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.1.right" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245215417" />
-    <state width="1877" height="341" key="GridCell.Tab.2.bottom" timestamp="1644245214747">
+    <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.2.bottom" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245214747" />
-    <state width="1877" height="341" key="GridCell.Tab.2.center" timestamp="1644245214747">
+    <state width="1877" height="341" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.2.center" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245214747" />
-    <state width="1877" height="341" key="GridCell.Tab.2.left" timestamp="1644245214747">
+    <state width="1877" height="341" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.2.left" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245214747" />
-    <state width="1877" height="341" key="GridCell.Tab.2.right" timestamp="1644245214747">
+    <state width="1877" height="341" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
+    <state width="1877" height="341" key="GridCell.Tab.2.right" timestamp="1644769800819">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644245214747" />
+    <state width="1877" height="341" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644769800819" />
     <state x="2386" y="329" key="SettingsEditor" timestamp="1642375916839">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -382,6 +397,10 @@
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642349563390" />
     <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644209178091" />
+    <state x="2463" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1644509381653">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2463" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644509381653" />
     <state x="2673" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1642328511225">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -394,10 +413,10 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2254" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644228140582" />
-    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1644449128426">
+    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1644858584039">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644449128426" />
+    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644858584039" />
     <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1644448913393">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
