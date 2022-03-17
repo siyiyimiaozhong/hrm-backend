@@ -1,5 +1,6 @@
 package com.hrm.system.controller;
 
+import com.hrm.common.controller.BaseController;
 import com.hrm.common.entity.Result;
 import com.hrm.domain.system.vo.LoginVo;
 import com.hrm.domain.system.vo.ProfileVo;
@@ -9,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * @Author: 敬学
  * @CreateTime: Created in 2022-02-14 07:46
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/sys")
-public class LoginController {
+public class LoginController extends BaseController {
 
     private final UserService userService;
 
@@ -34,8 +33,8 @@ public class LoginController {
      */
     @PostMapping("/login")
     public Result<Object> login(@RequestBody LoginVo loginVo) {
-        String token = this.userService.login(loginVo.getMobile(), loginVo.getPassword());
-        return Result.success(token);
+        String sessionId = this.userService.login(loginVo.getMobile(), loginVo.getPassword());
+        return Result.success(sessionId);
     }
 
     /**
@@ -44,8 +43,8 @@ public class LoginController {
      * @return
      */
     @PostMapping("/profile")
-    public Result<Object> profile(HttpServletRequest request) {
-        ProfileVo profileVo = this.userService.profile(request);
+    public Result<Object> profile() {
+        ProfileVo profileVo = this.userService.profile();
         return Result.success(profileVo);
     }
 }

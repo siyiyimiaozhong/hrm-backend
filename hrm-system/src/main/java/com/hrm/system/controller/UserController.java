@@ -8,6 +8,7 @@ import com.hrm.domain.system.dto.UserDto;
 import com.hrm.domain.system.dto.UserRoleDto;
 import com.hrm.domain.system.vo.UserVo;
 import com.hrm.system.service.UserService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -82,7 +83,8 @@ public class UserController extends BaseController {
      * @param ids
      * @return
      */
-    @DeleteMapping("/{ids}")
+    @RequiresPermissions(value = "API-USER-DELETE")
+    @DeleteMapping(value = "/{ids}", name = "API-USER-DELETE")
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.userService.delete(ids);
         return Result.success();

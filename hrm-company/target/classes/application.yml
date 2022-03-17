@@ -17,3 +17,11 @@ spring:
     database: mysql
     show-sql: true
     open-in-view: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+jwt:
+  config:
+    key: SaaS-HRM
+    ttl: 3600000

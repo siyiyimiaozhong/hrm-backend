@@ -13,6 +13,7 @@
         <module>hrm-model</module>
         <module>hrm-company</module>
         <module>hrm-system</module>
+        <module>hrm-employee</module>
     </modules>
 
     <parent>
@@ -28,6 +29,8 @@
         <java.version>1.8</java.version>
         <fastjson.version>1.2.47</fastjson.version>
         <lombok.version>1.18.22</lombok.version>
+        <shiro.version>1.3.2</shiro.version>
+        <shiro-redis.version>3.0.0</shiro-redis.version>
         <junit.version>4.13.1</junit.version>
     </properties>
 
@@ -54,6 +57,24 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <!--shiro和spring整合-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!--shiro核心包-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!--shiro与redis整合-->
+        <dependency>
+            <groupId>org.crazycake</groupId>
+            <artifactId>shiro-redis</artifactId>
+            <version>${shiro-redis.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

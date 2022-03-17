@@ -6,9 +6,7 @@ import com.hrm.domain.system.User;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Author: 敬学
@@ -33,14 +31,44 @@ public class ProfileVo implements Serializable {
      */
     private String company;
     /**
+     * 企业id
+     */
+    private String companyId;
+    /**
      * 角色权限信息
      */
-    private Map<String, Object> roles;
+    private Map<String, Object> roles = new HashMap<>();
+
+    public ProfileVo(User user, List<Permission> list) {
+        this.mobile = user.getMobile();
+        this.username = user.getUsername();
+        this.company = user.getCompanyName();
+        this.companyId = user.getCompanyId();
+
+        Set<String> menus = new HashSet<>();
+        Set<String> points = new HashSet<>();
+        Set<String> apis = new HashSet<>();
+
+        for (Permission perm : list) {
+            String code = perm.getCode();
+            if (perm.getType() == 1) {
+                menus.add(code);
+            } else if (perm.getType() == 2) {
+                points.add(code);
+            } else {
+                apis.add(code);
+            }
+        }
+        this.roles.put("menus", menus);
+        this.roles.put("points", points);
+        this.roles.put("apis", apis);
+    }
 
     public ProfileVo(User user) {
         this.mobile = user.getMobile();
         this.username = user.getUsername();
         this.company = user.getCompanyName();
+        this.companyId = user.getCompanyId();
 
         Set<Role> roles = user.getRoles();
         Set<String> menus = new HashSet<>();

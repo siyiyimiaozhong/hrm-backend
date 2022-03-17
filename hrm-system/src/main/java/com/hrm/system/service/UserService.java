@@ -7,8 +7,6 @@ import com.hrm.domain.system.dto.UserRoleDto;
 import com.hrm.domain.system.vo.ProfileVo;
 import com.hrm.domain.system.vo.UserVo;
 
-import javax.servlet.http.HttpServletRequest;
-
 /**
  * @Author: 敬学
  * @CreateTime: Created in 2022-02-07 18:21
@@ -36,6 +34,14 @@ public interface UserService {
      * @return
      */
     UserVo findUserVoById(String id);
+
+    /**
+     * 通过手机号获取用户信息
+     *
+     * @param mobile
+     * @return
+     */
+    User findByMobile(String mobile);
 
     /**
      * 根据id删除用户信息
@@ -71,8 +77,7 @@ public interface UserService {
     /**
      * 获取用户信息
      *
-     * @param request
      * @return
      */
-    ProfileVo profile(HttpServletRequest request);
+    ProfileVo profile();
 }

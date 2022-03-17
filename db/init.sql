@@ -118,7 +118,7 @@ CREATE TABLE `em_archive` (
   `data` longtext COMMENT '数据',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='月度员工归档表';
 
 DROP TABLE IF EXISTS `em_positive`;
 CREATE TABLE `em_positive` (
@@ -129,7 +129,7 @@ CREATE TABLE `em_positive` (
   `estatus` int(2) NOT NULL COMMENT '单据状态 1是未执行，2是已执行',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '转正申请表';
 
 INSERT INTO `em_positive` VALUES ('1063705989926227968', '2018-12-23 08:00:00', '111', null, '1', '2018-12-15 21:45:10');
 
@@ -146,7 +146,7 @@ CREATE TABLE `em_resignation` (
   `picture` varchar(255) DEFAULT NULL COMMENT '图片',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '离职申请表';
 
 INSERT INTO `em_resignation` VALUES ('1063705989926227968', '2018-02-05', '主动离职', null, '100', '100', '离职日本月', '离职日次月', null, '2018-12-16 20:49:26');
 
@@ -174,7 +174,7 @@ CREATE TABLE `em_transferposition` (
   `estatus` int(2) NOT NULL COMMENT '单据状态 1是未执行，2是已执行',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '员工调岗申请表';
 
 INSERT INTO `em_transferposition` VALUES ('1063705989926227968', '', '', '', '', '2018-12-03 08:00:00', 'aaaaa', '', '', '', '', '2018-12-03', '2018-12-04', '', '', '', '12月', '1', '', '1', '2018-12-15 22:01:08');
 
@@ -223,7 +223,7 @@ CREATE TABLE `em_user_company_jobs` (
   `social_recruitment` varchar(255) DEFAULT NULL COMMENT '社招校招',
   `recommender_business_people` varchar(255) DEFAULT NULL COMMENT '推荐企业人',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '员工岗位信息表';
 
 INSERT INTO `em_user_company_jobs` VALUES ('1063705989926227968', '1', '文员', null, null, null, null, null, null, '1066370498633486336', null, '1', null, null, null, '2018-12-25', '2018-12-21', '2018-12-03', '2018-12-04', '6月', null, '1', '拉勾网', '猎头', '社招', '百度');
 
@@ -290,7 +290,7 @@ CREATE TABLE `em_user_company_personal` (
   `proof_of_departure_of_former_company` varchar(255) DEFAULT NULL COMMENT '前公司离职证明',
   `remarks` text COMMENT '备注',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT '员工详细信息表';
 
 INSERT INTO `em_user_company_personal` VALUES ('1', 'test1', '13000000001', '2018-03-01', '开发部', '1', '', '', '初中', '中国大陆', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 INSERT INTO `em_user_company_personal` VALUES ('101', 'test101', '13000000101', '2018-03-01', '开发部', '1', '', '', '初中', '中国大陆', '1234', '1234', '', '', '1234', '1234', '', '未婚', '', '', '牛', '', '', '', '', '', '', '', '', '', '无', '无', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '统招', '', '', '', '', '', '', '', '', '', '', '', '');

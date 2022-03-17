@@ -1,6 +1,7 @@
 package com.hrm.system.service.impl;
 
 import com.hrm.common.constants.ResultCode;
+import com.hrm.common.constants.UserConstant;
 import com.hrm.common.entity.PageResult;
 import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.IdWorker;
@@ -13,8 +14,13 @@ import com.hrm.domain.system.vo.ProfileVo;
 import com.hrm.domain.system.vo.UserVo;
 import com.hrm.system.dao.RoleDao;
 import com.hrm.system.dao.UserDao;
+import com.hrm.system.service.PermissionService;
 import com.hrm.system.service.UserService;
-import io.jsonwebtoken.Claims;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
@@ -25,8 +31,10 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import javax.servlet.http.HttpServletRequest;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @Author: 敬学
@@ -40,12 +48,18 @@ public class UserServiceImpl implements UserService {
     private final JwtUtils jwtUtils;
     private final UserDao userDao;
     private final RoleDao roleDao;
+    private final PermissionService permissionService;
 
-    public UserServiceImpl(IdWorker idWorker, JwtUtils jwtUtils, UserDao userDao, RoleDao roleDao) {
+    public UserServiceImpl(IdWorker idWorker,
+                           JwtUtils jwtUtils,
+                           UserDao userDao,
+                           RoleDao roleDao,
+                           PermissionService permissionService) {
         this.idWorker = idWorker;
         this.jwtUtils = jwtUtils;
         this.userDao = userDao;
         this.roleDao = roleDao;
+        this.permissionService = permissionService;
     }
 
     @Override
@@ -53,7 +67,9 @@ public class UserServiceImpl implements UserService {
         //TODO 校验逻辑
         String id = idWorker.nextId() + "";
         user.setId(id);
-        user.setPassword("123456");
+        String password = new Md5Hash("123456", user.getMobile(), 3).toString();
+        user.setLevel(UserConstant.USER);
+        user.setPassword(password);
         user.setEnableState(1);
         this.userDao.save(user);
     }
@@ -73,6 +89,11 @@ public class UserServiceImpl implements UserService {
     public UserVo findUserVoById(String id) {
         User user = this.userDao.findById(id).get();
         return UserVo.toUserVo(user);
+    }
+
+    @Override
+    public User findByMobile(String mobile) {
+        return this.userDao.findByMobile(mobile);
     }
 
     @Override
@@ -132,32 +153,48 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String login(String mobile, String password) {
-        User user = this.userDao.findByMobile(mobile);
-        if (null == user || !user.getPassword().equals(password)) {
+        try {
+            //1.构造登录令牌 UsernamePasswordToken
+            //加密密码
+            password = new Md5Hash(password, mobile, 3).toString();  //1.密码，盐，加密次数
+            UsernamePasswordToken upToken = new UsernamePasswordToken(mobile, password);
+            //2.获取subject
+            Subject subject = SecurityUtils.getSubject();
+            //3.调用login方法，进入realm完成认证
+            subject.login(upToken);
+            //4.获取sessionId
+            //5.构造返回结果
+            return (String) subject.getSession().getId();
+        } catch (Exception e) {
             throw new BusinessException(ResultCode.WRONG_USERNAME_OR_PASSWORD);
         }
-        Map<String, Object> map = new HashMap<>();
-        map.put("companyId", user.getCompanyId());
-        map.put("companyName", user.getCompanyName());
-        return this.jwtUtils.createJwt(user.getId(), user.getUsername(), map);
     }
 
     @Override
-    public ProfileVo profile(HttpServletRequest request) {
-        //1.获取请求头信息：名称=Authorization
-        String authorization = request.getHeader("Authorization");
-        if (StringUtils.isEmpty(authorization)) {
-            throw new BusinessException(ResultCode.UNAUTHENTICATED);
-        }
-        //2.替换Bearer+空格
-        String token = authorization.replace("Bearer ", "");
-        //3.解析token
-        Claims claims = jwtUtils.parseJwt(token);
-        String userId = claims.getId();
-        User user = this.userDao.findById(userId).get();
-        if (null == user) {
-            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
-        }
-        return new ProfileVo(user);
+    public ProfileVo profile() {
+        //获取session中的安全数据
+        Subject subject = SecurityUtils.getSubject();
+        //1.subject获取所有的安全数据集合
+        PrincipalCollection principals = subject.getPrincipals();
+        //2.获取安全数据
+        return (ProfileVo) principals.getPrimaryPrincipal();
+//        User user = this.userDao.findById(userId).get();
+//        if (null == user) {
+//            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+//        }
+//
+//        // 根据不同的用户级别获取用户权限
+//        ProfileVo profileVo = null;
+//        if (UserConstant.USER.equals(user.getLevel())) {
+//            profileVo = new ProfileVo(user);
+//        } else {
+//            Map<String, Object> map = new HashMap<>();
+//            if (UserConstant.CO_ADMIN.equals(user.getLevel())) {
+//                map.put("enVisible", "1");
+//            }
+//            List<Permission> list = this.permissionService.findAll(map);
+//            profileVo = new ProfileVo(user, list);
+//        }
+//        return profileVo;
     }
 }
