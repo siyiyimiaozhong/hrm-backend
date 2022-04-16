@@ -37,6 +37,7 @@
         <junit.version>4.13.1</junit.version>
         <cloud.dependencies.version>Finchley.SR1</cloud.dependencies.version>
         <poi-version>4.0.1</poi-version>
+        <qiniuyun.version>[7.2.0, 7.2.99]</qiniuyun.version>
     </properties>
 
     <dependencyManagement>
@@ -115,6 +116,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>${poi-version}</version>
+        </dependency>
+
+        <!-- 七牛云 -->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>${qiniuyun.version}</version>
         </dependency>
     </dependencies>
 

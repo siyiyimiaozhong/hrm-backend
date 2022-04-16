@@ -109,4 +109,12 @@ public interface UserService {
      * @param file
      */
     void importUserByExcel(String companyId, String companyName, MultipartFile file);
+
+    /**
+     * 上传用户头像，转化为DataURL返回给前端
+     * @param id
+     * @param file
+     * @return
+     */
+    String uploadImage(String id, MultipartFile file);
 }

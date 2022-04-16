@@ -30,6 +30,7 @@ public enum ResultCode {
      */
     UNAUTHENTICATED(false, 20001, "您还未登录"),
     WRONG_USERNAME_OR_PASSWORD(false, 20002, "用户名或者密码错误"),
+    PICTURE_UPLOAD_FAILED(false, 20003, "图片上传失败"),
 
     /**
      * 企业操作返回码

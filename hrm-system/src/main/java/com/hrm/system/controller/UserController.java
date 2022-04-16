@@ -138,6 +138,13 @@ public class UserController extends BaseController implements UserControllerApi 
         return Result.success();
     }
 
+    @PostMapping("/upload/{id}")
+    @Override
+    public Result<String> uploadImage(@PathVariable("id") String id, MultipartFile file) {
+        String imgUrl = this.userService.uploadImage(id, file);
+        return Result.success(imgUrl);
+    }
+
     @GetMapping("/test/{id}")
     public Result<Department> testFeign(@PathVariable("id") String id) {
         return this.departmentFeignClient.get(id);

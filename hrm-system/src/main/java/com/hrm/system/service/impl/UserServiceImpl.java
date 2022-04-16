@@ -1,10 +1,8 @@
 package com.hrm.system.service.impl;
 
+import com.hrm.common.properties.QiniuyunConfig;
 import com.hrm.common.service.BaseService;
-import com.hrm.common.utils.CommonUtils;
-import com.hrm.common.utils.ExcelExportUtil;
-import com.hrm.common.utils.ExcelImportUtil;
-import com.hrm.common.utils.IdWorker;
+import com.hrm.common.utils.*;
 import com.hrm.core.constant.FileImportTemplateEnum;
 import com.hrm.core.constant.ResultCode;
 import com.hrm.core.constant.UserConstant;
@@ -24,6 +22,7 @@ import com.hrm.system.client.DepartmentFeignClient;
 import com.hrm.system.dao.RoleDao;
 import com.hrm.system.dao.UserDao;
 import com.hrm.system.service.UserService;
+import com.sun.org.apache.xml.internal.security.utils.Base64;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.Md5Hash;
@@ -42,11 +41,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -61,17 +58,20 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     private final UserDao userDao;
     private final RoleDao roleDao;
     private final DepartmentFeignClient departmentFeignClient;
+    private final QiniuyunConfig qiniuyunConfig;
     @Value("${user.default-password}")
     private String DEFAULT_PASSWORD;
 
     public UserServiceImpl(IdWorker idWorker,
                            UserDao userDao,
                            RoleDao roleDao,
-                           DepartmentFeignClient departmentFeignClient) {
+                           DepartmentFeignClient departmentFeignClient,
+                           QiniuyunConfig qiniuyunConfig) {
         this.idWorker = idWorker;
         this.userDao = userDao;
         this.roleDao = roleDao;
         this.departmentFeignClient = departmentFeignClient;
+        this.qiniuyunConfig = qiniuyunConfig;
     }
 
     @Override
@@ -251,6 +251,42 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
             this.userDao.saveAll(users);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+//    @Override
+//    public String uploadImage(String id, MultipartFile file) {
+//        //1.根据id查询用户
+//        User user = userDao.findById(id).get();
+//        //2.使用DataURL的形式存储图片（对图片byte数组进行base64编码）
+//        String encode = null;
+//        try {
+//            encode = "data:image/png;base64,"+ Base64.encode(file.getBytes());
+//            System.out.println(encode);
+//            //3.更新用户头像地址
+//            user.setStaffPhoto(encode);
+//            userDao.save(user);
+//            //4.返回
+//            return encode;
+//        } catch (IOException e) {
+//            throw new BusinessException(ResultCode.PICTURE_UPLOAD_FAILED);
+//        }
+//    }
+
+    @Override
+    public String uploadImage(String id, MultipartFile file) {
+        try {
+            //1.根据id查询用户
+            User user = userDao.findById(id).get();
+            //2.将图片上传到七牛云存储，获取请求路径
+            String imgUrl = new QiniuUploadUtil(this.qiniuyunConfig).upload(user.getId(), file.getBytes());//上传图片名，图片的byte数组
+            //3.更新用户头像地址
+            user.setStaffPhoto(imgUrl);
+            userDao.save(user);
+            //4.返回
+            return imgUrl;
+        } catch (IOException e) {
+            throw new BusinessException(ResultCode.PICTURE_UPLOAD_FAILED);
         }
     }
 

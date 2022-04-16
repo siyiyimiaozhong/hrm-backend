@@ -92,6 +92,11 @@ public class UserVo implements Serializable {
 
     private String departmentName;
 
+    /**
+     * 员工照片
+     */
+    private String staffPhoto;
+
     private List<String> roleIds = new LinkedList<>();
 
     public static UserVo toUserVo(User user) {
