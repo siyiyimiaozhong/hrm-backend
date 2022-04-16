@@ -1,6 +1,6 @@
 package com.hrm.system.dao;
 
-import com.hrm.domain.system.PermissionApi;
+import com.hrm.model.system.PermissionApi;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

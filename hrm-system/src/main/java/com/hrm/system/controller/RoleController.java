@@ -1,11 +1,12 @@
 package com.hrm.system.controller;
 
+import com.hrm.api.system.RoleControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.common.entity.PageResult;
-import com.hrm.common.entity.Result;
-import com.hrm.domain.system.Role;
-import com.hrm.domain.system.dto.RoleDto;
-import com.hrm.domain.system.vo.RoleVo;
+import com.hrm.core.entity.PageResult;
+import com.hrm.core.entity.Result;
+import com.hrm.model.system.Role;
+import com.hrm.model.system.dto.RoleDto;
+import com.hrm.model.system.vo.RoleVo;
 import com.hrm.system.service.RoleService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ import java.util.List;
 @CrossOrigin
 @RestController
 @RequestMapping("/sys/role")
-public class RoleController extends BaseController {
+public class RoleController extends BaseController implements RoleControllerApi {
     private final RoleService roleService;
 
     public RoleController(RoleService roleService) {
@@ -33,6 +34,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @PutMapping("/assignPerm")
+    @Override
     public Result<Object> assignPerm(@RequestBody RoleDto roleDto) {
         this.roleService.assignPerms(roleDto);
         return Result.success();
@@ -45,6 +47,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @PostMapping
+    @Override
     public Result<Object> add(@RequestBody Role role) {
         role.setCompanyId(this.companyId);
         this.roleService.checkAndInsert(role);
@@ -59,6 +62,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @PutMapping("/{id}")
+    @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Role role) {
         this.roleService.checkAndUpdate(id, role);
         return Result.success();
@@ -71,6 +75,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @DeleteMapping("/{ids}")
+    @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.roleService.delete(ids);
         return Result.success();
@@ -83,6 +88,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @GetMapping("/{id}")
+    @Override
     public Result<RoleVo> get(@PathVariable("id") String id) {
         RoleVo role = this.roleService.findRoleVoById(id);
         return Result.success(role);
@@ -96,6 +102,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @GetMapping("/page")
+    @Override
     public Result<PageResult<Role>> page(int page, int size) {
         PageResult<Role> pageResult = this.roleService.page(this.companyId, page, size);
         return Result.success(pageResult);
@@ -107,6 +114,7 @@ public class RoleController extends BaseController {
      * @return
      */
     @GetMapping("/list")
+    @Override
     public Result<List<Role>> list() {
         List<Role> roles = this.roleService.findAllByCompanyId(this.companyId);
         return Result.success(roles);

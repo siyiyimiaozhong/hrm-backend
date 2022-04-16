@@ -1,6 +1,6 @@
 package com.hrm.company.service;
 
-import com.hrm.domain.company.Company;
+import com.hrm.model.company.Company;
 
 import java.util.List;
 

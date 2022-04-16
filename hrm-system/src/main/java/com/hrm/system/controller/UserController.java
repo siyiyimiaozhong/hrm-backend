@@ -1,15 +1,23 @@
 package com.hrm.system.controller;
 
+import com.hrm.api.system.UserControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.common.entity.PageResult;
-import com.hrm.common.entity.Result;
-import com.hrm.domain.system.User;
-import com.hrm.domain.system.dto.UserDto;
-import com.hrm.domain.system.dto.UserRoleDto;
-import com.hrm.domain.system.vo.UserVo;
+import com.hrm.core.entity.PageResult;
+import com.hrm.core.entity.Result;
+import com.hrm.model.company.Department;
+import com.hrm.model.system.User;
+import com.hrm.model.system.dto.UserDto;
+import com.hrm.model.system.dto.UserRoleDto;
+import com.hrm.model.system.vo.UserSimpleVo;
+import com.hrm.model.system.vo.UserVo;
+import com.hrm.system.client.DepartmentFeignClient;
 import com.hrm.system.service.UserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * @Author: 敬学
@@ -19,11 +27,13 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RestController
 @RequestMapping("/sys/user")
-public class UserController extends BaseController {
+public class UserController extends BaseController implements UserControllerApi {
     private final UserService userService;
+    private final DepartmentFeignClient departmentFeignClient;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, DepartmentFeignClient departmentFeignClient) {
         this.userService = userService;
+        this.departmentFeignClient = departmentFeignClient;
     }
 
     /**
@@ -33,6 +43,7 @@ public class UserController extends BaseController {
      * @return
      */
     @PostMapping
+    @Override
     public Result<Object> save(@RequestBody User user) {
         user.setCompanyId(this.companyId);
         user.setCompanyName(this.companyName);
@@ -46,6 +57,7 @@ public class UserController extends BaseController {
      * @return
      */
     @PostMapping("/page")
+    @Override
     public Result<PageResult<User>> page(@RequestBody UserDto userDto) {
         userDto.setCompanyId(this.companyId);
         PageResult<User> userPage = this.userService.findAll(userDto);
@@ -59,6 +71,7 @@ public class UserController extends BaseController {
      * @return
      */
     @GetMapping("/{id}")
+    @Override
     public Result<UserVo> get(@PathVariable("id") String id) {
         UserVo user = this.userService.findUserVoById(id);
         return Result.success(user);
@@ -72,6 +85,7 @@ public class UserController extends BaseController {
      * @return
      */
     @PutMapping("/{id}")
+    @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody User user) {
         this.userService.checkAndUpdate(id, user);
         return Result.success();
@@ -85,6 +99,7 @@ public class UserController extends BaseController {
      */
     @RequiresPermissions(value = "API-USER-DELETE")
     @DeleteMapping(value = "/{ids}", name = "API-USER-DELETE")
+    @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.userService.delete(ids);
         return Result.success();
@@ -97,8 +112,34 @@ public class UserController extends BaseController {
      * @return
      */
     @PutMapping("/assignRoles")
+    @Override
     public Result<Object> assignRoles(@RequestBody UserRoleDto userRoleDto) {
         this.userService.assignRoles(userRoleDto);
         return Result.success();
+    }
+
+    @GetMapping("/simple")
+    @Override
+    public Result<List<UserSimpleVo>> simple() {
+        List<UserSimpleVo> list = this.userService.getSimpleInfo(super.companyId);
+        return Result.success(list);
+    }
+
+    @GetMapping("/template")
+    @Override
+    public void template(HttpServletResponse response) {
+        this.userService.getUserTemplateExcel(response);
+    }
+
+    @PostMapping("/import")
+    @Override
+    public Result<Object> importUser(@RequestParam("file") MultipartFile file) {
+        this.userService.importUserByExcel(super.companyId, super.companyName, file);
+        return Result.success();
+    }
+
+    @GetMapping("/test/{id}")
+    public Result<Department> testFeign(@PathVariable("id") String id) {
+        return this.departmentFeignClient.get(id);
     }
 }

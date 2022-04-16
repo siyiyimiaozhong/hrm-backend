@@ -1,14 +1,14 @@
 package com.hrm.system.service.impl;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.entity.PageResult;
-import com.hrm.common.exception.BusinessException;
 import com.hrm.common.service.BaseService;
 import com.hrm.common.utils.IdWorker;
-import com.hrm.domain.system.Permission;
-import com.hrm.domain.system.Role;
-import com.hrm.domain.system.dto.RoleDto;
-import com.hrm.domain.system.vo.RoleVo;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.entity.PageResult;
+import com.hrm.core.exception.BusinessException;
+import com.hrm.model.system.Permission;
+import com.hrm.model.system.Role;
+import com.hrm.model.system.dto.RoleDto;
+import com.hrm.model.system.vo.RoleVo;
 import com.hrm.system.constant.PermissionConstant;
 import com.hrm.system.dao.PermissionDao;
 import com.hrm.system.dao.RoleDao;

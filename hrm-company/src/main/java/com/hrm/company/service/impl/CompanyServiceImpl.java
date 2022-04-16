@@ -1,15 +1,16 @@
 package com.hrm.company.service.impl;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.constants.StateConstant;
-import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.IdWorker;
 import com.hrm.company.dao.CompanyDao;
 import com.hrm.company.service.CompanyService;
-import com.hrm.domain.company.Company;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.constant.StateConstant;
+import com.hrm.core.exception.BusinessException;
+import com.hrm.model.company.Company;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author: 敬学
@@ -58,11 +59,11 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public Company get(String id) {
-        Company company = this.companyDao.findById(id).get();
-        if (null == company) {
+        Optional<Company> company = this.companyDao.findById(id);
+        if (!company.isPresent()) {
             throw new RuntimeException("参数验证失败");
         }
-        return company;
+        return company.get();
     }
 
     @Override

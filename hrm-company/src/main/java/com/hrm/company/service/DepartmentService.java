@@ -1,7 +1,7 @@
 package com.hrm.company.service;
 
-import com.hrm.domain.company.Department;
-import com.hrm.domain.company.vo.CompanyDepartmentListVo;
+import com.hrm.model.company.Department;
+import com.hrm.model.company.vo.CompanyDepartmentListVo;
 
 /**
  * @Author: 敬学
@@ -44,4 +44,13 @@ public interface DepartmentService {
      * @return
      */
     CompanyDepartmentListVo findAllByCompanyId(String companyId);
+
+    /**
+     * 根据部门编码以及企业id查询部门
+     *
+     * @param code
+     * @param companyId
+     * @return
+     */
+    Department findByCodeAndCompanyId(String code, String companyId);
 }

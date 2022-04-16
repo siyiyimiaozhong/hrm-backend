@@ -1,6 +1,6 @@
 package com.hrm.common.shiro.realm;
 
-import com.hrm.domain.system.vo.ProfileVo;
+import com.hrm.model.system.vo.ProfileVo;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;

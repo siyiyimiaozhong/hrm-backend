@@ -1,9 +1,9 @@
 package com.hrm.system.service;
 
-import com.hrm.common.entity.PageResult;
-import com.hrm.domain.system.Role;
-import com.hrm.domain.system.dto.RoleDto;
-import com.hrm.domain.system.vo.RoleVo;
+import com.hrm.core.entity.PageResult;
+import com.hrm.model.system.Role;
+import com.hrm.model.system.dto.RoleDto;
+import com.hrm.model.system.vo.RoleVo;
 
 import java.util.List;
 

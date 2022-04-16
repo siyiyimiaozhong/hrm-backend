@@ -1,9 +1,10 @@
 package com.hrm.system.controller;
 
+import com.hrm.api.system.LoginControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.common.entity.Result;
-import com.hrm.domain.system.vo.LoginVo;
-import com.hrm.domain.system.vo.ProfileVo;
+import com.hrm.core.entity.Result;
+import com.hrm.model.system.vo.LoginVo;
+import com.hrm.model.system.vo.ProfileVo;
 import com.hrm.system.service.UserService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sys")
-public class LoginController extends BaseController {
+public class LoginController extends BaseController implements LoginControllerApi {
 
     private final UserService userService;
 
@@ -32,6 +33,7 @@ public class LoginController extends BaseController {
      * @return
      */
     @PostMapping("/login")
+    @Override
     public Result<Object> login(@RequestBody LoginVo loginVo) {
         String sessionId = this.userService.login(loginVo.getMobile(), loginVo.getPassword());
         return Result.success(sessionId);
@@ -43,6 +45,7 @@ public class LoginController extends BaseController {
      * @return
      */
     @PostMapping("/profile")
+    @Override
     public Result<Object> profile() {
         ProfileVo profileVo = this.userService.profile();
         return Result.success(profileVo);

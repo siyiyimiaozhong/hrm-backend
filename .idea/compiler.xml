@@ -8,23 +8,35 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hrm-common" />
-        <module name="hrm-model" />
-        <module name="hrm-system" />
+        <module name="hrm-getway" />
+        <module name="hrm-api" />
         <module name="hrm-company" />
+        <module name="hrm-model" />
+        <module name="hrm-core" />
+        <module name="hrm-employee" />
+        <module name="hrm-system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hrm-api" target="1.8" />
       <module name="hrm-backend" target="1.8" />
       <module name="hrm-common" target="1.8" />
       <module name="hrm-company" target="1.8" />
+      <module name="hrm-core" target="1.8" />
+      <module name="hrm-employee" target="1.8" />
+      <module name="hrm-getway" target="1.8" />
       <module name="hrm-model" target="1.8" />
       <module name="hrm-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hrm-api" options="-parameters" />
       <module name="hrm-common" options="-parameters" />
       <module name="hrm-company" options="-parameters" />
+      <module name="hrm-core" options="-parameters" />
+      <module name="hrm-employee" options="-parameters" />
+      <module name="hrm-getway" options="-parameters" />
       <module name="hrm-model" options="-parameters" />
       <module name="hrm-system" options="-parameters" />
     </option>

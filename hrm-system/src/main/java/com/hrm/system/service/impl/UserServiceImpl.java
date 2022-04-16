@@ -1,40 +1,53 @@
 package com.hrm.system.service.impl;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.constants.UserConstant;
-import com.hrm.common.entity.PageResult;
-import com.hrm.common.exception.BusinessException;
+import com.hrm.common.service.BaseService;
+import com.hrm.common.utils.CommonUtils;
+import com.hrm.common.utils.ExcelExportUtil;
+import com.hrm.common.utils.ExcelImportUtil;
 import com.hrm.common.utils.IdWorker;
-import com.hrm.common.utils.JwtUtils;
-import com.hrm.domain.system.Role;
-import com.hrm.domain.system.User;
-import com.hrm.domain.system.dto.UserDto;
-import com.hrm.domain.system.dto.UserRoleDto;
-import com.hrm.domain.system.vo.ProfileVo;
-import com.hrm.domain.system.vo.UserVo;
+import com.hrm.core.constant.FileImportTemplateEnum;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.constant.UserConstant;
+import com.hrm.core.entity.PageResult;
+import com.hrm.core.entity.Result;
+import com.hrm.core.exception.BusinessException;
+import com.hrm.core.template.UserTemplate;
+import com.hrm.model.company.Department;
+import com.hrm.model.system.Role;
+import com.hrm.model.system.User;
+import com.hrm.model.system.dto.UserDto;
+import com.hrm.model.system.dto.UserRoleDto;
+import com.hrm.model.system.vo.ProfileVo;
+import com.hrm.model.system.vo.UserSimpleVo;
+import com.hrm.model.system.vo.UserVo;
+import com.hrm.system.client.DepartmentFeignClient;
 import com.hrm.system.dao.RoleDao;
 import com.hrm.system.dao.UserDao;
-import com.hrm.system.service.PermissionService;
 import com.hrm.system.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import javax.servlet.http.HttpServletResponse;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @Author: 敬学
@@ -42,24 +55,23 @@ import java.util.Set;
  * @Description: 用户业务层实现类
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends BaseService<User> implements UserService {
 
     private final IdWorker idWorker;
-    private final JwtUtils jwtUtils;
     private final UserDao userDao;
     private final RoleDao roleDao;
-    private final PermissionService permissionService;
+    private final DepartmentFeignClient departmentFeignClient;
+    @Value("${user.default-password}")
+    private String DEFAULT_PASSWORD;
 
     public UserServiceImpl(IdWorker idWorker,
-                           JwtUtils jwtUtils,
                            UserDao userDao,
                            RoleDao roleDao,
-                           PermissionService permissionService) {
+                           DepartmentFeignClient departmentFeignClient) {
         this.idWorker = idWorker;
-        this.jwtUtils = jwtUtils;
         this.userDao = userDao;
         this.roleDao = roleDao;
-        this.permissionService = permissionService;
+        this.departmentFeignClient = departmentFeignClient;
     }
 
     @Override
@@ -67,7 +79,7 @@ public class UserServiceImpl implements UserService {
         //TODO 校验逻辑
         String id = idWorker.nextId() + "";
         user.setId(id);
-        String password = new Md5Hash("123456", user.getMobile(), 3).toString();
+        String password = new Md5Hash(DEFAULT_PASSWORD, user.getMobile(), 3).toString();
         user.setLevel(UserConstant.USER);
         user.setPassword(password);
         user.setEnableState(1);
@@ -196,5 +208,77 @@ public class UserServiceImpl implements UserService {
 //            profileVo = new ProfileVo(user, list);
 //        }
 //        return profileVo;
+    }
+
+    @Override
+    public List<UserSimpleVo> getSimpleInfo(String companyId) {
+        List<UserSimpleVo> simpleVos = new LinkedList<>();
+        List<User> all = this.userDao.findAll(super.getSpec(companyId));
+        for (User user : all) {
+            simpleVos.add(new UserSimpleVo(user.getId(), user.getUsername()));
+        }
+        return simpleVos;
+    }
+
+    @Override
+    public void getUserTemplateExcel(HttpServletResponse response) {
+        InputStream resourceAsStream =
+                Thread.currentThread().getContextClassLoader()
+                        .getResourceAsStream(FileImportTemplateEnum.USER_EXCEL.getPath());
+        ExcelExportUtil<UserTemplate> excelExportUtil
+                = new ExcelExportUtil<>(UserTemplate.class, 3, 1);
+        excelExportUtil.setStartCell(1);
+        try {
+            excelExportUtil.export(response, resourceAsStream, new LinkedList<>(), FileImportTemplateEnum.USER_EXCEL.getName());
+        } catch (Exception e) {
+            throw new BusinessException(ResultCode.EXPORT_FAILED);
+        }
+    }
+
+    @Override
+    public void importUserByExcel(String companyId, String companyName, MultipartFile file) {
+        String fileName = file.getOriginalFilename();
+        if (null == fileName || (!fileName.endsWith(".xlsx") && !fileName.endsWith(".xls"))) {
+            throw new BusinessException(ResultCode.EXCEL_FILE_TYPE_ERROR);
+        }
+        ExcelImportUtil<UserTemplate> userTemplateExcelImportUtil = new ExcelImportUtil<>(UserTemplate.class);
+        try {
+            List<UserTemplate> userTemplates = userTemplateExcelImportUtil.readExcel(file.getInputStream(), 3, 1);
+            if (CommonUtils.isEmpty(userTemplates)) {
+                return;
+            }
+            List<User> users = userTemplates.stream().map(userTemplate -> getUserByUserTemplate(companyId, companyName, userTemplate)).collect(Collectors.toList());
+            this.userDao.saveAll(users);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 将UserTemplate对象转化为User对象
+     *
+     * @param companyId
+     * @param companyName
+     * @param userTemplate
+     * @return
+     */
+    private User getUserByUserTemplate(String companyId, String companyName, UserTemplate userTemplate) {
+        User user = new User(userTemplate);
+
+        user.setPassword(new Md5Hash(DEFAULT_PASSWORD, user.getMobile(), 3).toString());
+        user.setId(idWorker.nextId() + "");
+        user.setCompanyId(companyId);
+        user.setCompanyName(companyName);
+        user.setInServiceStatus(UserConstant.EMPLOYED);
+        user.setEnableState(UserConstant.DISABLE);
+        user.setLevel(UserConstant.USER);
+
+        Result<Department> departmentResult = this.departmentFeignClient.findByCode(user.getDepartmentId(), companyId);
+        Department department = departmentResult.getData();
+        if (null != department) {
+            user.setDepartmentId(department.getId());
+            user.setDepartmentName(department.getName());
+        }
+        return user;
     }
 }

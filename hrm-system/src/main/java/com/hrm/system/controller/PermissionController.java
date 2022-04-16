@@ -1,7 +1,8 @@
 package com.hrm.system.controller;
 
-import com.hrm.common.entity.Result;
-import com.hrm.domain.system.Permission;
+import com.hrm.api.system.PermissionControllerApi;
+import com.hrm.core.entity.Result;
+import com.hrm.model.system.Permission;
 import com.hrm.system.service.PermissionService;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ import java.util.Map;
 @CrossOrigin
 @RestController
 @RequestMapping("/sys/perm")
-public class PermissionController {
+public class PermissionController implements PermissionControllerApi {
     private final PermissionService permissionService;
 
     public PermissionController(PermissionService permissionService) {
@@ -30,6 +31,7 @@ public class PermissionController {
      * @return
      */
     @PostMapping
+    @Override
     public Result<Object> save(@RequestBody Map<String, Object> map) throws Exception {
         this.permissionService.checkAndInsert(map);
         return Result.success();
@@ -43,6 +45,7 @@ public class PermissionController {
      * @return
      */
     @PutMapping("/{id}")
+    @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Map<String, Object> map) throws Exception {
         this.permissionService.checkAndUpdate(id, map);
         return Result.success();
@@ -55,6 +58,7 @@ public class PermissionController {
      * @return
      */
     @GetMapping
+    @Override
     public Result<List<Permission>> findAll(@RequestParam Map<String, Object> map) {
         List<Permission> list = this.permissionService.findAll(map);
         return Result.success(list);
@@ -67,6 +71,7 @@ public class PermissionController {
      * @return
      */
     @GetMapping("/{id}")
+    @Override
     public Result<Map<String, Object>> get(@PathVariable("id") String id) {
         Map<String, Object> map = this.permissionService.findById(id);
         return Result.success(map);
@@ -79,6 +84,7 @@ public class PermissionController {
      * @return
      */
     @DeleteMapping("/{ids}")
+    @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.permissionService.delete(ids);
         return Result.success();

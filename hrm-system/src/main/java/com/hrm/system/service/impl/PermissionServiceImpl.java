@@ -1,13 +1,13 @@
 package com.hrm.system.service.impl;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.BeanMapUtils;
 import com.hrm.common.utils.IdWorker;
-import com.hrm.domain.system.Permission;
-import com.hrm.domain.system.PermissionApi;
-import com.hrm.domain.system.PermissionMenu;
-import com.hrm.domain.system.PermissionPoint;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.exception.BusinessException;
+import com.hrm.model.system.Permission;
+import com.hrm.model.system.PermissionApi;
+import com.hrm.model.system.PermissionMenu;
+import com.hrm.model.system.PermissionPoint;
 import com.hrm.system.constant.PermissionConstant;
 import com.hrm.system.dao.PermissionApiDao;
 import com.hrm.system.dao.PermissionDao;

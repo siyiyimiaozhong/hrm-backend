@@ -3,6 +3,8 @@ server:
   port: 9001
 # spring配置
 spring:
+  main:
+    allow-bean-definition-overriding: true
   # 应用配置
   application:
     name: hrm-company
@@ -25,3 +27,9 @@ jwt:
   config:
     key: SaaS-HRM
     ttl: 3600000
+
+#微服务注册到eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/

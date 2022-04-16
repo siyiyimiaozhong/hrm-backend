@@ -1,10 +1,10 @@
 package com.hrm.system.shiro.realm;
 
-import com.hrm.common.constants.UserConstant;
 import com.hrm.common.shiro.realm.HrmRealm;
-import com.hrm.domain.system.Permission;
-import com.hrm.domain.system.User;
-import com.hrm.domain.system.vo.ProfileVo;
+import com.hrm.core.constant.UserConstant;
+import com.hrm.model.system.Permission;
+import com.hrm.model.system.User;
+import com.hrm.model.system.vo.ProfileVo;
 import com.hrm.system.service.PermissionService;
 import com.hrm.system.service.UserService;
 import org.apache.shiro.authc.*;

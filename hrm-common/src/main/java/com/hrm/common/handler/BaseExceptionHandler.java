@@ -1,8 +1,8 @@
 package com.hrm.common.handler;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.entity.Result;
-import com.hrm.common.exception.BusinessException;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.entity.Result;
+import com.hrm.core.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.AuthorizationException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

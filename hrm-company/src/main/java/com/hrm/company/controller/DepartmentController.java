@@ -1,10 +1,11 @@
 package com.hrm.company.controller;
 
+import com.hrm.api.company.DepartmentControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.common.entity.Result;
 import com.hrm.company.service.DepartmentService;
-import com.hrm.domain.company.Department;
-import com.hrm.domain.company.vo.CompanyDepartmentListVo;
+import com.hrm.core.entity.Result;
+import com.hrm.model.company.Department;
+import com.hrm.model.company.vo.CompanyDepartmentListVo;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -14,8 +15,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/company/department")
-public class DepartmentController extends BaseController {
+public class DepartmentController extends BaseController implements DepartmentControllerApi {
     private final DepartmentService departmentService;
 
     public DepartmentController(DepartmentService departmentService) {
@@ -28,7 +28,7 @@ public class DepartmentController extends BaseController {
      * @param department
      * @return
      */
-    @PostMapping
+    @Override
     public Result<Object> save(@RequestBody Department department) {
         department.setCompanyId(this.companyId);
         this.departmentService.checkAndInsert(department);
@@ -40,8 +40,8 @@ public class DepartmentController extends BaseController {
      *
      * @return
      */
-    @GetMapping
-    public Result<CompanyDepartmentListVo> findAll() {
+    @Override
+    public Result<CompanyDepartmentListVo> list() {
         CompanyDepartmentListVo companyDepartmentListVo = this.departmentService.findAllByCompanyId(this.companyId);
         return Result.success(companyDepartmentListVo);
     }
@@ -52,7 +52,7 @@ public class DepartmentController extends BaseController {
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
+    @Override
     public Result<Department> get(@PathVariable("id") String id) {
         Department department = this.departmentService.findById(id);
         return Result.success(department);
@@ -65,15 +65,23 @@ public class DepartmentController extends BaseController {
      * @param department
      * @return
      */
-    @PutMapping("/{id}")
+    @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Department department) {
         this.departmentService.checkAndUpdate(id, department);
         return Result.success();
     }
 
-    @DeleteMapping("/{ids}")
+    @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.departmentService.delete(ids);
         return Result.success();
     }
+
+    @Override
+    public Result<Department> findByCode(@RequestParam("code") String code, @RequestParam("companyId") String companyId) {
+        Department department = this.departmentService.findByCodeAndCompanyId(code, companyId);
+        return Result.success(department);
+    }
+
+
 }

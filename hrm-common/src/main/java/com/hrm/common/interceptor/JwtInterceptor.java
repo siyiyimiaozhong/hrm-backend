@@ -1,8 +1,8 @@
 package com.hrm.common.interceptor;
 
-import com.hrm.common.constants.ResultCode;
-import com.hrm.common.exception.BusinessException;
 import com.hrm.common.utils.JwtUtils;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.exception.BusinessException;
 import io.jsonwebtoken.Claims;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

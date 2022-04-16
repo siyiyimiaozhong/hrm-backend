@@ -5,9 +5,9 @@ import com.hrm.common.utils.IdWorker;
 import com.hrm.company.dao.DepartmentDao;
 import com.hrm.company.service.CompanyService;
 import com.hrm.company.service.DepartmentService;
-import com.hrm.domain.company.Company;
-import com.hrm.domain.company.Department;
-import com.hrm.domain.company.vo.CompanyDepartmentListVo;
+import com.hrm.model.company.Company;
+import com.hrm.model.company.Department;
+import com.hrm.model.company.vo.CompanyDepartmentListVo;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -60,6 +60,11 @@ public class DepartmentServiceImpl extends BaseService<Department> implements De
         List<Department> departments = this.departmentDao.findAll(spec);
         Company company = this.companyService.get(companyId);
         return new CompanyDepartmentListVo(company, departments);
+    }
+
+    @Override
+    public Department findByCodeAndCompanyId(String code, String companyId) {
+        return this.departmentDao.findByCodeAndCompanyId(code, companyId);
     }
 
     @Override
