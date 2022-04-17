@@ -4,7 +4,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: ihrm-employee #指定服务名
+    name: hrm-employee #指定服务名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hrm?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC

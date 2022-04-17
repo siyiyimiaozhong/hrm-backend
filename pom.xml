@@ -17,6 +17,7 @@
         <module>hrm-getway</module>
         <module>hrm-api</module>
         <module>hrm-core</module>
+        <module>hrm-eureka</module>
     </modules>
 
     <parent>

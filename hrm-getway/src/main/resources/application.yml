@@ -1,13 +1,62 @@
-#eureka服务的配置文件
-server:
-  port: 6868 #服务端口
+#注册到eureka的服务地址
 eureka:
   client:
-    registerWithEureka: false #是否将自己注册到Eureka服务中，本身就是所有无需注册
-    fetchRegistry: false #是否从Eureka中获取注册信息
-    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
-      defaultZone: http://127.0.0.1:${server.port}/eureka/
-
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    preferIpAddress : true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+#服务配置
+server:
+  port: 9090
+#spring配置
 spring:
-  main:
-    allow-bean-definition-overriding: true
+  #1.应用配置
+  application:
+    name: hrm-getway #指定服务名
+  redis:
+    host: 127.0.0.1
+    port: 6379
+#配置路由规则
+zuul:
+  routes:
+    #路由id,随便写
+    hrm-company:
+      path: /company/** #需要映射的路径地址
+      #url: http://127.0.0.1:9001 #映射路径对应的实际微服务的url路径
+      serviceId: hrm-company
+      #zuul 自动的会删除请求的前缀 http://127.0.0.1:9001/company
+      stripPrefix: false #不删除请求前缀
+      #处理敏感头信息
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-system: #系统
+      path: /sys/** #配置请求URL的请求规则
+      serviceId: hrm-system #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-employee: #员工
+      path: /employees/** #配置请求URL的请求规则
+      serviceId: hrm-employee #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-social-securitys: #社保
+      path: /social_securitys/** #配置请求URL的请求规则
+      serviceId: hrm-social-securitys #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-atte-cfg: #社保
+      path: /cfg/** #配置请求URL的请求规则
+      serviceId: hrm-attendance #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-atte-attendances: #社保
+      path: /attendances/** #配置请求URL的请求规则
+      serviceId: hrm-attendance #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
