@@ -38,6 +38,7 @@
         <cloud.dependencies.version>Finchley.SR1</cloud.dependencies.version>
         <poi-version>4.0.1</poi-version>
         <qiniuyun.version>[7.2.0, 7.2.99]</qiniuyun.version>
+        <jasper.version>6.5.0</jasper.version>
     </properties>
 
     <dependencyManagement>
@@ -123,6 +124,13 @@
             <groupId>com.qiniu</groupId>
             <artifactId>qiniu-java-sdk</artifactId>
             <version>${qiniuyun.version}</version>
+        </dependency>
+
+        <!-- jasper -->
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>${jasper.version}</version>
         </dependency>
     </dependencies>
 

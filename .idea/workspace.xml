@@ -16,359 +16,69 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="通过shiro实现权限管理">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_05.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_puppycrawl_tools_checkstyle_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_java8_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_9_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_29_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_saxon_Saxon_HE_9_8_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_34.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_crazycake_shiro_redis_3_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_12_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/company/CompanyControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/company/DepartmentControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/ArchivesControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/EmployeeControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/JobsControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/LeaveControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/PersonalInfoControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/PositiveControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/TransferPositionControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/LoginControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/PermissionControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/RoleControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/UserControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/feign/FeignConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/CommonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/ExcelExportUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/ExcelImportUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/annotation/ExcelAttribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/FileImportTemplateEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/template/EmployeeReportTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/template/UserTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/resources/excel/人事报表模板.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-core/src/main/resources/excel/用户信息导入模板.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/EmployeeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/config/ShiroConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/ArchivesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/JobsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/LeaveController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/PersonalInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/PositiveController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/TransferPositionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/ArchiveDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/PositiveDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/ResignationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/TransferPositionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/UserCompanyJobsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/dao/UserCompanyPersonalDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/ArchiveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/PositiveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/ResignationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/TransferPositionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/UserCompanyJobsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/UserCompanyPersonalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/ArchiveServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/PositiveServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/ResignationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/TransferPositionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyJobsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-employee/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-getway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-getway/src/main/java/com/hrm/getway/GetWayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-getway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/Archive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/Positive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/Resignation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/TransferPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/UserCompanyJobs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/UserCompanyPersonal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/employee/vo/EmployeeReportVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/UserSimpleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/client/DepartmentFeignClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_34.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_41.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_34.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_25_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_10_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_10_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="实现头像头像上传（1.DataURL 2.七牛云）">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_57_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7_js6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_qiniu_java_sdk_7_2_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_regexp_jakarta_regexp_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_6_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_4_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_core_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_xml_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_0_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_olap4j_olap4j_0_9_7_309_JS_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-api/hrm-api.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/jasperreports_extension.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/stsong/fonts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/stsong/stsong.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/templates/excel/人事报表模板.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/templates/excel/用户信息导入模板.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/templates/pdf/profile.jasper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/templates/pdf/profile.jrxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-core/hrm-core.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-employee/hrm-employee.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-getway/hrm-getway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hrm-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hrm-backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_52.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/StateConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/StateConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/constants/UserConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/UserConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/controller/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/controller/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/controller/ErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/entity/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/entity/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/entity/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/exception/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/exception/BusinessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/interceptor/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/shiro/realm/HrmRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/shiro/realm/HrmRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/shiro/session/CustomSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/shiro/session/CustomSessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/CompanyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/CompanyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/dao/DepartmentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/CompanyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/DepartmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/service/impl/DepartmentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-company/src/test/java/com/hrm/company/CompanyDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/test/java/com/hrm/company/CompanyDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/EmployeeControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/employee/EmployeeControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/hrm-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/hrm-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/target/classes/com/hrm/common/constants/StateConstant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/target/classes/com/hrm/common/entity/PageResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/target/classes/com/hrm/common/entity/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/hrm-company.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/hrm-company.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/company/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/company/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/company/vo/CompanyDepartmentListVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/company/vo/CompanyDepartmentListVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/PermissionApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/PermissionMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/PermissionPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/PermissionPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/RoleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/dto/RoleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/dto/UserRoleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/dto/UserRoleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/LoginVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/LoginVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/ProfileVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/ProfileVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/RoleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/RoleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/domain/system/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/UserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/config/SystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/config/SystemConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/PermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/PermissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionApiDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionApiDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionMenuDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionPointDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/PermissionPointDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/RoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/shiro/realm/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/shiro/realm/UserRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/CompanyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/CompanyApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/controller/CompanyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/dao/CompanyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/dao/CompanyDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/CompanyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/CompanyService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/impl/CompanyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/classes/com/hrm/company/service/impl/CompanyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/target/test-classes/com/hrm/company/CompanyDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/target/test-classes/com/hrm/company/CompanyDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/FileImportTemplateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/FileImportTemplateEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-core/src/main/java/com/hrm/core/constant/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-core/src/main/resources/excel/人事报表模板.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-core/src/main/resources/excel/用户信息导入模板.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/config/ShiroConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/config/ShiroConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/UserCompanyPersonalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/UserCompanyPersonalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/hrm-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/hrm-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/target/classes/com/hrm/domain/company/Company.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/hrm-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/hrm-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -419,7 +129,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../i-hrm/ihrm_parent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hrm-common/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -432,22 +142,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources\templates\pdf" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources\templates\excel\pdf" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\resources" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\java" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\resources\excel" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-model\src\main\resources\excel" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\java\com\hrm\common\utils" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-system\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hrm.company.config" />
       <recent name="com.hrm.common.exception" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\resources" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\java" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources\templates\pdf" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\resources\excel" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-model\src\main\resources\excel" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\java\com\hrm\common\utils" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.EmployeeApplication">
@@ -528,8 +242,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.EmployeeApplication" />
-        <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="Spring Boot.CompanyApplication" />
+        <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="Spring Boot.GetWayApplication" />
         <item itemvalue="Application.UserServiceImpl" />
       </list>
@@ -619,7 +333,9 @@
       <workItem from="1649898380998" duration="9689000" />
       <workItem from="1649984647757" duration="5768000" />
       <workItem from="1650075113693" duration="10234000" />
-      <workItem from="1650098488113" duration="4355000" />
+      <workItem from="1650098488113" duration="7392000" />
+      <workItem from="1650110633940" duration="7796000" />
+      <workItem from="1650160218631" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目，并实现企业信息CRUD">
       <created>1642328668483</created>
@@ -684,7 +400,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647558813746</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="实现用户基本操作，以及excel导入导出">
+      <created>1650105500465</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650105500465</updated>
+    </task>
+    <task id="LOCAL-00011" summary="实现头像头像上传（1.DataURL 2.七牛云）">
+      <created>1650116796789</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650116796789</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -724,7 +454,9 @@
     <MESSAGE value="新增用户与角色管理" />
     <MESSAGE value="基本实现用户，角色，权限的CRUD" />
     <MESSAGE value="通过shiro实现权限管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="通过shiro实现权限管理" />
+    <MESSAGE value="实现用户基本操作，以及excel导入导出" />
+    <MESSAGE value="实现头像头像上传（1.DataURL 2.七牛云）" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现头像头像上传（1.DataURL 2.七牛云）" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2772" y="409" key="#Assign_Data_Sources" timestamp="1650080507631">
@@ -748,15 +480,15 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647747049311" />
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1650077177681">
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1650105679750">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650077177681" />
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105679750" />
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1647673127806" />
-    <state x="2685" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1649582903816">
+    <state x="2685" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1650110732421">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2685" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649582903816" />
+    <state x="2685" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650110732421" />
     <state x="2659" y="400" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1649582891560">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -769,14 +501,14 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644233461022" />
-    <state x="2405" y="444" width="880" height="596" key="#xdebugger.evaluate" timestamp="1650099814753">
+    <state x="2405" y="444" width="880" height="596" key="#xdebugger.evaluate" timestamp="1650160879864">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2405" y="444" width="880" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650099814753" />
-    <state width="1092" height="466" key="DebuggerActiveHint" timestamp="1650099855219">
+    <state x="2405" y="444" width="880" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160879864" />
+    <state width="1092" height="466" key="DebuggerActiveHint" timestamp="1650160438635">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650099855219" />
+    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160438635" />
     <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1649899305648" />
     <state x="2104" y="86" key="DiffContextDialog" timestamp="1644858781227">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -792,82 +524,82 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2691" y="421" key="Github.CreateGistDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649588016434" />
-    <state width="1877" height="229" key="GridCell.Tab.0.bottom" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom" timestamp="1650160785452">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407865" />
+    <state width="1877" height="315" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160785452" />
     <state width="1877" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645218" />
-    <state width="1877" height="229" key="GridCell.Tab.0.center" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.0.center" timestamp="1650160785452">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407865" />
+    <state width="1877" height="315" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160785452" />
     <state width="1877" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645218" />
-    <state width="1877" height="229" key="GridCell.Tab.0.left" timestamp="1650105180151">
+    <state width="1877" height="315" key="GridCell.Tab.0.left" timestamp="1650160785452">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180151" />
+    <state width="1877" height="315" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407865" />
+    <state width="1877" height="315" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160785452" />
     <state width="1877" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645218" />
-    <state width="1877" height="229" key="GridCell.Tab.0.right" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.0.right" timestamp="1650160785452">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407865" />
+    <state width="1877" height="315" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160785452" />
     <state width="1877" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645218" />
-    <state width="1877" height="229" key="GridCell.Tab.1.bottom" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.1.bottom" timestamp="1650160773522">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160773522" />
     <state width="1877" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1649911690809" />
-    <state width="1877" height="229" key="GridCell.Tab.1.center" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.1.center" timestamp="1650160773522">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160773522" />
     <state width="1877" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1649911690809" />
-    <state width="1877" height="229" key="GridCell.Tab.1.left" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.1.left" timestamp="1650160773522">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160773522" />
     <state width="1877" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1649911690809" />
-    <state width="1877" height="229" key="GridCell.Tab.1.right" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.1.right" timestamp="1650160773522">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160773522" />
     <state width="1877" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1649911690809" />
-    <state width="1877" height="229" key="GridCell.Tab.2.bottom" timestamp="1650105180153">
+    <state width="1877" height="315" key="GridCell.Tab.2.bottom" timestamp="1650160735549">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463917" />
-    <state width="1877" height="229" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180153" />
+    <state width="1877" height="315" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160735549" />
     <state width="1877" height="229" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645103" />
-    <state width="1877" height="229" key="GridCell.Tab.2.center" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.2.center" timestamp="1650160735549">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160735549" />
     <state width="1877" height="229" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645103" />
-    <state width="1877" height="229" key="GridCell.Tab.2.left" timestamp="1650105180152">
+    <state width="1877" height="315" key="GridCell.Tab.2.left" timestamp="1650160735549">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463916" />
-    <state width="1877" height="229" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180152" />
+    <state width="1877" height="315" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160735549" />
     <state width="1877" height="229" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645103" />
-    <state width="1877" height="229" key="GridCell.Tab.2.right" timestamp="1650105180153">
+    <state width="1877" height="315" key="GridCell.Tab.2.right" timestamp="1650160735549">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="341" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1647562463917" />
-    <state width="1877" height="229" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105180153" />
+    <state width="1877" height="315" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650133407697" />
+    <state width="1877" height="315" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650160735549" />
     <state width="1877" height="229" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1649911645103" />
-    <state x="2410" y="175" key="Maven.ArtifactSearchDialog" timestamp="1649582574713">
+    <state x="2410" y="175" key="Maven.ArtifactSearchDialog" timestamp="1650110716621">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2410" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649582574713" />
+    <state x="2410" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650110716621" />
     <state x="2092" y="197" width="998" height="708" key="SettingsEditor" timestamp="1650105395873">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -894,29 +626,34 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2673" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642328511225" />
-    <state x="2582" y="74" width="596" height="891" key="find.popup" timestamp="1650032479084">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="662" y="74" width="628" height="891" key="find.popup" timestamp="1650132501041">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="662" y="74" width="628" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650132501041" />
     <state x="2582" y="74" width="596" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650032479084" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1650106000943">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650106000943" />
     <state x="334" y="180" key="new project wizard" timestamp="1649984738003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2254" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649256038773" />
     <state x="334" y="180" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1649984738003" />
-    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1650078836175">
+    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1650132241629">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650078836175" />
+    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650132241629" />
     <state x="1290" y="305" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1647675811488" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1647766654352">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647766654352" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1650105020444">
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1650131470406">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1648376411739" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650105020444" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650131470406" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1647677635029" />
   </component>
   <component name="XDebuggerManager">
@@ -924,13 +661,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/UserController.java</url>
-          <line>142</line>
+          <line>149</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java</url>
           <line>36</line>
           <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

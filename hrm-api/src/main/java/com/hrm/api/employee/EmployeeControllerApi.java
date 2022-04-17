@@ -30,4 +30,11 @@ public interface EmployeeControllerApi {
      */
     @GetMapping("/export/{month}")
     void export(@PathVariable("month") String month, HttpServletResponse response);
+
+    /**
+     * 根据id获取员工简介pdf
+     * @param id
+     */
+    @GetMapping("/{id}/pdf")
+    void exportPdf(@PathVariable("id") String id);
 }

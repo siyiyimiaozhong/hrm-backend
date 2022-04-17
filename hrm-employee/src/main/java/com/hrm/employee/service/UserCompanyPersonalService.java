@@ -36,4 +36,11 @@ public interface UserCompanyPersonalService {
      * @param month
      */
     void exportReport(HttpServletResponse response, String companyId, String month);
+
+    /**
+     * 根据用户id导出对应的简介pdf
+     * @param id
+     * @param response
+     */
+    void exportProfilePdf(String id, HttpServletResponse response);
 }

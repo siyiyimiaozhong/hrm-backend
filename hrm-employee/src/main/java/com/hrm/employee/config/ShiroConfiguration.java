@@ -76,7 +76,7 @@ public class ShiroConfiguration {
         filterMap.put("/frame/login", "anon");
         filterMap.put("/autherror", "anon");
         //认证之后访问（登录之后可以访问）
-        filterMap.put("/**", "authc");
+//        filterMap.put("/**", "authc");
 
         //5.设置过滤器
         filterFactory.setFilterChainDefinitionMap(filterMap);

@@ -4,7 +4,6 @@ import com.hrm.api.employee.EmployeeControllerApi;
 import com.hrm.common.controller.BaseController;
 import com.hrm.core.entity.Result;
 import com.hrm.employee.service.*;
-import com.hrm.model.employee.vo.EmployeeReportVo;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  * @Author: 敬学
@@ -60,5 +58,10 @@ public class EmployeeController extends BaseController implements EmployeeContro
     @Override
     public void export(@PathVariable("month") String month, HttpServletResponse response) {
         this.userCompanyPersonalService.exportReport(response, super.companyId, month);
+    }
+
+    @Override
+    public void exportPdf(@PathVariable("id") String id) {
+        this.userCompanyPersonalService.exportProfilePdf(id, response);
     }
 }

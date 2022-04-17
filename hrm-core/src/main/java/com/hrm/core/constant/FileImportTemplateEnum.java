@@ -12,7 +12,7 @@ public enum FileImportTemplateEnum {
     /**
      * 用户信息导入模板
      */
-    USER_EXCEL("用户信息导入模板.xlsx", "excel/用户信息导入模板.xlsx"),
+    USER_EXCEL("用户信息导入模板.xlsx", "templates/excel/用户信息导入模板.xlsx"),
 
     ;
 
