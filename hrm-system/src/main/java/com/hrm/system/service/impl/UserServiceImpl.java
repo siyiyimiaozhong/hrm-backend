@@ -59,6 +59,7 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     private final RoleDao roleDao;
     private final DepartmentFeignClient departmentFeignClient;
     private final QiniuyunConfig qiniuyunConfig;
+    private final BaiduAiUtil baiduAiUtil;
     @Value("${user.default-password}")
     private String DEFAULT_PASSWORD;
 
@@ -66,12 +67,13 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
                            UserDao userDao,
                            RoleDao roleDao,
                            DepartmentFeignClient departmentFeignClient,
-                           QiniuyunConfig qiniuyunConfig) {
+                           QiniuyunConfig qiniuyunConfig, BaiduAiUtil baiduAiUtil) {
         this.idWorker = idWorker;
         this.userDao = userDao;
         this.roleDao = roleDao;
         this.departmentFeignClient = departmentFeignClient;
         this.qiniuyunConfig = qiniuyunConfig;
+        this.baiduAiUtil = baiduAiUtil;
     }
 
     @Override
@@ -283,6 +285,17 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
             //3.更新用户头像地址
             user.setStaffPhoto(imgUrl);
             userDao.save(user);
+
+            //判断是否已经注册面部信息
+            Boolean aBoolean = baiduAiUtil.faceExist(id);
+            String imgBase64 = Base64.encode(file.getBytes());
+            if (aBoolean) {
+                //更新
+                baiduAiUtil.faceUpdate(id,imgBase64);
+            }else{
+                //注册
+                baiduAiUtil.faceRegister(id,imgBase64);
+            }
             //4.返回
             return imgUrl;
         } catch (IOException e) {

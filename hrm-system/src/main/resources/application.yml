@@ -36,3 +36,6 @@ eureka:
 
 user:
   default-password: 123456
+
+qr:
+  url: http://localhost:8080/#/facelogin
