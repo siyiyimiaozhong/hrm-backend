@@ -12,7 +12,6 @@ import com.hrm.model.system.vo.UserSimpleVo;
 import com.hrm.model.system.vo.UserVo;
 import com.hrm.system.client.DepartmentFeignClient;
 import com.hrm.system.service.UserService;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,7 +25,6 @@ import java.util.List;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/sys/user")
 public class UserController extends BaseController implements UserControllerApi {
     private final UserService userService;
     private final DepartmentFeignClient departmentFeignClient;
@@ -42,7 +40,6 @@ public class UserController extends BaseController implements UserControllerApi 
      * @param user
      * @return
      */
-    @PostMapping
     @Override
     public Result<Object> save(@RequestBody User user) {
         user.setCompanyId(this.companyId);
@@ -56,7 +53,6 @@ public class UserController extends BaseController implements UserControllerApi 
      *
      * @return
      */
-    @PostMapping("/page")
     @Override
     public Result<PageResult<User>> page(@RequestBody UserDto userDto) {
         userDto.setCompanyId(this.companyId);
@@ -70,7 +66,6 @@ public class UserController extends BaseController implements UserControllerApi 
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
     @Override
     public Result<UserVo> get(@PathVariable("id") String id) {
         UserVo user = this.userService.findUserVoById(id);
@@ -84,7 +79,6 @@ public class UserController extends BaseController implements UserControllerApi 
      * @param user
      * @return
      */
-    @PutMapping("/{id}")
     @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody User user) {
         this.userService.checkAndUpdate(id, user);
@@ -97,8 +91,6 @@ public class UserController extends BaseController implements UserControllerApi 
      * @param ids
      * @return
      */
-    @RequiresPermissions(value = "API-USER-DELETE")
-    @DeleteMapping(value = "/{ids}", name = "API-USER-DELETE")
     @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.userService.delete(ids);
@@ -111,34 +103,29 @@ public class UserController extends BaseController implements UserControllerApi 
      * @param userRoleDto
      * @return
      */
-    @PutMapping("/assignRoles")
     @Override
     public Result<Object> assignRoles(@RequestBody UserRoleDto userRoleDto) {
         this.userService.assignRoles(userRoleDto);
         return Result.success();
     }
 
-    @GetMapping("/simple")
     @Override
     public Result<List<UserSimpleVo>> simple() {
         List<UserSimpleVo> list = this.userService.getSimpleInfo(super.companyId);
         return Result.success(list);
     }
 
-    @GetMapping("/template")
     @Override
     public void template(HttpServletResponse response) {
         this.userService.getUserTemplateExcel(response);
     }
 
-    @PostMapping("/import")
     @Override
     public Result<Object> importUser(@RequestParam("file") MultipartFile file) {
         this.userService.importUserByExcel(super.companyId, super.companyName, file);
         return Result.success();
     }
 
-    @PostMapping("/upload/{id}")
     @Override
     public Result<String> uploadImage(@PathVariable("id") String id, MultipartFile file) {
         String imgUrl = this.userService.uploadImage(id, file);

@@ -7,9 +7,8 @@ import com.hrm.model.system.dto.UserDto;
 import com.hrm.model.system.dto.UserRoleDto;
 import com.hrm.model.system.vo.UserSimpleVo;
 import com.hrm.model.system.vo.UserVo;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +19,7 @@ import java.util.List;
  * @CreateTime: Created in 2022-03-20 16:58
  * @Description: 用户Api
  */
+@RequestMapping("/sys/user")
 public interface UserControllerApi {
 
     /**
@@ -28,6 +28,7 @@ public interface UserControllerApi {
      * @param user
      * @return
      */
+    @PostMapping
     Result<Object> save(@RequestBody User user);
 
     /**
@@ -36,6 +37,7 @@ public interface UserControllerApi {
      * @param userDto
      * @return
      */
+    @PostMapping("/page")
     Result<PageResult<User>> page(@RequestBody UserDto userDto);
 
     /**
@@ -44,6 +46,7 @@ public interface UserControllerApi {
      * @param id
      * @return
      */
+    @GetMapping("/{id}")
     Result<UserVo> get(@PathVariable("id") String id);
 
     /**
@@ -53,6 +56,7 @@ public interface UserControllerApi {
      * @param user
      * @return
      */
+    @PutMapping("/{id}")
     Result<Object> update(@PathVariable("id") String id, @RequestBody User user);
 
     /**
@@ -61,6 +65,8 @@ public interface UserControllerApi {
      * @param ids
      * @return
      */
+    @RequiresPermissions(value = "API-USER-DELETE")
+    @DeleteMapping(value = "/{ids}", name = "API-USER-DELETE")
     Result<Object> delete(@PathVariable("ids") String... ids);
 
     /**
@@ -69,6 +75,7 @@ public interface UserControllerApi {
      * @param userRoleDto
      * @return
      */
+    @PutMapping("/assignRoles")
     Result<Object> assignRoles(@RequestBody UserRoleDto userRoleDto);
 
     /**
@@ -76,6 +83,7 @@ public interface UserControllerApi {
      *
      * @return
      */
+    @GetMapping("/simple")
     Result<List<UserSimpleVo>> simple();
 
     /**
@@ -84,7 +92,8 @@ public interface UserControllerApi {
      * @param response
      * @return
      */
-    public void template(HttpServletResponse response);
+    @GetMapping("/template")
+    void template(HttpServletResponse response);
 
     /**
      * 导入excel，添加用户
@@ -92,13 +101,16 @@ public interface UserControllerApi {
      * @param file
      * @return
      */
+    @PostMapping("/import")
     Result<Object> importUser(@RequestParam("file") MultipartFile file);
 
     /**
      * 上传头像，并转化为DataURL返回
+     *
      * @param id
      * @param file
      * @return
      */
+    @PostMapping("/upload/{id}")
     Result<String> uploadImage(@PathVariable("id") String id, @RequestParam("file") MultipartFile file);
 }

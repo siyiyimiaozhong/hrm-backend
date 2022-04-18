@@ -18,6 +18,7 @@
         <module>hrm-api</module>
         <module>hrm-core</module>
         <module>hrm-eureka</module>
+        <module>hrm-social-security</module>
     </modules>
 
     <parent>

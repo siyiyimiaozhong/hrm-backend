@@ -43,7 +43,10 @@ import javax.persistence.criteria.Root;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -291,10 +294,10 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
             String imgBase64 = Base64.encode(file.getBytes());
             if (aBoolean) {
                 //更新
-                baiduAiUtil.faceUpdate(id,imgBase64);
-            }else{
+                baiduAiUtil.faceUpdate(id, imgBase64);
+            } else {
                 //注册
-                baiduAiUtil.faceRegister(id,imgBase64);
+                baiduAiUtil.faceRegister(id, imgBase64);
             }
             //4.返回
             return imgUrl;

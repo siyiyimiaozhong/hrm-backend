@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hrm-social-security" />
         <module name="hrm-common" />
         <module name="hrm-getway" />
         <module name="hrm-system" />
@@ -28,6 +29,7 @@
       <module name="hrm-eureka" target="1.8" />
       <module name="hrm-getway" target="1.8" />
       <module name="hrm-model" target="1.8" />
+      <module name="hrm-social-security" target="1.8" />
       <module name="hrm-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -41,6 +43,7 @@
       <module name="hrm-eureka" options="-parameters" />
       <module name="hrm-getway" options="-parameters" />
       <module name="hrm-model" options="-parameters" />
+      <module name="hrm-social-security" options="-parameters" />
       <module name="hrm-system" options="-parameters" />
     </option>
   </component>

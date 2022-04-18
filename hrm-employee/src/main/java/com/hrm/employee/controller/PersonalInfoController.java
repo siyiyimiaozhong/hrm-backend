@@ -5,7 +5,10 @@ import com.hrm.common.controller.BaseController;
 import com.hrm.core.entity.Result;
 import com.hrm.employee.service.UserCompanyPersonalService;
 import com.hrm.model.employee.UserCompanyPersonal;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Author: 敬学
@@ -14,7 +17,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/personalInfo")
 public class PersonalInfoController extends BaseController implements PersonalInfoControllerApi {
 
     private final UserCompanyPersonalService userCompanyPersonalService;
@@ -31,7 +33,6 @@ public class PersonalInfoController extends BaseController implements PersonalIn
      * @return
      * @throws Exception
      */
-    @PostMapping(value = "/{id}")
     @Override
     public Result<Object> savePersonalInfo(@PathVariable("id") String userId, @RequestBody UserCompanyPersonal userCompanyPersonal) {
         this.userCompanyPersonalService.save(userId, super.companyId, userCompanyPersonal);
@@ -45,7 +46,6 @@ public class PersonalInfoController extends BaseController implements PersonalIn
      * @return
      * @throws Exception
      */
-    @GetMapping("/{id}")
     @Override
     public Result<UserCompanyPersonal> getPersonalInfo(@PathVariable("id") String userId) {
         UserCompanyPersonal info = this.userCompanyPersonalService.get(userId);

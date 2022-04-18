@@ -57,14 +57,14 @@ public class FaceLoginServiceImpl implements FaceLoginService {
         //1.创建唯一标识
         String code = idWorker.nextId() + "";
         //2.生成二维码(url地址)
-        String content = url+"?code="+code;
+        String content = url + "?code=" + code;
         System.out.println(content);
         String file = qrCodeUtil.crateQRCode(content);
         System.out.println(file);
         //3.存入当前二维码状态（存入redis）
         FaceLoginResult result = new FaceLoginResult("-1");
-        redisTemplate.boundValueOps(getCacheKey(code)).set(result,10, TimeUnit.MINUTES);//状态对象，失效时间，单位
-        return new QRCode(code,file);
+        redisTemplate.boundValueOps(getCacheKey(code)).set(result, 10, TimeUnit.MINUTES);//状态对象，失效时间，单位
+        return new QRCode(code, file);
     }
 
     @Override
@@ -79,23 +79,23 @@ public class FaceLoginServiceImpl implements FaceLoginService {
             String userId = baiduAiUtil.faceSearch(Base64Util.encode(attachment.getBytes()));
             //2.自动登录（token）
             FaceLoginResult result = new FaceLoginResult("0");
-            if(userId != null) {
+            if (userId != null) {
                 //自己模拟登录
                 //查询用户对象
                 Optional<User> userOptional = this.userDao.findById(userId);
-                if(userOptional.isPresent()) {
+                if (userOptional.isPresent()) {
                     User user = userOptional.get();
                     //获取subject
                     Subject subject = SecurityUtils.getSubject();
                     //调用login方法登录
-                    subject.login(new UsernamePasswordToken(user.getMobile(),user.getPassword()));
+                    subject.login(new UsernamePasswordToken(user.getMobile(), user.getPassword()));
                     //获取token（sessionId）
-                    String token = subject.getSession().getId()+"";
-                    result = new FaceLoginResult("1",token,userId);
+                    String token = subject.getSession().getId() + "";
+                    result = new FaceLoginResult("1", token, userId);
                 }
             }
             //3.修改二维码的状态
-            redisTemplate.boundValueOps(getCacheKey(code)).set(result,10,TimeUnit.MINUTES);
+            redisTemplate.boundValueOps(getCacheKey(code)).set(result, 10, TimeUnit.MINUTES);
             return userId;
         } catch (Exception e) {
             throw new BusinessException(ResultCode.LOGIN_FAILED);
@@ -115,6 +115,7 @@ public class FaceLoginServiceImpl implements FaceLoginService {
 
     /**
      * 构造缓存key
+     *
      * @param code
      * @return
      */

@@ -18,9 +18,9 @@ public class FaceLoginResult implements Serializable {
     private static final long serialVersionUID = -1616426041373762391L;
     /**
      * 二维码使用状态
-     *      -1:未使用
-     *      0：失败
-     *      1：登录成功（返回用户id和token）
+     * -1:未使用
+     * 0：失败
+     * 1：登录成功（返回用户id和token）
      */
     private String state;
     /**

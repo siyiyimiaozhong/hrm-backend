@@ -1,10 +1,8 @@
 package com.hrm.employee.service;
 
 import com.hrm.model.employee.UserCompanyPersonal;
-import com.hrm.model.employee.vo.EmployeeReportVo;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  * @Author: 敬学
@@ -31,6 +29,7 @@ public interface UserCompanyPersonalService {
 
     /**
      * 导出员工报表
+     *
      * @param response
      * @param companyId
      * @param month
@@ -39,6 +38,7 @@ public interface UserCompanyPersonalService {
 
     /**
      * 根据用户id导出对应的简介pdf
+     *
      * @param id
      * @param response
      */

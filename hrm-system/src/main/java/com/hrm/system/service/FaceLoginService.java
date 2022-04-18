@@ -12,12 +12,14 @@ import org.springframework.web.multipart.MultipartFile;
 public interface FaceLoginService {
     /**
      * 创建并获取二维码
+     *
      * @return
      */
     QRCode getQRCode();
 
     /**
      * 根据唯一标识，查询用户是否登录成功
+     *
      * @param code
      * @return
      */
@@ -25,6 +27,7 @@ public interface FaceLoginService {
 
     /**
      * 扫描二维码之后，使用拍摄照片进行登录
+     *
      * @param code
      * @param attachment
      * @return 登录成功之后返回的用户id 登录失败为null
@@ -33,6 +36,7 @@ public interface FaceLoginService {
 
     /**
      * 图像检测 判断图片中是否存在面部头像
+     *
      * @param attachment
      * @return
      */

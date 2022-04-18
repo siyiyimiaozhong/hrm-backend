@@ -112,6 +112,7 @@ public interface UserService {
 
     /**
      * 上传用户头像，转化为DataURL返回给前端
+     *
      * @param id
      * @param file
      * @return

@@ -4,7 +4,7 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:6868/eureka/
   instance:
-    preferIpAddress : true
+    preferIpAddress: true
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
 #服务配置
 server:

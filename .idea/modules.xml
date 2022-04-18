@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/hrm-eureka/hrm-eureka.iml" filepath="$PROJECT_DIR$/hrm-eureka/hrm-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-getway/hrm-getway.iml" filepath="$PROJECT_DIR$/hrm-getway/hrm-getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-model/hrm-model.iml" filepath="$PROJECT_DIR$/hrm-model/hrm-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-social-security/hrm-social-security.iml" filepath="$PROJECT_DIR$/hrm-social-security/hrm-social-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-system/hrm-system.iml" filepath="$PROJECT_DIR$/hrm-system/hrm-system.iml" />
     </modules>
   </component>

@@ -16,6 +16,7 @@ import java.util.List;
 public interface UserCompanyPersonalDao extends JpaRepository<UserCompanyPersonal, String>, JpaSpecificationExecutor<UserCompanyPersonal> {
     /**
      * 根据用户id查询用户信息
+     *
      * @param userId
      * @return
      */
@@ -23,6 +24,7 @@ public interface UserCompanyPersonalDao extends JpaRepository<UserCompanyPersona
 
     /**
      * 根据企业id以及月份 查询用户报表细腻些
+     *
      * @param companyId
      * @param month
      * @return
