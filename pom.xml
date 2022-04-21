@@ -19,6 +19,7 @@
         <module>hrm-core</module>
         <module>hrm-eureka</module>
         <module>hrm-social-security</module>
+        <module>hrm-attendance</module>
     </modules>
 
     <parent>

@@ -1,6 +1,6 @@
 package com.hrm.employee.service;
 
-import com.hrm.model.employee.UserCompanyJobs;
+import com.hrm.model.employee.entity.UserCompanyJobs;
 
 /**
  * @Author: 敬学

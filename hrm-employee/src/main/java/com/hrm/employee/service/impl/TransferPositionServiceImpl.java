@@ -2,7 +2,7 @@ package com.hrm.employee.service.impl;
 
 import com.hrm.employee.dao.TransferPositionDao;
 import com.hrm.employee.service.TransferPositionService;
-import com.hrm.model.employee.TransferPosition;
+import com.hrm.model.employee.entity.TransferPosition;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,6 +1,6 @@
 package com.hrm.employee.service;
 
-import com.hrm.model.employee.TransferPosition;
+import com.hrm.model.employee.entity.TransferPosition;
 
 /**
  * @Author: 敬学

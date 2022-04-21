@@ -1,9 +1,9 @@
 package com.hrm.system.controller;
 
 import com.hrm.api.system.FaceLoginControllerApi;
-import com.hrm.core.entity.FaceLoginResult;
-import com.hrm.core.entity.QRCode;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.FaceLoginResult;
+import com.hrm.core.pojo.QRCode;
+import com.hrm.core.pojo.Result;
 import com.hrm.system.service.FaceLoginService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;

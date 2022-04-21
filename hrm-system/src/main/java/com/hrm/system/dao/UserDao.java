@@ -1,6 +1,6 @@
 package com.hrm.system.dao;
 
-import com.hrm.model.system.User;
+import com.hrm.model.system.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

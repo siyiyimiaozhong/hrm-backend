@@ -1,7 +1,7 @@
 package com.hrm.api.system;
 
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.Permission;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.Permission;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;

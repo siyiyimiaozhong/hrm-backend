@@ -4,7 +4,7 @@ import com.hrm.core.constant.ResultCode;
 import com.hrm.core.exception.BusinessException;
 import com.hrm.employee.dao.ResignationDao;
 import com.hrm.employee.service.ResignationService;
-import com.hrm.model.employee.Resignation;
+import com.hrm.model.employee.entity.Resignation;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

@@ -1,7 +1,7 @@
 package com.hrm.api.system;
 
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.City;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.City;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

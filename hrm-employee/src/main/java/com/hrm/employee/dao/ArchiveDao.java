@@ -1,6 +1,6 @@
 package com.hrm.employee.dao;
 
-import com.hrm.model.employee.Archive;
+import com.hrm.model.employee.entity.Archive;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

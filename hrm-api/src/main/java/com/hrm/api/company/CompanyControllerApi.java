@@ -1,6 +1,6 @@
 package com.hrm.api.company;
 
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.company.Company;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

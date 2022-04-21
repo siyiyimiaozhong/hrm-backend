@@ -1,11 +1,11 @@
 package com.hrm.employee.controller;
 
 import com.hrm.api.employee.TransferPositionControllerApi;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.employee.service.TransferPositionService;
 import com.hrm.employee.service.UserCompanyJobsService;
-import com.hrm.model.employee.TransferPosition;
-import com.hrm.model.employee.UserCompanyJobs;
+import com.hrm.model.employee.entity.TransferPosition;
+import com.hrm.model.employee.entity.UserCompanyJobs;
 import org.springframework.web.bind.annotation.*;
 
 /**

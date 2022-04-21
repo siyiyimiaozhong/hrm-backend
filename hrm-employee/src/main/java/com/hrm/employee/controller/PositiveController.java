@@ -1,9 +1,9 @@
 package com.hrm.employee.controller;
 
 import com.hrm.api.employee.PositiveControllerApi;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.employee.service.PositiveService;
-import com.hrm.model.employee.Positive;
+import com.hrm.model.employee.entity.Positive;
 import org.springframework.web.bind.annotation.*;
 
 /**

@@ -1,7 +1,7 @@
 package com.hrm.common.handler;
 
 import com.hrm.core.constant.ResultCode;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.core.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.AuthorizationException;

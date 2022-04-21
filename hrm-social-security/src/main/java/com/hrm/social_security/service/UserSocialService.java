@@ -1,7 +1,7 @@
 package com.hrm.social_security.service;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.model.social_security.UserSocialSecurity;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.model.social_security.entity.UserSocialSecurity;
 
 import java.util.Map;
 

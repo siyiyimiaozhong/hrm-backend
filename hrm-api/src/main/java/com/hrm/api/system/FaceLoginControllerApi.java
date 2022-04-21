@@ -1,8 +1,8 @@
 package com.hrm.api.system;
 
-import com.hrm.core.entity.FaceLoginResult;
-import com.hrm.core.entity.QRCode;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.FaceLoginResult;
+import com.hrm.core.pojo.QRCode;
+import com.hrm.core.pojo.Result;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 

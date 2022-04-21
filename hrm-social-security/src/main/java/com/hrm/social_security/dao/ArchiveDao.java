@@ -1,6 +1,6 @@
 package com.hrm.social_security.dao;
 
-import com.hrm.model.social_security.Archive;
+import com.hrm.model.social_security.entity.Archive;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

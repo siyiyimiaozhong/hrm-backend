@@ -1,6 +1,6 @@
 package com.hrm.system.service;
 
-import com.hrm.model.system.Permission;
+import com.hrm.model.system.entity.Permission;
 
 import java.util.List;
 import java.util.Map;

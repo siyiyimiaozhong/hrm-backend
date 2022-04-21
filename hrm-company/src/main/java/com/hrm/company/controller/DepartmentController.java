@@ -3,7 +3,7 @@ package com.hrm.company.controller;
 import com.hrm.api.company.DepartmentControllerApi;
 import com.hrm.common.controller.BaseController;
 import com.hrm.company.service.DepartmentService;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.company.Department;
 import com.hrm.model.company.vo.CompanyDepartmentListVo;
 import org.springframework.web.bind.annotation.*;

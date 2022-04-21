@@ -1,9 +1,9 @@
 package com.hrm.employee.service.impl;
 
-import com.hrm.core.entity.PageResult;
+import com.hrm.core.pojo.PageResult;
 import com.hrm.employee.dao.ArchiveDao;
 import com.hrm.employee.service.ArchiveService;
-import com.hrm.model.employee.Archive;
+import com.hrm.model.employee.entity.Archive;
 import com.puppycrawl.tools.checkstyle.utils.CommonUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

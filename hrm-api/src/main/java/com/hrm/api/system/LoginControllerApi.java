@@ -1,6 +1,6 @@
 package com.hrm.api.system;
 
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.system.vo.LoginVo;
 import org.springframework.web.bind.annotation.RequestBody;
 

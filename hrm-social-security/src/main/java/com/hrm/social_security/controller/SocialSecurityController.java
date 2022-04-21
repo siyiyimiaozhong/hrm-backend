@@ -2,13 +2,14 @@ package com.hrm.social_security.controller;
 
 import com.hrm.api.social_security.SocialSecurityControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
-import com.hrm.model.social_security.*;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.social_security.entity.*;
 import com.hrm.social_security.service.ArchiveService;
 import com.hrm.social_security.service.CompanySettingsService;
 import com.hrm.social_security.service.PaymentItemService;
 import com.hrm.social_security.service.UserSocialService;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -93,7 +94,7 @@ public class SocialSecurityController extends BaseController implements SocialSe
      * @return
      */
     @Override
-    public Result<Map<String, Object>> findById(String id) {
+    public Result<Map<String, Object>> findById(@PathVariable("id") String id) {
         Map<String, Object> map = this.userSocialService.get(id);
         return Result.success(map);
     }
@@ -105,7 +106,7 @@ public class SocialSecurityController extends BaseController implements SocialSe
      * @return
      */
     @Override
-    public Result<Object> saveUserSocialSecurity(UserSocialSecurity uss) {
+    public Result<Object> saveUserSocialSecurity(@PathVariable("id") String id, @RequestBody UserSocialSecurity uss) {
         this.userSocialService.saveUserSocialSecurity(uss);
         return Result.success();
     }

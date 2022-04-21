@@ -1,7 +1,7 @@
 package com.hrm.model.system.vo;
 
-import com.hrm.model.system.Permission;
-import com.hrm.model.system.Role;
+import com.hrm.model.system.entity.Permission;
+import com.hrm.model.system.entity.Role;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 

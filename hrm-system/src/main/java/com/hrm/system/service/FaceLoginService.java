@@ -1,7 +1,7 @@
 package com.hrm.system.service;
 
-import com.hrm.core.entity.FaceLoginResult;
-import com.hrm.core.entity.QRCode;
+import com.hrm.core.pojo.FaceLoginResult;
+import com.hrm.core.pojo.QRCode;
 import org.springframework.web.multipart.MultipartFile;
 
 /**

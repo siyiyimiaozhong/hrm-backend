@@ -1,7 +1,7 @@
 package com.hrm.model.employee.vo;
 
-import com.hrm.model.employee.Resignation;
-import com.hrm.model.employee.UserCompanyPersonal;
+import com.hrm.model.employee.entity.Resignation;
+import com.hrm.model.employee.entity.UserCompanyPersonal;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

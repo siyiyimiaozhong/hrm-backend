@@ -1,7 +1,7 @@
 package com.hrm.system.service.impl;
 
 import com.hrm.common.utils.IdWorker;
-import com.hrm.model.system.City;
+import com.hrm.model.system.entity.City;
 import com.hrm.system.dao.CityDao;
 import com.hrm.system.service.CityService;
 import org.springframework.stereotype.Service;

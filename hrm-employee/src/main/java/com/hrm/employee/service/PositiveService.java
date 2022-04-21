@@ -1,6 +1,6 @@
 package com.hrm.employee.service;
 
-import com.hrm.model.employee.Positive;
+import com.hrm.model.employee.entity.Positive;
 
 /**
  * @Author: 敬学

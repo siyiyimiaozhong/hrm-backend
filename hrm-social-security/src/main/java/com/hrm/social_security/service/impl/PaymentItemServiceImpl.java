@@ -1,6 +1,6 @@
 package com.hrm.social_security.service.impl;
 
-import com.hrm.model.social_security.CityPaymentItem;
+import com.hrm.model.social_security.entity.CityPaymentItem;
 import com.hrm.social_security.dao.CityPaymentItemDao;
 import com.hrm.social_security.service.PaymentItemService;
 import org.springframework.stereotype.Service;

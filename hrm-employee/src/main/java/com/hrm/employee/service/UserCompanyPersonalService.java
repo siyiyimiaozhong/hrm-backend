@@ -1,6 +1,6 @@
 package com.hrm.employee.service;
 
-import com.hrm.model.employee.UserCompanyPersonal;
+import com.hrm.model.employee.entity.UserCompanyPersonal;
 
 import javax.servlet.http.HttpServletResponse;
 

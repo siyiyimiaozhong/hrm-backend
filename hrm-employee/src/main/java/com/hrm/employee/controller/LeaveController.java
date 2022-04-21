@@ -1,9 +1,9 @@
 package com.hrm.employee.controller;
 
 import com.hrm.api.employee.LeaveControllerApi;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.employee.service.ResignationService;
-import com.hrm.model.employee.Resignation;
+import com.hrm.model.employee.entity.Resignation;
 import org.springframework.web.bind.annotation.*;
 
 /**

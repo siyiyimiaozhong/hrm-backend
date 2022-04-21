@@ -2,7 +2,7 @@ package com.hrm.company.controller;
 
 import com.hrm.api.company.CompanyControllerApi;
 import com.hrm.company.service.CompanyService;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.company.Company;
 import org.springframework.web.bind.annotation.*;
 

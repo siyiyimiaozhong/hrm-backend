@@ -1,7 +1,7 @@
 package com.hrm.model.system.vo;
 
-import com.hrm.model.system.Role;
-import com.hrm.model.system.User;
+import com.hrm.model.system.entity.Role;
+import com.hrm.model.system.entity.User;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 

@@ -1,6 +1,6 @@
 package com.hrm.api.employee;
 
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 

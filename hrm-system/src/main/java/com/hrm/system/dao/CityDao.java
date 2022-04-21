@@ -1,6 +1,6 @@
 package com.hrm.system.dao;
 
-import com.hrm.model.system.City;
+import com.hrm.model.system.entity.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

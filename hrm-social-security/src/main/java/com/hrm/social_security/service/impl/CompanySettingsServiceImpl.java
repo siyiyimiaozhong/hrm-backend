@@ -1,6 +1,6 @@
 package com.hrm.social_security.service.impl;
 
-import com.hrm.model.social_security.CompanySettings;
+import com.hrm.model.social_security.entity.CompanySettings;
 import com.hrm.social_security.dao.CompanySettingsDao;
 import com.hrm.social_security.service.CompanySettingsService;
 import org.springframework.stereotype.Service;

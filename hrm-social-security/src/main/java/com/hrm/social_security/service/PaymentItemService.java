@@ -1,6 +1,6 @@
 package com.hrm.social_security.service;
 
-import com.hrm.model.social_security.CityPaymentItem;
+import com.hrm.model.social_security.entity.CityPaymentItem;
 
 import java.util.List;
 

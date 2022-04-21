@@ -2,9 +2,9 @@ package com.hrm.system.controller;
 
 import com.hrm.api.system.RoleControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.Role;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.Role;
 import com.hrm.model.system.dto.RoleDto;
 import com.hrm.model.system.vo.RoleVo;
 import com.hrm.system.service.RoleService;

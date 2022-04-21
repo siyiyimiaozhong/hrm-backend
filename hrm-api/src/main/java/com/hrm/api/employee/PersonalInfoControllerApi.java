@@ -1,7 +1,7 @@
 package com.hrm.api.employee;
 
-import com.hrm.core.entity.Result;
-import com.hrm.model.employee.UserCompanyPersonal;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.employee.entity.UserCompanyPersonal;
 import org.springframework.web.bind.annotation.*;
 
 /**

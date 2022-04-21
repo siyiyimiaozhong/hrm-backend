@@ -1,7 +1,7 @@
 package com.hrm.common.controller;
 
 import com.hrm.core.constant.ResultCode;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

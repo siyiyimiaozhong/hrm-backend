@@ -1,7 +1,7 @@
 package com.hrm.employee.service;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.model.employee.Archive;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.model.employee.entity.Archive;
 
 /**
  * @Author: 敬学

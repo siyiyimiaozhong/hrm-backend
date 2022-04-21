@@ -1,6 +1,6 @@
 package com.hrm.social_security.service;
 
-import com.hrm.model.social_security.CompanySettings;
+import com.hrm.model.social_security.entity.CompanySettings;
 
 /**
  * @Author: 敬学

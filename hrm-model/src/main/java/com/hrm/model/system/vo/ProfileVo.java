@@ -1,8 +1,8 @@
 package com.hrm.model.system.vo;
 
-import com.hrm.model.system.Permission;
-import com.hrm.model.system.Role;
-import com.hrm.model.system.User;
+import com.hrm.model.system.entity.Permission;
+import com.hrm.model.system.entity.Role;
+import com.hrm.model.system.entity.User;
 import lombok.Data;
 
 import java.io.Serializable;

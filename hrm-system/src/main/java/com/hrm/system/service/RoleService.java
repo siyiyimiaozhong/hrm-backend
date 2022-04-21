@@ -1,7 +1,7 @@
 package com.hrm.system.service;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.model.system.Role;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.model.system.entity.Role;
 import com.hrm.model.system.dto.RoleDto;
 import com.hrm.model.system.vo.RoleVo;
 

@@ -1,6 +1,6 @@
 package com.hrm.social_security.dao;
 
-import com.hrm.model.social_security.PaymentItem;
+import com.hrm.model.social_security.entity.PaymentItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

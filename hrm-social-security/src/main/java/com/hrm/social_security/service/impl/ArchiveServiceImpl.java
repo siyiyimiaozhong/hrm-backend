@@ -2,12 +2,12 @@ package com.hrm.social_security.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.hrm.common.utils.IdWorker;
-import com.hrm.core.entity.Result;
-import com.hrm.model.employee.UserCompanyPersonal;
-import com.hrm.model.social_security.Archive;
-import com.hrm.model.social_security.ArchiveDetail;
-import com.hrm.model.social_security.CityPaymentItem;
-import com.hrm.model.social_security.UserSocialSecurity;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.employee.entity.UserCompanyPersonal;
+import com.hrm.model.social_security.entity.Archive;
+import com.hrm.model.social_security.entity.ArchiveDetail;
+import com.hrm.model.social_security.entity.CityPaymentItem;
+import com.hrm.model.social_security.entity.UserSocialSecurity;
 import com.hrm.social_security.client.PersonalInfoFeignClient;
 import com.hrm.social_security.dao.ArchiveDao;
 import com.hrm.social_security.dao.ArchiveDetailDao;

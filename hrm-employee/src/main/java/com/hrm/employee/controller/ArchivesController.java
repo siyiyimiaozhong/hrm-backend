@@ -2,10 +2,10 @@ package com.hrm.employee.controller;
 
 import com.hrm.api.employee.ArchivesControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
 import com.hrm.employee.service.ArchiveService;
-import com.hrm.model.employee.Archive;
+import com.hrm.model.employee.entity.Archive;
 import org.springframework.web.bind.annotation.*;
 
 /**

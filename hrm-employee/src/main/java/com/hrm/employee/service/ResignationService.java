@@ -1,6 +1,6 @@
 package com.hrm.employee.service;
 
-import com.hrm.model.employee.Resignation;
+import com.hrm.model.employee.entity.Resignation;
 
 /**
  * @Author: 敬学

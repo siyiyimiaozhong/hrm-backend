@@ -1,8 +1,8 @@
 package com.hrm.api.system;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.User;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.User;
 import com.hrm.model.system.dto.UserDto;
 import com.hrm.model.system.dto.UserRoleDto;
 import com.hrm.model.system.vo.UserSimpleVo;

@@ -1,7 +1,7 @@
 package com.hrm.social_security.service;
 
-import com.hrm.model.social_security.Archive;
-import com.hrm.model.social_security.ArchiveDetail;
+import com.hrm.model.social_security.entity.Archive;
+import com.hrm.model.social_security.entity.ArchiveDetail;
 
 import java.util.List;
 

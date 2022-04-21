@@ -1,6 +1,6 @@
 package com.hrm.employee.dao;
 
-import com.hrm.model.employee.TransferPosition;
+import com.hrm.model.employee.entity.TransferPosition;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

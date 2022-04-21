@@ -1,7 +1,7 @@
 package com.hrm.social_security.service.impl;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.model.social_security.UserSocialSecurity;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.model.social_security.entity.UserSocialSecurity;
 import com.hrm.social_security.client.UserFeignClient;
 import com.hrm.social_security.dao.UserSocialSecurityDao;
 import com.hrm.social_security.service.UserSocialService;

@@ -4,7 +4,7 @@ import com.hrm.core.constant.ResultCode;
 import com.hrm.core.exception.BusinessException;
 import com.hrm.employee.dao.UserCompanyJobsDao;
 import com.hrm.employee.service.UserCompanyJobsService;
-import com.hrm.model.employee.UserCompanyJobs;
+import com.hrm.model.employee.entity.UserCompanyJobs;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

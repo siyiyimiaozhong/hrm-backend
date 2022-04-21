@@ -1,6 +1,6 @@
 package com.hrm.employee.dao;
 
-import com.hrm.model.employee.Resignation;
+import com.hrm.model.employee.entity.Resignation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

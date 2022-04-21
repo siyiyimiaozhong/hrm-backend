@@ -1,6 +1,6 @@
 package com.hrm.system.service;
 
-import com.hrm.model.system.City;
+import com.hrm.model.system.entity.City;
 
 import java.util.List;
 

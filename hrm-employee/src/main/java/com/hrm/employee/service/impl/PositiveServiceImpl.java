@@ -4,7 +4,7 @@ import com.hrm.core.constant.ResultCode;
 import com.hrm.core.exception.BusinessException;
 import com.hrm.employee.dao.PositiveDao;
 import com.hrm.employee.service.PositiveService;
-import com.hrm.model.employee.Positive;
+import com.hrm.model.employee.entity.Positive;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,6 +1,6 @@
 package com.hrm.api.company;
 
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.company.Department;
 import com.hrm.model.company.vo.CompanyDepartmentListVo;
 import org.springframework.web.bind.annotation.*;

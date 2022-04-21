@@ -1,8 +1,8 @@
 package com.hrm.api.employee;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
-import com.hrm.model.employee.Archive;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.employee.entity.Archive;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 

@@ -1,8 +1,8 @@
 package com.hrm.api.social_security;
 
-import com.hrm.core.entity.PageResult;
-import com.hrm.core.entity.Result;
-import com.hrm.model.social_security.*;
+import com.hrm.core.pojo.PageResult;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.social_security.entity.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -43,13 +43,13 @@ public interface SocialSecurityControllerApi {
      * 根据用户id查询用户的社保数据
      */
     @GetMapping("/{id}")
-    Result<Map<String, Object>> findById(@PathVariable String id);
+    Result<Map<String, Object>> findById(@PathVariable("id") String id);
 
     /**
      * 保存或更新用户社保
      */
-    @PutMapping(value = "/{id}")
-    Result<Object> saveUserSocialSecurity(@RequestBody UserSocialSecurity uss);
+    @PutMapping("/{id}")
+    Result<Object> saveUserSocialSecurity(@PathVariable("id") String id, UserSocialSecurity uss);
 
     /**
      * 根据城市id查询参保城市的参保项目
@@ -59,7 +59,7 @@ public interface SocialSecurityControllerApi {
 
     /**
      * 查询月份数据报表
-     * /historys/201907?yearMonth=201907&opType=1
+     * /historys/202202?yearMonth=202202&opType=1
      * opType : 1 (当月数据)
      * : 其他(历史归档的详细记录)
      */

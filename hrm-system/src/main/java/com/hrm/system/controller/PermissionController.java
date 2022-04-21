@@ -1,8 +1,8 @@
 package com.hrm.system.controller;
 
 import com.hrm.api.system.PermissionControllerApi;
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.Permission;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.Permission;
 import com.hrm.system.service.PermissionService;
 import org.springframework.web.bind.annotation.*;
 

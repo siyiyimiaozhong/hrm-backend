@@ -2,7 +2,7 @@ package com.hrm.system.controller;
 
 import com.hrm.api.system.LoginControllerApi;
 import com.hrm.common.controller.BaseController;
-import com.hrm.core.entity.Result;
+import com.hrm.core.pojo.Result;
 import com.hrm.model.system.vo.LoginVo;
 import com.hrm.model.system.vo.ProfileVo;
 import com.hrm.system.service.UserService;

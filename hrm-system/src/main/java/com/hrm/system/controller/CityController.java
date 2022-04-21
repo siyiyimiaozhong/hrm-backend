@@ -1,8 +1,8 @@
 package com.hrm.system.controller;
 
 import com.hrm.api.system.CityControllerApi;
-import com.hrm.core.entity.Result;
-import com.hrm.model.system.City;
+import com.hrm.core.pojo.Result;
+import com.hrm.model.system.entity.City;
 import com.hrm.system.service.CityService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
