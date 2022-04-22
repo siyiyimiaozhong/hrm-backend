@@ -8,19 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hrm-social-security" />
+        <module name="hrm-attendance" />
         <module name="hrm-common" />
         <module name="hrm-getway" />
-        <module name="hrm-system" />
         <module name="hrm-api" />
+        <module name="hrm-company" />
         <module name="hrm-model" />
         <module name="hrm-core" />
         <module name="hrm-employee" />
-        <module name="hrm-company" />
+        <module name="hrm-system" />
         <module name="hrm-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hrm-api" target="1.8" />
+      <module name="hrm-attendance" target="1.8" />
       <module name="hrm-backend" target="1.8" />
       <module name="hrm-common" target="1.8" />
       <module name="hrm-company" target="1.8" />
@@ -36,6 +38,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hrm-api" options="-parameters" />
+      <module name="hrm-attendance" options="-parameters" />
       <module name="hrm-common" options="-parameters" />
       <module name="hrm-company" options="-parameters" />
       <module name="hrm-core" options="-parameters" />

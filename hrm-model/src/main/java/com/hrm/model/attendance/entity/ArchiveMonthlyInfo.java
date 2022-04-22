@@ -66,7 +66,7 @@ public class ArchiveMonthlyInfo extends BaseEntity implements Serializable {
     private String homeLeavaDays;
 
     /**
-     *工伤假
+     * 工伤假
      */
     private String accidentialLeaveDays;
     private String dayOffLeaveDays;
@@ -126,6 +126,9 @@ public class ArchiveMonthlyInfo extends BaseEntity implements Serializable {
     private String salaryOfficialDays;
 
 
+    private String archiveDate;
+
+
     public ArchiveMonthlyInfo(User user) {
         this.userId = user.getId();
         this.name = user.getUsername();
@@ -135,12 +138,22 @@ public class ArchiveMonthlyInfo extends BaseEntity implements Serializable {
     }
 
 
-    public void setStatisData(Map map) {
-        this.normalDays = (String) map.get("at1").toString();
-        this.absenceDays = (String) map.get("at2").toString();
-        this.laterTimes = (String) map.get("at3").toString();
-        this.earlyTimes = (String) map.get("at4").toString();
-        this.leaveDays = (String) map.get("at8").toString();
-        this.dayOffLeaveDays = (String) map.get("at17").toString();
+    public void setStatisData(Map<String, Object> map) {
+        this.normalDays = map.get("at1").toString(); //正常
+        this.absenceDays = map.get("at2").toString(); //旷工
+        this.laterTimes = map.get("at3").toString();//迟到
+        this.earlyTimes = map.get("at4").toString(); //早退
+        this.leaveDays = map.get("at8").toString(); //事假
+        this.dayOffLeaveDays = map.get("at17").toString(); //调休
+        //平均工作日21.75
+        this.workingDays = "21.75";
+        //是否全勤
+        this.isFullAttendanceint = Integer.parseInt(this.normalDays) >= 21.75 ? 0 : 1;
+        //出勤天数 = 正常 + 早退 + 迟到
+        this.actualAtteOfficialDays = Integer.parseInt(this.laterTimes) +
+                Integer.parseInt(this.normalDays) +
+                Integer.parseInt(this.earlyTimes) + "";
+        //出勤天数 = 计薪天数
+        this.salaryOfficialDays = this.actualAtteOfficialDays;
     }
 }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hrm-api/hrm-api.iml" filepath="$PROJECT_DIR$/hrm-api/hrm-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-attendance/hrm-attendance.iml" filepath="$PROJECT_DIR$/hrm-attendance/hrm-attendance.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hrm-backend.iml" filepath="$PROJECT_DIR$/.idea/hrm-backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-common/hrm-common.iml" filepath="$PROJECT_DIR$/hrm-common/hrm-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-company/hrm-company.iml" filepath="$PROJECT_DIR$/hrm-company/hrm-company.iml" />

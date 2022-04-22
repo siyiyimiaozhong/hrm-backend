@@ -34,7 +34,7 @@ public interface AttendanceControllerApi {
      * @throws Exception
      */
     @GetMapping
-    Result<Map<String, Object>> importExcel(int page,int pagesize);
+    Result<Map<String, Object>> page(int page,int pagesize);
 
     /**
      * 编辑用户的考勤记录
@@ -60,7 +60,7 @@ public interface AttendanceControllerApi {
     Result<List<ArchiveMonthlyInfo>> reports(String atteDate);
 
     /**
-     * 获取月报表归档数据
+     * 数据归档
      *  /attendances/archive/item?archiveDate=202202
      * @param archiveDate
      * @return
