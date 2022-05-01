@@ -20,6 +20,7 @@
         <module>hrm-eureka</module>
         <module>hrm-social-security</module>
         <module>hrm-attendance</module>
+        <module>hrm-salary</module>
     </modules>
 
     <parent>

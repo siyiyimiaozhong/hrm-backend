@@ -86,5 +86,5 @@ public interface SocialSecurityControllerApi {
      * /social_securitys/historys/data?userId=1063705482939731968&yearMonth=201906
      */
     @GetMapping("/historys/data")
-    Result<ArchiveDetail> historysData(String userId, String yearMonth);
+    Result<ArchiveDetail> historysData(@RequestParam("userId") String userId, @RequestParam("yearMonth") String yearMonth);
 }

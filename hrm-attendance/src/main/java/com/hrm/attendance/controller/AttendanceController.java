@@ -8,6 +8,8 @@ import com.hrm.core.pojo.Result;
 import com.hrm.model.attendance.entity.ArchiveMonthly;
 import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.attendance.entity.Attendance;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -63,7 +65,7 @@ public class AttendanceController extends BaseController implements AttendanceCo
      * @return
      */
     @Override
-    public Result<Object> editAtte(Attendance attendance) {
+    public Result<Object> editAtte(@RequestBody Attendance attendance) {
         this.attendanceService.updateAtte(attendance);
         return Result.success();
     }
@@ -75,8 +77,8 @@ public class AttendanceController extends BaseController implements AttendanceCo
      * @return
      */
     @Override
-    public Result<List<ArchiveMonthlyInfo>> reports(String atteDate) {
-        List<ArchiveMonthlyInfo> reports = this.attendanceService.getReports(atteDate, companyId);
+    public Result<List<ArchiveMonthlyInfo>> reports(@RequestParam("atteDate") String atteDate) {
+        List<ArchiveMonthlyInfo> reports = this.attendanceService.getReports(atteDate, super.companyId);
         return Result.success(reports);
     }
 
@@ -136,7 +138,7 @@ public class AttendanceController extends BaseController implements AttendanceCo
      * @return
      */
     @Override
-    public Result<ArchiveMonthlyInfo> historyData(String userId, String yearMonth) {
+    public Result<ArchiveMonthlyInfo> historyData(@PathVariable("userId") String userId, @PathVariable("yearMonth") String yearMonth) {
         ArchiveMonthlyInfo info = this.archiveService.findUserArchiveDetail(userId, yearMonth);
         return Result.success(info);
     }

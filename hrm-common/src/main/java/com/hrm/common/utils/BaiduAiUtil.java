@@ -17,31 +17,23 @@ import java.util.HashMap;
 @Component
 public class BaiduAiUtil {
 
-    private String appId;
-    private String apiKey;
-    private String secretKey;
-    private String imageType;
-    private String groupId;
+    private final String imageType;
+    private final String groupId;
 
-    private AipFace client;
+    private final AipFace client;
 
     private final HashMap<String, String> options = new HashMap<>();
 
     public BaiduAiUtil(BaiDuAiConfig config) {
-        this.appId = config.getAppId();
-        this.apiKey = config.getApiKey();
-        this.secretKey = config.getSecretKey();
+        String appId = config.getAppId();
+        String apiKey = config.getApiKey();
+        String secretKey = config.getSecretKey();
         this.imageType = config.getImageType();
         this.groupId = config.getGroupId();
-    }
 
-    public BaiduAiUtil() {
         options.put("quality_control", "NORMAL");
         options.put("liveness_control", "LOW");
-    }
 
-    @PostConstruct
-    public void init() {
         client = new AipFace(appId, apiKey, secretKey);
     }
 

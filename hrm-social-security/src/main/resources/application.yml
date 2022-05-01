@@ -13,7 +13,7 @@ server:
 spring:
   #1.应用配置
   application:
-    name: hrm-social-securitys #指定服务名
+    name: hrm-social-security #指定服务名
   #2.数据库连接池
   datasource:
     driver-class-name: com.mysql.jdbc.Driver

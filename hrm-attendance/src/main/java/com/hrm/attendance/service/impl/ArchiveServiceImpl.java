@@ -6,11 +6,16 @@ import com.hrm.attendance.dao.AttendanceDao;
 import com.hrm.attendance.dao.UserDao;
 import com.hrm.attendance.service.ArchiveService;
 import com.hrm.common.utils.IdWorker;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.exception.BusinessException;
 import com.hrm.model.attendance.entity.ArchiveMonthly;
 import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.system.entity.User;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -23,18 +28,18 @@ import java.util.Map;
 public class ArchiveServiceImpl implements ArchiveService {
 
     private final AttendanceDao attendanceDao;
-    private final ArchiveMonthlyDao atteArchiveMonthlyDao;
+    private final ArchiveMonthlyDao archiveMonthlyDao;
     private final ArchiveMonthlyInfoDao archiveMonthlyInfoDao;
     private final UserDao userDao;
     private final IdWorker idWorker;
 
     public ArchiveServiceImpl(AttendanceDao attendanceDao,
-                              ArchiveMonthlyDao atteArchiveMonthlyDao,
+                              ArchiveMonthlyDao archiveMonthlyDao,
                               ArchiveMonthlyInfoDao archiveMonthlyInfoDao,
                               UserDao userDao,
                               IdWorker idWorker) {
         this.attendanceDao = attendanceDao;
-        this.atteArchiveMonthlyDao = atteArchiveMonthlyDao;
+        this.archiveMonthlyDao = archiveMonthlyDao;
         this.archiveMonthlyInfoDao = archiveMonthlyInfoDao;
         this.userDao = userDao;
         this.idWorker = idWorker;
@@ -51,7 +56,7 @@ public class ArchiveServiceImpl implements ArchiveService {
         List<User> users = this.userDao.findByCompanyId(companyId);
 
         //1.保存归档主表数据
-        this.atteArchiveMonthlyDao.findByCompanyIdAndArchiveYear(companyId,archiveDate);
+        this.archiveMonthlyDao.findByCompanyIdAndArchiveYear(companyId,archiveDate);
 
         ArchiveMonthly archiveMonthly = new ArchiveMonthly();
         archiveMonthly.setId(this.idWorker.nextId()+"");
@@ -77,7 +82,7 @@ public class ArchiveServiceImpl implements ArchiveService {
         archiveMonthly.setFullAttePeopleNum(users.size());
         archiveMonthly.setIsArchived(0);
 
-        this.atteArchiveMonthlyDao.save(archiveMonthly);
+        this.archiveMonthlyDao.save(archiveMonthly);
     }
 
     /**
@@ -88,7 +93,7 @@ public class ArchiveServiceImpl implements ArchiveService {
      */
     @Override
     public List<ArchiveMonthly> findReportsByYear(String year, String companyId) {
-        return this.atteArchiveMonthlyDao.findByCompanyIdAndArchiveYear(companyId,year);
+        return this.archiveMonthlyDao.findByCompanyIdAndArchiveYear(companyId,year);
     }
 
     /**

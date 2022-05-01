@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  * * 2.从token中解析获取claims
  * * 3.将claims绑定到request域中
  */
-@Component
+//@Component
 public class JwtInterceptor implements HandlerInterceptor {
 
     private final JwtUtils jwtUtils;

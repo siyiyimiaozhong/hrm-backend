@@ -34,7 +34,7 @@ public interface AttendanceControllerApi {
      * @throws Exception
      */
     @GetMapping
-    Result<Map<String, Object>> page(int page,int pagesize);
+    Result<Map<String, Object>> page(@RequestParam("page") int page, @RequestParam("pagesize") int pagesize);
 
     /**
      * 编辑用户的考勤记录
@@ -57,7 +57,7 @@ public interface AttendanceControllerApi {
      * @throws Exception
      */
     @GetMapping("/reports")
-    Result<List<ArchiveMonthlyInfo>> reports(String atteDate);
+    Result<List<ArchiveMonthlyInfo>> reports(@RequestParam("atteDate") String atteDate);
 
     /**
      * 数据归档
@@ -107,5 +107,5 @@ public interface AttendanceControllerApi {
      * @return
      */
     @GetMapping ("/archive/{userId}/{yearMonth}")
-    Result<ArchiveMonthlyInfo> historyData(@PathVariable String userId,@PathVariable String yearMonth);
+    Result<ArchiveMonthlyInfo> historyData(@PathVariable("userId") String userId,@PathVariable("yearMonth") String yearMonth);
 }

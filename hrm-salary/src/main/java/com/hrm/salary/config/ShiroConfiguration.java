@@ -1,10 +1,7 @@
-package com.hrm.system.config;
+package com.hrm.salary.config;
 
 import com.hrm.common.shiro.realm.HrmRealm;
 import com.hrm.common.shiro.session.CustomSessionManager;
-import com.hrm.system.service.PermissionService;
-import com.hrm.system.service.UserService;
-import com.hrm.system.shiro.realm.UserRealm;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
@@ -22,16 +19,16 @@ import java.util.Map;
 
 /**
  * @Author: 敬学
- * @CreateTime: Created in 2022-03-16 20:31
- * @Description: shiro配置类
+ * @CreateTime: Created in 2022-04-26 07:46
+ * @Description: Shiro配置类
  */
 @Configuration
 public class ShiroConfiguration {
 
     //1.创建realm
     @Bean
-    public HrmRealm getRealm(UserService userService, PermissionService permissionService) {
-        return new UserRealm(userService, permissionService);
+    public HrmRealm getRealm() {
+        return new HrmRealm();
     }
 
     //2.创建安全管理器
@@ -71,7 +68,7 @@ public class ShiroConfiguration {
         filterMap.put("/autherror", "anon");
         //注册
         //authc -- 认证之后访问（登录）
-        filterMap.put("/**", "anon");
+        filterMap.put("/**", "authc");
         //perms -- 具有某中权限 (使用注解配置授权)
         filterFactory.setFilterChainDefinitionMap(filterMap);
 
@@ -110,7 +107,7 @@ public class ShiroConfiguration {
         CustomSessionManager sessionManager = new CustomSessionManager();
         sessionManager.setSessionDAO(redisSessionDAO());
         //禁用cookie
-        sessionManager.setSessionIdCookieEnabled(false);
+        //sessionManager.setSessionIdCookieEnabled(false);
         //禁用url重写   url;jsessionid=id
         sessionManager.setSessionIdUrlRewritingEnabled(false);
         return sessionManager;
@@ -125,9 +122,8 @@ public class ShiroConfiguration {
         return redisCacheManager;
     }
 
-
     /**
-     * 开启对shiro注解的支持
+     * 开启对shior注解的支持
      *
      * @param securityManager
      * @return

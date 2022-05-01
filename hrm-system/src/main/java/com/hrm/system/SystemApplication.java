@@ -1,5 +1,7 @@
 package com.hrm.system;
 
+import com.hrm.common.properties.BaiDuAiConfig;
+import com.hrm.common.utils.BaiduAiUtil;
 import com.hrm.common.utils.IdWorker;
 import com.hrm.common.utils.JwtUtils;
 import com.hrm.common.utils.SpringContextUtil;
@@ -11,6 +13,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 
 /**

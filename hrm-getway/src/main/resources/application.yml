@@ -44,7 +44,7 @@ zuul:
       customSensitiveHeaders: true #对指定路由开启自定义敏感头
     hrm-social-securitys: #社保
       path: /social_securitys/** #配置请求URL的请求规则
-      serviceId: hrm-social-securitys #指定Eureka注册中心中的服务id
+      serviceId: hrm-social-security #指定Eureka注册中心中的服务id
       stripPrefix: false
       sentiviteHeaders:   #将指定路由的敏感头设置为空
       customSensitiveHeaders: true #对指定路由开启自定义敏感头
@@ -57,6 +57,12 @@ zuul:
     hrm-atte-attendances: #社保
       path: /attendances/** #配置请求URL的请求规则
       serviceId: hrm-attendance #指定Eureka注册中心中的服务id
+      stripPrefix: false
+      sentiviteHeaders:   #将指定路由的敏感头设置为空
+      customSensitiveHeaders: true #对指定路由开启自定义敏感头
+    hrm-salary: #社保
+      path: /salarys/** #配置请求URL的请求规则
+      serviceId: hrm-salary #指定Eureka注册中心中的服务id
       stripPrefix: false
       sentiviteHeaders:   #将指定路由的敏感头设置为空
       customSensitiveHeaders: true #对指定路由开启自定义敏感头
