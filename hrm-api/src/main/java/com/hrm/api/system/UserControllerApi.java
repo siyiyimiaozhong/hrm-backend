@@ -65,9 +65,9 @@ public interface UserControllerApi {
      * @param ids
      * @return
      */
-    @RequiresPermissions(value = "API-USER-DELETE")
-    @DeleteMapping(value = "/{ids}", name = "API-USER-DELETE")
-    Result<Object> delete(@PathVariable("ids") String... ids);
+//    @RequiresPermissions(value = "API-USER-DELETE")
+    @DeleteMapping(value = "/{id}", name = "API-USER-DELETE")
+    Result<Object> delete(@PathVariable("id") String ids);
 
     /**
      * 添加对应角色

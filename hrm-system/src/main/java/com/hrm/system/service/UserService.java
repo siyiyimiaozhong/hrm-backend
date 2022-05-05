@@ -51,9 +51,9 @@ public interface UserService {
     /**
      * 根据id删除用户信息
      *
-     * @param ids
+     * @param id
      */
-    void delete(String[] ids);
+    void delete(String id);
 
     /**
      * 根据条件分页查询

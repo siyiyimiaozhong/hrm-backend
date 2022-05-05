@@ -88,12 +88,12 @@ public class UserController extends BaseController implements UserControllerApi 
     /**
      * 根据id删除用户
      *
-     * @param ids
+     * @param id
      * @return
      */
     @Override
-    public Result<Object> delete(@PathVariable("ids") String... ids) {
-        this.userService.delete(ids);
+    public Result<Object> delete(@PathVariable("id") String id) {
+        this.userService.delete(id);
         return Result.success();
     }
 

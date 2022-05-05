@@ -114,14 +114,8 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     }
 
     @Override
-    public void delete(String[] ids) {
-        if (0 == ids.length) {
-            return;
-        }
-        for (String id : ids) {
-            //TODO 校验逻辑
-            this.userDao.deleteById(id);
-        }
+    public void delete(String id) {
+        this.userDao.deleteById(id);
     }
 
     @Override
