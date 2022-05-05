@@ -5,6 +5,7 @@ import com.hrm.common.utils.JwtUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
@@ -13,7 +14,7 @@ import org.springframework.context.annotation.Bean;
  * @CreateTime: Created in 2022-04-25 09:13
  * @Description: 薪酬模块启动类
  */
-@SpringBootApplication(scanBasePackages = "com.hrm")
+@SpringBootApplication(scanBasePackages = "com.hrm", exclude = {SecurityAutoConfiguration.class})
 @EntityScan(value = "com.hrm.model")
 @EnableFeignClients
 public class SalaryApplication {

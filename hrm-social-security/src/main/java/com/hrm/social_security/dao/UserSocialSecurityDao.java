@@ -37,7 +37,7 @@ public interface UserSocialSecurityDao extends JpaRepository<UserSocialSecurity,
                     "       ssuss.provident_fund_city_id providentFundCityId, \n" +
                     "       ssuss.provident_fund_city providentFundCity,\n" +
                     "       ssuss.social_security_base socialSecurityBase,\n" +
-                    "       ssuss.provident_fund_base providentFundBase FROM bs_user bu LEFT JOIN ss_user_social_security ssuss ON bu.id=ssuss.user_id WHERE bu.company_id=1",
+                    "       ssuss.provident_fund_base providentFundBase FROM bs_user bu LEFT JOIN ss_user_social_security ssuss ON bu.id=ssuss.user_id WHERE bu.company_id=?1",
             countQuery = "SELECT COUNT(*) FROM bs_user u LEFT JOIN ss_user_social_security  s ON u.id = s.user_id WHERE company_id=?1"
     )
     public Page<Map<String, Object>> findPage(String companyId, Pageable pageable);

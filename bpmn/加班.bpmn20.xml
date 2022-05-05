@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef">
+  <process id="process_overtime" name="加班" isExecutable="true">
+    <documentation>加班流程</documentation>
+    <startEvent id="START" name="开始"></startEvent>
+    <userTask id="SHEN1" name="部门审批" activiti:candidateGroups="PROCESS_OVERTIME_SHEN1_USERS"></userTask>
+    <userTask id="SHEN2" name="人事审批" activiti:candidateGroups="PROCESS_OVERTIME_SHEN2_USERS"></userTask>
+    <sequenceFlow id="sid-B1BEB514-7A1B-4F05-92E6-BBA96C5EB97B" sourceRef="SHEN1" targetRef="SHEN2"></sequenceFlow>
+    <endEvent id="END" name="结束"></endEvent>
+    <sequenceFlow id="sid-07EE5703-C4D5-4A54-A233-1BAB658300BB" sourceRef="SHEN2" targetRef="END"></sequenceFlow>
+    <userTask id="APPLY" name="提交申请" activiti:candidateGroups="PROCESS_OVERTIME_APPLY_USERS"></userTask>
+    <sequenceFlow id="sid-4E27E37B-F3D3-4C41-B30D-7333971D979B" sourceRef="START" targetRef="APPLY"></sequenceFlow>
+    <sequenceFlow id="sid-F919C33A-6FAB-4F05-AE2F-D43EB9DA8902" sourceRef="APPLY" targetRef="SHEN1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_process_overtime">
+    <bpmndi:BPMNPlane bpmnElement="process_overtime" id="BPMNPlane_process_overtime">
+      <bpmndi:BPMNShape bpmnElement="START" id="BPMNShape_START">
+        <omgdc:Bounds height="30.0" width="30.0" x="100.0" y="163.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="SHEN1" id="BPMNShape_SHEN1">
+        <omgdc:Bounds height="80.0" width="100.0" x="330.0" y="138.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="SHEN2" id="BPMNShape_SHEN2">
+        <omgdc:Bounds height="80.0" width="100.0" x="475.0" y="138.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="END" id="BPMNShape_END">
+        <omgdc:Bounds height="28.0" width="28.0" x="620.0" y="164.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="APPLY" id="BPMNShape_APPLY">
+        <omgdc:Bounds height="80.0" width="100.0" x="175.0" y="138.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-B1BEB514-7A1B-4F05-92E6-BBA96C5EB97B" id="BPMNEdge_sid-B1BEB514-7A1B-4F05-92E6-BBA96C5EB97B">
+        <omgdi:waypoint x="430.0" y="178.0"></omgdi:waypoint>
+        <omgdi:waypoint x="475.0" y="178.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-07EE5703-C4D5-4A54-A233-1BAB658300BB" id="BPMNEdge_sid-07EE5703-C4D5-4A54-A233-1BAB658300BB">
+        <omgdi:waypoint x="575.0" y="178.0"></omgdi:waypoint>
+        <omgdi:waypoint x="620.0" y="178.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-F919C33A-6FAB-4F05-AE2F-D43EB9DA8902" id="BPMNEdge_sid-F919C33A-6FAB-4F05-AE2F-D43EB9DA8902">
+        <omgdi:waypoint x="275.0" y="178.0"></omgdi:waypoint>
+        <omgdi:waypoint x="330.0" y="178.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4E27E37B-F3D3-4C41-B30D-7333971D979B" id="BPMNEdge_sid-4E27E37B-F3D3-4C41-B30D-7333971D979B">
+        <omgdi:waypoint x="130.0" y="178.0"></omgdi:waypoint>
+        <omgdi:waypoint x="175.0" y="178.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

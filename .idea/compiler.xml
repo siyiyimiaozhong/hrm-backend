@@ -16,13 +16,16 @@
         <module name="hrm-model" />
         <module name="hrm-core" />
         <module name="hrm-employee" />
+        <module name="hrm-salary" />
         <module name="hrm-system" />
+        <module name="hrm-audit" />
         <module name="hrm-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hrm-api" target="1.8" />
       <module name="hrm-attendance" target="1.8" />
+      <module name="hrm-audit" target="1.8" />
       <module name="hrm-backend" target="1.8" />
       <module name="hrm-common" target="1.8" />
       <module name="hrm-company" target="1.8" />
@@ -31,6 +34,7 @@
       <module name="hrm-eureka" target="1.8" />
       <module name="hrm-getway" target="1.8" />
       <module name="hrm-model" target="1.8" />
+      <module name="hrm-salary" target="1.8" />
       <module name="hrm-social-security" target="1.8" />
       <module name="hrm-system" target="1.8" />
     </bytecodeTargetLevel>
@@ -39,6 +43,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hrm-api" options="-parameters" />
       <module name="hrm-attendance" options="-parameters" />
+      <module name="hrm-audit" options="-parameters" />
       <module name="hrm-common" options="-parameters" />
       <module name="hrm-company" options="-parameters" />
       <module name="hrm-core" options="-parameters" />
@@ -46,6 +51,7 @@
       <module name="hrm-eureka" options="-parameters" />
       <module name="hrm-getway" options="-parameters" />
       <module name="hrm-model" options="-parameters" />
+      <module name="hrm-salary" options="-parameters" />
       <module name="hrm-social-security" options="-parameters" />
       <module name="hrm-system" options="-parameters" />
     </option>

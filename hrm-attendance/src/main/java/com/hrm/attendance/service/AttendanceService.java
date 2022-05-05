@@ -2,6 +2,7 @@ package com.hrm.attendance.service;
 
 import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.attendance.entity.Attendance;
+import com.hrm.model.attendance.vo.AttendanceDto;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.Map;
 public interface AttendanceService {
     /**
      * 上传考勤数据
+     *
      * @param file
      * @param companyId
      */
@@ -22,21 +24,23 @@ public interface AttendanceService {
 
     /**
      * 查询考勤数据列表
+     *
      * @param companyId
-     * @param page
-     * @param pagesize
+     * @param attendanceDto
      * @return
      */
-    Map<String, Object> getAtteDate(String companyId, int page, int pagesize);
+    Map<String, Object> getAtteDate(String companyId, AttendanceDto attendanceDto);
 
     /**
      * 编辑用户的考勤记录
+     *
      * @param attendance
      */
     void updateAtte(Attendance attendance);
 
     /**
      * 获取月报表归档数据
+     *
      * @param atteDate
      * @param companyId
      * @return
@@ -45,6 +49,7 @@ public interface AttendanceService {
 
     /**
      * 新建报表
+     *
      * @param yearMonth
      * @param companyId
      */

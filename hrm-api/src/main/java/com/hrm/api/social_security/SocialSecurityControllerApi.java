@@ -2,6 +2,7 @@ package com.hrm.api.social_security;
 
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.pojo.Result;
+import com.hrm.model.social_security.dto.ArchiveDto;
 import com.hrm.model.social_security.entity.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,7 +38,7 @@ public interface SocialSecurityControllerApi {
      * 查询企业员工的社保信息列表
      */
     @PostMapping("/list")
-    Result<PageResult<Map<String, Object>>> list(@RequestBody Map<String, Object> map);
+    Result<PageResult<Map<String, Object>>> list(@RequestBody ArchiveDto archiveDto);
 
     /**
      * 根据用户id查询用户的社保数据

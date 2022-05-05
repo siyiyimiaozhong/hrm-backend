@@ -18,6 +18,7 @@ public class ProfileVo implements Serializable {
 
     private static final long serialVersionUID = -4598647172677961964L;
 
+    private String id;
     /**
      * 手机
      */
@@ -40,6 +41,7 @@ public class ProfileVo implements Serializable {
     private Map<String, Object> roles = new HashMap<>();
 
     public ProfileVo(User user, List<Permission> list) {
+        this.id = user.getId();
         this.mobile = user.getMobile();
         this.username = user.getUsername();
         this.company = user.getCompanyName();
@@ -65,6 +67,7 @@ public class ProfileVo implements Serializable {
     }
 
     public ProfileVo(User user) {
+        this.id = user.getId();
         this.mobile = user.getMobile();
         this.username = user.getUsername();
         this.company = user.getCompanyName();

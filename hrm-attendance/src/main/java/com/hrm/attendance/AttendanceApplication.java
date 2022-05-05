@@ -5,6 +5,7 @@ import com.hrm.common.utils.JwtUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -16,7 +17,7 @@ import org.springframework.context.annotation.Bean;
  * @Description: 考勤模块启动类
  */
 //1.配置springboot的包扫描
-@SpringBootApplication(scanBasePackages = "com.hrm")
+@SpringBootApplication(scanBasePackages = "com.hrm", exclude = {SecurityAutoConfiguration.class})
 //2.配置jpa注解的扫描
 @EntityScan(value="com.hrm.model")
 @EnableEurekaClient

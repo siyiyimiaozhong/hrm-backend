@@ -21,6 +21,7 @@
         <module>hrm-social-security</module>
         <module>hrm-attendance</module>
         <module>hrm-salary</module>
+        <module>hrm-audit</module>
     </modules>
 
     <parent>

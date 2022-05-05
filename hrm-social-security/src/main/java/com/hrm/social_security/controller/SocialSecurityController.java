@@ -4,6 +4,7 @@ import com.hrm.api.social_security.SocialSecurityControllerApi;
 import com.hrm.common.controller.BaseController;
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.pojo.Result;
+import com.hrm.model.social_security.dto.ArchiveDto;
 import com.hrm.model.social_security.entity.*;
 import com.hrm.social_security.service.ArchiveService;
 import com.hrm.social_security.service.CompanySettingsService;
@@ -78,12 +79,12 @@ public class SocialSecurityController extends BaseController implements SocialSe
     /**
      * 查询企业员工的社保信息列表
      *
-     * @param map
+     * @param archiveDto
      * @return
      */
     @Override
-    public Result<PageResult<Map<String, Object>>> list(@RequestBody Map<String, Object> map) {
-        PageResult<Map<String, Object>> userSocialSecurityPageResult = this.userSocialService.list((Integer) map.get("page"), (Integer) map.get("pageSize"), super.companyId);
+    public Result<PageResult<Map<String, Object>>> list(@RequestBody ArchiveDto archiveDto) {
+        PageResult<Map<String, Object>> userSocialSecurityPageResult = this.userSocialService.list(archiveDto, super.companyId);
         return Result.success(userSocialSecurityPageResult);
     }
 

@@ -43,6 +43,10 @@ public class CommonUtils {
         return false;
     }
 
+    public static boolean isNotEmpty(Object object) {
+        return !isEmpty(object);
+    }
+
     public static boolean isEmpty(Object... objects) {
         if (objects.length == 0) {
             return true;

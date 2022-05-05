@@ -64,7 +64,7 @@ public class ArchiveServiceImpl implements ArchiveService {
                 list = this.findAllDetailByArchiveId(archive.getId());
             }
         }
-        return null;
+        return list;
     }
 
     @Override

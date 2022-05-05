@@ -4,6 +4,7 @@ import com.hrm.core.pojo.Result;
 import com.hrm.model.attendance.entity.ArchiveMonthly;
 import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.attendance.entity.Attendance;
+import com.hrm.model.attendance.vo.AttendanceDto;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,13 +29,12 @@ public interface AttendanceControllerApi {
 
     /**
      * 查询考勤数据列表
-     * @param page
-     * @param pagesize
+     * @param attendanceDto
      * @return
      * @throws Exception
      */
-    @GetMapping
-    Result<Map<String, Object>> page(@RequestParam("page") int page, @RequestParam("pagesize") int pagesize);
+    @PostMapping
+    Result<Map<String, Object>> page(@RequestBody AttendanceDto attendanceDto);
 
     /**
      * 编辑用户的考勤记录

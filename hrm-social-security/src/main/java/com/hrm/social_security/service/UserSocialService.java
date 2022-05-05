@@ -1,6 +1,7 @@
 package com.hrm.social_security.service;
 
 import com.hrm.core.pojo.PageResult;
+import com.hrm.model.social_security.dto.ArchiveDto;
 import com.hrm.model.social_security.entity.UserSocialSecurity;
 
 import java.util.Map;
@@ -14,12 +15,11 @@ public interface UserSocialService {
     /**
      * 分页查询员工社保信息列表
      *
-     * @param page
-     * @param pageSize
+     * @param archiveDto
      * @param companyId
      * @return
      */
-    PageResult<Map<String, Object>> list(Integer page, Integer pageSize, String companyId);
+    PageResult<Map<String, Object>> list(ArchiveDto archiveDto, String companyId);
 
     /**
      * 根据用户id查询员工的社保数据

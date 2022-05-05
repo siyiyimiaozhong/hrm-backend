@@ -1,6 +1,7 @@
 package com.hrm.salary.service;
 
 import com.hrm.core.pojo.PageResult;
+import com.hrm.model.salary.dto.UserSalaryItemDto;
 import com.hrm.model.salary.entity.UserSalary;
 import com.hrm.model.salary.vo.UserSalaryItemVo;
 
@@ -30,10 +31,9 @@ public interface SalaryService {
     /**
      * 分页查询当月薪资列表
      *
-     * @param page
-     * @param pageSize
      * @param companyId
+     * @param userSalaryItemDto
      * @return
      */
-    PageResult<UserSalaryItemVo> findAll(Integer page, Integer pageSize, String companyId);
+    PageResult<UserSalaryItemVo> findAll(String companyId, UserSalaryItemDto userSalaryItemDto);
 }

@@ -8,6 +8,7 @@ import com.hrm.core.pojo.Result;
 import com.hrm.model.attendance.entity.ArchiveMonthly;
 import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.attendance.entity.Attendance;
+import com.hrm.model.attendance.vo.AttendanceDto;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -48,13 +49,12 @@ public class AttendanceController extends BaseController implements AttendanceCo
     /**
      * 查询考勤数据列表
      *
-     * @param page
-     * @param pagesize
+     * @param attendanceDto
      * @return
      */
     @Override
-    public Result<Map<String, Object>> page(int page, int pagesize) {
-        Map<String, Object> map = this.attendanceService.getAtteDate(companyId, page, pagesize);
+    public Result<Map<String, Object>> page(@RequestBody AttendanceDto attendanceDto) {
+        Map<String, Object> map = this.attendanceService.getAtteDate(super.companyId, attendanceDto);
         return Result.success(map);
     }
 

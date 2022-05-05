@@ -6,6 +6,15 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -16,33 +25,127 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="创建考勤API">
-      <change afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/ArchiveListBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/AttendanceItemBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/AttendanceReportMonthlyBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/AttendanceSalaryStatisticsBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/AttendanceStatisticsBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/AttendanceTotalsBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/bo/DaysMonthlyBO.java" afterDir="false" />
+    <list default="true" id="821ad4f2-be67-42fc-80b9-aaaf82017570" name="Default Changelist" comment="简单实现工资管理">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_uuid_java_uuid_generator_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_api_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_impl_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_odysseus_juel_juel_spi_2_2_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_el_el_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_api_process_runtime_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_api_runtime_shared_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_api_task_runtime_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_converter_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_bpmn_model_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_engine_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_image_generator_7_1_0_M2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_process_validation_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_app_process_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_activiti_spring_boot_starter_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_model_shared_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_model_shared_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_process_model_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_process_model_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_process_runtime_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_runtime_shared_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_task_model_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_task_model_impl_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_api_activiti_api_task_runtime_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_connector_model_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_spring_application_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_spring_connector_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_spring_identity_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_spring_security_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_activiti_core_common_activiti_spring_security_policies_7_0_0_Beta3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_email_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_awt_util_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_constants_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_css_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_dom_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ext_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_i18n_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svggen_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_util_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_xml_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_8_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_ext_1_3_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bpmn/加班.bpmn20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bpmn/离职.bpmn20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bpmn/请假.bpmn20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/audit/ProcessControllerApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/hrm-audit.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/AuditApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/client/CityFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/client/UserFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/config/AuditDatasourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/config/JpaRepositoriesConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/config/ShiroConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/controller/ProcessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/dao/ProcInstanceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/dao/ProcTaskInstanceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/dao/ProcUserGroupDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/AuditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/FeignClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/ProcessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/impl/AuditServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/impl/FeignClientServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/java/com/hrm/audit/service/impl/ProcessServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-audit/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/vo/AttendanceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/audit/entity/ProcInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/audit/entity/ProcTaskInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/audit/entity/ProcUserGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/salary/dto/UserSalaryItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/social_security/dto/ArchiveDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/attendance/AttendanceConfigControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/attendance/AttendanceConfigControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-api/hrm-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/hrm-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/attendance/AttendanceControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/attendance/AttendanceControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/salary/SalaryControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/salary/SalaryControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/social_security/SocialSecurityControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/social_security/SocialSecurityControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/LoginControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-api/src/main/java/com/hrm/api/system/LoginControllerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/AttendanceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/AttendanceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/controller/AttendanceConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/controller/AttendanceConfigController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/controller/AttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/controller/AttendanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/dao/AttendanceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/dao/AttendanceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/ArchiveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/ArchiveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/AttendanceConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/AttendanceConfigService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/AttendanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/AttendanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/ArchiveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/ArchiveServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/AttendanceConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/AttendanceConfigServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/AttendanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-attendance/src/main/java/com/hrm/attendance/service/impl/AttendanceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/hrm-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/hrm-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/CommonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/CommonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hrm-common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-common/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/entity/ArchiveMonthlyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/attendance/entity/ArchiveMonthlyInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-company/src/main/java/com/hrm/company/CompanyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/EmployeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/EmployeeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-getway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-getway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/hrm-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/hrm-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/ProfileVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-model/src/main/java/com/hrm/model/system/vo/ProfileVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/SalaryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/SalaryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/controller/SalaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/controller/SalaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/service/SalaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/service/SalaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/service/impl/SalaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-salary/src/main/java/com/hrm/salary/service/impl/SalaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/SocialSecurityApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/SocialSecurityApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/controller/SocialSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/controller/SocialSecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/dao/UserSocialSecurityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/dao/UserSocialSecurityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/UserSocialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/UserSocialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/impl/ArchiveServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/impl/ArchiveServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/impl/UserSocialServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/service/impl/UserSocialServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/SystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hrm-system/src/main/java/com/hrm/system/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +162,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -92,7 +196,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hrm-social-security/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bpmn" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -119,18 +223,19 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hrm.common.config" />
       <recent name="com.hrm.company.config" />
       <recent name="com.hrm.common.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\project\IHRM\hrm-backend\bpmn" />
+      <recent name="E:\project\IHRM\hrm-backend\hrm-audit\src\main\resources" />
       <recent name="E:\project\IHRM\hrm-backend\hrm-social-security\src\main\resources" />
       <recent name="E:\project\IHRM\hrm-backend\hrm-eureka\src\main\resources" />
       <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-common\src\main\resources\templates\pdf" />
-      <recent name="E:\project\IHRM\hrm-backend\hrm-core\src\main\resources\excel" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AttendanceApplication">
+  <component name="RunManager" selected="Spring Boot.SocialSecurityApplication">
     <configuration name="AttendanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hrm-attendance" />
       <extension name="coverage">
@@ -140,6 +245,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hrm.attendance.AttendanceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuditApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="hrm-audit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hrm.audit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hrm.audit.AuditApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,6 +316,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SalaryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="hrm-salary" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hrm.salary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hrm.salary.SalaryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SocialSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="hrm-social-security" />
       <extension name="coverage">
@@ -226,12 +357,14 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.GetWayApplication" />
       <item itemvalue="Spring Boot.SocialSecurityApplication" />
       <item itemvalue="Spring Boot.CompanyApplication" />
       <item itemvalue="Spring Boot.EmployeeApplication" />
-      <item itemvalue="Spring Boot.GetWayApplication" />
       <item itemvalue="Spring Boot.SystemApplication" />
       <item itemvalue="Spring Boot.AttendanceApplication" />
+      <item itemvalue="Spring Boot.SalaryApplication" />
+      <item itemvalue="Spring Boot.AuditApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -328,7 +461,30 @@
       <workItem from="1650416331916" duration="6083000" />
       <workItem from="1650496606547" duration="1911000" />
       <workItem from="1650502987012" duration="9326000" />
-      <workItem from="1650583148943" duration="8338000" />
+      <workItem from="1650583148943" duration="9322000" />
+      <workItem from="1650678684668" duration="5191000" />
+      <workItem from="1650755838268" duration="1655000" />
+      <workItem from="1650787560874" duration="2574000" />
+      <workItem from="1650842344314" duration="935000" />
+      <workItem from="1650848937441" duration="8545000" />
+      <workItem from="1650928723280" duration="2252000" />
+      <workItem from="1650935038451" duration="6042000" />
+      <workItem from="1650985307000" duration="1190000" />
+      <workItem from="1651015607800" duration="255000" />
+      <workItem from="1651022142259" duration="5327000" />
+      <workItem from="1651153079671" duration="4078000" />
+      <workItem from="1651188032823" duration="1681000" />
+      <workItem from="1651194680298" duration="2898000" />
+      <workItem from="1651245417332" duration="2214000" />
+      <workItem from="1651281369570" duration="12272000" />
+      <workItem from="1651397175386" duration="10033000" />
+      <workItem from="1651546817152" duration="3553000" />
+      <workItem from="1651561145265" duration="13515000" />
+      <workItem from="1651632818261" duration="1777000" />
+      <workItem from="1651635015831" duration="27210000" />
+      <workItem from="1651706258642" duration="840000" />
+      <workItem from="1651712553945" duration="5349000" />
+      <workItem from="1651756002311" duration="2079000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目，并实现企业信息CRUD">
       <created>1642328668483</created>
@@ -442,11 +598,35 @@
       <option name="project" value="LOCAL" />
       <updated>1650555762464</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="初步完成考勤实现">
+      <created>1650603456162</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650603456162</updated>
+    </task>
+    <task id="LOCAL-00018" summary="简单实现工资管理">
+      <created>1651420114603</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651420114603</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -489,7 +669,9 @@
     <MESSAGE value="调整网关和服务注册中心模块" />
     <MESSAGE value="实现社保模块" />
     <MESSAGE value="创建考勤API" />
-    <option name="LAST_COMMIT_MESSAGE" value="创建考勤API" />
+    <MESSAGE value="初步完成考勤实现" />
+    <MESSAGE value="简单实现工资管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单实现工资管理" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2772" y="409" key="#Assign_Data_Sources" timestamp="1650197123684">
@@ -504,22 +686,23 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2506" y="198" key="#Inspections/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650033926569" />
-    <state x="2360" y="94" key="#Project_Structure" timestamp="1650472719236">
+    <state x="2360" y="94" key="#Project_Structure" timestamp="1651642178203">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650184968221" />
-    <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650472719236" />
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1650416588160" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1650602874197">
+    <state x="2360" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651642178203" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1650935423900" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651576416875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647747049311" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650602874197" />
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1650602040036">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651576416875" />
+    <state x="2334" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651281644945" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650935439692" />
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1651574784120">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650176604453" />
-    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650585089646" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651574061136" />
+    <state x="2685" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651574784120" />
     <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1650602040036" />
     <state x="2685" y="443" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1650110732421">
       <screen x="1920" y="0" width="1920" height="1040" />
@@ -537,102 +720,103 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644233461022" />
-    <state x="2423" y="444" width="880" height="596" key="#xdebugger.evaluate" timestamp="1650287886969">
+    <state x="319" y="155" width="1205" height="596" key="#xdebugger.evaluate" timestamp="1651724972907">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="228" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672335293" />
+    <state x="2456" y="444" width="880" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651681454696" />
+    <state x="319" y="155" width="1205" height="596" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1651724972907" />
+    <state width="1144" height="513" key="DebuggerActiveHint" timestamp="1651684024821">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2423" y="444" width="880" height="596" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650287886969" />
-    <state width="1144" height="513" key="DebuggerActiveHint" timestamp="1650287817025">
+    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672279446" />
+    <state width="1144" height="513" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651684024821" />
+    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1651196060421" />
+    <state x="2104" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1651636148207">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650286103222" />
-    <state width="1144" height="513" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650287817025" />
-    <state width="1092" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1650258872839" />
-    <state x="2104" y="86" key="DiffContextDialog" timestamp="1644858781227">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2104" y="86" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1644858781227" />
+    <state x="2104" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651636148207" />
     <state x="3204" y="393" key="FileChooserDialogImpl" timestamp="1650095748971">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="1284" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642254979648" />
     <state x="3204" y="393" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650095748971" />
     <state x="1284" y="393" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1649984718526" />
     <state x="2691" y="421" key="Github.CreateGistDialog" timestamp="1649588016434">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2691" y="421" key="Github.CreateGistDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649588016434" />
-    <state width="1892" height="336" key="GridCell.Tab.0.bottom" timestamp="1650602938164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1651757156456">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="938" height="405" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650556426954" />
-    <state width="1892" height="336" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938164" />
-    <state width="1892" height="336" key="GridCell.Tab.0.center" timestamp="1650602938164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672913991" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156456" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591920" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1651757156456">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="938" height="405" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650556426954" />
-    <state width="1892" height="336" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938164" />
-    <state width="1892" height="336" key="GridCell.Tab.0.left" timestamp="1650602938164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672913991" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156456" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591920" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1651757156456">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="938" height="405" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650556426953" />
-    <state width="1892" height="336" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938164" />
-    <state width="1892" height="336" key="GridCell.Tab.0.right" timestamp="1650602938164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672913991" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156456" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591920" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1651757156456">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="938" height="405" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650556426954" />
-    <state width="1892" height="336" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938164" />
-    <state width="1892" height="336" key="GridCell.Tab.1.bottom" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672913991" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156456" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591920" />
+    <state width="1877" height="266" key="GridCell.Tab.1.bottom" timestamp="1651757156580">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
-    <state width="1892" height="336" key="GridCell.Tab.1.center" timestamp="1650602938020">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672908202" />
+    <state width="1877" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156580" />
+    <state width="1877" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651726614059" />
+    <state width="1877" height="266" key="GridCell.Tab.1.center" timestamp="1651757156580">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938020" />
-    <state width="1892" height="336" key="GridCell.Tab.1.left" timestamp="1650602938020">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672908202" />
+    <state width="1877" height="266" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156580" />
+    <state width="1877" height="266" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651726614059" />
+    <state width="1877" height="266" key="GridCell.Tab.1.left" timestamp="1651757156580">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938020" />
-    <state width="1892" height="336" key="GridCell.Tab.1.right" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672908202" />
+    <state width="1877" height="266" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156580" />
+    <state width="1877" height="266" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651726614059" />
+    <state width="1877" height="266" key="GridCell.Tab.1.right" timestamp="1651757156580">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
-    <state width="1892" height="336" key="GridCell.Tab.2.bottom" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672908202" />
+    <state width="1877" height="266" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156580" />
+    <state width="1877" height="266" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651726614059" />
+    <state width="1877" height="266" key="GridCell.Tab.2.bottom" timestamp="1651757156457">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356751" />
-    <state width="1877" height="330" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
-    <state width="1892" height="336" key="GridCell.Tab.2.center" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672671759" />
+    <state width="1877" height="266" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156457" />
+    <state width="1877" height="266" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591532" />
+    <state width="1877" height="266" key="GridCell.Tab.2.center" timestamp="1651757156457">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
-    <state width="1892" height="336" key="GridCell.Tab.2.left" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672671759" />
+    <state width="1877" height="266" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156457" />
+    <state width="1877" height="266" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591532" />
+    <state width="1877" height="266" key="GridCell.Tab.2.left" timestamp="1651757156457">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
-    <state width="1892" height="336" key="GridCell.Tab.2.right" timestamp="1650602938021">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="266" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672671758" />
+    <state width="1877" height="266" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156457" />
+    <state width="1877" height="266" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591532" />
+    <state width="1877" height="266" key="GridCell.Tab.2.right" timestamp="1651757156457">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="330" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650560356750" />
-    <state width="1877" height="330" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650555540207" />
-    <state width="1892" height="336" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1650602938021" />
+    <state width="1877" height="266" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651672671759" />
+    <state width="1877" height="266" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651757156457" />
+    <state width="1877" height="266" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1651726591532" />
     <state x="2410" y="175" key="Maven.ArtifactSearchDialog" timestamp="1650110716621">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -640,62 +824,70 @@
     <state x="2092" y="197" width="998" height="708" key="SettingsEditor" timestamp="1650301752564">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1642328362981" />
     <state x="2092" y="197" width="998" height="708" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650301752564" />
     <state x="2632" y="216" key="VCS.ChangeListViewerDialog" timestamp="1647690342739">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2632" y="216" key="VCS.ChangeListViewerDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647690342739" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1650556431130">
+    <state x="2979" y="151" key="Vcs.Push.Dialog.v2" timestamp="1651420573647">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650551049243" />
-    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650556431130" />
+    <state x="2979" y="151" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651420573647" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1650603548684" />
+    <state x="2559" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1651636104093">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2559" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651636104093" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1650091678697">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650091678697" />
-    <state x="543" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1650184472225">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2463" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1651681132982">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="543" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650184472225" />
-    <state x="2463" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647765415590" />
+    <state x="2463" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651681132982" />
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650186933950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="753" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650186933950" />
-    <state x="2673" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1642328511225" />
-    <state x="662" y="74" width="879" height="891" key="find.popup" timestamp="1650332379672">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2582" y="74" width="621" height="891" key="find.popup" timestamp="1651756809063">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="74" width="879" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650187164034" />
-    <state x="2582" y="74" width="621" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650296164175" />
-    <state x="662" y="74" width="879" height="891" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650332379672" />
+    <state x="662" y="74" width="879" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651578259985" />
+    <state x="2582" y="74" width="621" height="891" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651756809063" />
+    <state x="662" y="74" width="879" height="891" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1651726133123" />
+    <state x="2555" y="307" key="git4idea.merge.GitPullDialog" timestamp="1651420486383">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2555" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651420486383" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1650106000943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650106000943" />
-    <state x="334" y="180" key="new project wizard" timestamp="1650416405407">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="334" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650192765527" />
-    <state x="2254" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1649256038773" />
-    <state x="334" y="180" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1650416405407" />
-    <state x="2656" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1650132241629">
+    <state x="2254" y="180" key="new project wizard" timestamp="1651546968058">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="334" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650192765527" />
+    <state x="2254" y="180" key="new project wizard/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651546968058" />
+    <state x="334" y="180" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1650849053840" />
+    <state x="736" y="276" key="refactoring.ChangeSignatureDialog" timestamp="1651671164137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651671164137" />
     <state x="2656" y="276" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650132241629" />
     <state x="1290" y="305" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1647675811488" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1647766654352">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2536" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1647766654352" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1650331056885">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1651725549169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1650186758929" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1650131470406" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650331056885" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1651568955843" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1651659546842" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1651725549169" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -706,26 +898,26 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/handler/BaseExceptionHandler.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/service/impl/UserCompanyPersonalServiceImpl.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/controller/SocialSecurityController.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/hrm-social-security/src/main/java/com/hrm/social_security/controller/SocialSecurityController.java</url>
-          <line>109</line>
+          <line>110</line>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hrm-common/src/main/java/com/hrm/common/utils/BaiduAiUtil.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hrm-employee/src/main/java/com/hrm/employee/controller/ArchivesController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hrm_parent$CompanyApplication.ic" NAME="CompanyApplication Coverage Results" MODIFIED="1650935469435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.hrm.company.*</FILTER>
+    </SUITE>
   </component>
 </project>

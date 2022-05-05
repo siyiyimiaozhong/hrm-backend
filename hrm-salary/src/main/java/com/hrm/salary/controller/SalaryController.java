@@ -4,6 +4,7 @@ import com.hrm.api.salary.SalaryControllerApi;
 import com.hrm.common.controller.BaseController;
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.pojo.Result;
+import com.hrm.model.salary.dto.UserSalaryItemDto;
 import com.hrm.model.salary.entity.UserSalary;
 import com.hrm.model.salary.vo.UserSalaryItemVo;
 import com.hrm.salary.service.SalaryService;
@@ -51,12 +52,8 @@ public class SalaryController extends BaseController implements SalaryController
     }
 
     @Override
-    public Result<PageResult<UserSalaryItemVo>> list(@RequestBody Map<String, Object> map) {
-        //1.获取请求参数,page,size
-        Integer page = (Integer) map.get("page");
-        Integer pageSize = (Integer) map.get("pageSize");
-        //2.调用service查询
-        PageResult<UserSalaryItemVo> pr = salaryService.findAll(page, pageSize, companyId);
+    public Result<PageResult<UserSalaryItemVo>> list(@RequestBody UserSalaryItemDto userSalaryItemDto) {
+        PageResult<UserSalaryItemVo> pr = salaryService.findAll(companyId, userSalaryItemDto);
         return Result.success(pr);
     }
 }

@@ -2,6 +2,7 @@ package com.hrm.api.salary;
 
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.pojo.Result;
+import com.hrm.model.salary.dto.UserSalaryItemDto;
 import com.hrm.model.salary.entity.UserSalary;
 import com.hrm.model.salary.vo.UserSalaryItemVo;
 import org.springframework.web.bind.annotation.*;
@@ -45,9 +46,9 @@ public interface SalaryControllerApi {
     /**
      * 查询列表
      *
-     * @param map
+     * @param userSalaryItemDto
      * @return
      */
     @PostMapping("/list")
-    Result<PageResult<UserSalaryItemVo>> list(@RequestBody Map<String, Object> map);
+    Result<PageResult<UserSalaryItemVo>> list(@RequestBody UserSalaryItemDto userSalaryItemDto);
 }

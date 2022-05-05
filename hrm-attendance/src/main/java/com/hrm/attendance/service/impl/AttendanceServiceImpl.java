@@ -2,9 +2,12 @@ package com.hrm.attendance.service.impl;
 
 import com.hrm.attendance.dao.*;
 import com.hrm.attendance.service.AttendanceService;
+import com.hrm.common.utils.CommonUtils;
 import com.hrm.common.utils.DateUtil;
 import com.hrm.common.utils.ExcelImportUtil;
 import com.hrm.common.utils.IdWorker;
+import com.hrm.core.constant.ResultCode;
+import com.hrm.core.exception.BusinessException;
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.template.AttendanceTemplate;
 import com.hrm.model.attendance.bo.AttendanceItemBO;
@@ -12,14 +15,19 @@ import com.hrm.model.attendance.entity.ArchiveMonthlyInfo;
 import com.hrm.model.attendance.entity.Attendance;
 import com.hrm.model.attendance.entity.AttendanceConfig;
 import com.hrm.model.attendance.entity.CompanySettings;
+import com.hrm.model.attendance.vo.AttendanceDto;
+import com.hrm.model.audit.entity.ProcInstance;
 import com.hrm.model.system.entity.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.persistence.criteria.*;
 import java.text.ParseException;
 import java.util.*;
 
@@ -108,28 +116,42 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     /**
      * 获取用户的考勤数据
-     * 1.考勤月
-     * 2.分页
-     * 3.查询
      *
      * @param companyId
-     * @param page
-     * @param pageSize
+     * @param attendanceDto
      * @return
      */
     @Override
-    public Map<String, Object> getAtteDate(String companyId, int page, int pageSize) {
+    public Map<String, Object> getAtteDate(String companyId, AttendanceDto attendanceDto) {
         //1.考勤月
-        CompanySettings settings = this.companySettingsDao.findById(companyId).get();
+        Optional<CompanySettings> optional = this.companySettingsDao.findById(companyId);
+        if (!optional.isPresent()) {
+            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+        }
+        CompanySettings settings = optional.get();
         String dataMonth = settings.getDataMonth();
-        //2.分页查询用户
-        Page<User> page1 = this.userDao.findPage(companyId, new PageRequest(page - 1, pageSize));
-        List<AttendanceItemBO> list = new ArrayList<>();
+
+        Specification<User> specification = new Specification<User>() {
+            @Override
+            public Predicate toPredicate(Root<User> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                List<Predicate> list = new ArrayList<>();
+                list.add(criteriaBuilder.equal(root.get("companyId").as(String.class), companyId));
+                if (CommonUtils.isNotEmpty(attendanceDto.getDeptIds())) {
+                    Expression<String> exp = root.<String>get("departmentId");
+                    list.add(exp.in(attendanceDto.getDeptIds()));
+                }
+                return criteriaBuilder.and(list.toArray(new Predicate[0]));
+            }
+        };
+        Page<User> page1 = this.userDao.findAll(specification, new PageRequest(attendanceDto.getPage() - 1, attendanceDto.getPageSize()));
+
+//        Page<User> page1 = this.userDao.findPage(companyId, new PageRequest(attendanceDto.getPage() - 1, attendanceDto.getPageSize()));
+        List<AttendanceItemBO> list = new LinkedList<>();
         //3.循环所有的用户,获取每个用户每天的考勤情况
         for (User user : page1.getContent()) {
             AttendanceItemBO bo = new AttendanceItemBO();
             BeanUtils.copyProperties(user, bo);
-            List<Attendance> attendanceRecord = new ArrayList<>();
+            List<Attendance> attendanceRecord = new LinkedList<>();
             //获取当前月所有的天数
             String[] days = new String[0];//传递20220201,
             try {
@@ -180,6 +202,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     /**
      * 查询归档数据
+     *
      * @param atteDate
      * @param companyId
      * @return
@@ -203,6 +226,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
     /**
      * 新建报表,将companySetting中的月份修改为指定的数据
+     *
      * @param yearMonth
      * @param companyId
      */

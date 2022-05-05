@@ -6,18 +6,15 @@ import com.hrm.core.pojo.Result;
 import com.hrm.model.system.vo.LoginVo;
 import com.hrm.model.system.vo.ProfileVo;
 import com.hrm.system.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: 敬学
  * @CreateTime: Created in 2022-02-14 07:46
  * @Description: 登录控制器
  */
+@CrossOrigin
 @RestController
-@RequestMapping("/sys")
 public class LoginController extends BaseController implements LoginControllerApi {
 
     private final UserService userService;
@@ -32,9 +29,8 @@ public class LoginController extends BaseController implements LoginControllerAp
      * @param loginVo
      * @return
      */
-    @PostMapping("/login")
     @Override
-    public Result<Object> login(@RequestBody LoginVo loginVo) {
+    public Result<String> login(@RequestBody LoginVo loginVo) {
         String sessionId = this.userService.login(loginVo.getMobile(), loginVo.getPassword());
         return Result.success(sessionId);
     }
@@ -44,7 +40,6 @@ public class LoginController extends BaseController implements LoginControllerAp
      *
      * @return
      */
-    @PostMapping("/profile")
     @Override
     public Result<Object> profile() {
         ProfileVo profileVo = this.userService.profile();

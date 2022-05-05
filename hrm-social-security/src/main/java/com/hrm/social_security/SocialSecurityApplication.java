@@ -5,6 +5,7 @@ import com.hrm.common.utils.JwtUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -16,7 +17,7 @@ import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
  * @CreateTime: Created in 2022-04-17 18:55
  * @Description: 社保模块启动类
  */
-@SpringBootApplication(scanBasePackages = "com.hrm")
+@SpringBootApplication(scanBasePackages = "com.hrm", exclude = {SecurityAutoConfiguration.class})
 @EntityScan(value = "com.hrm.model")
 @EnableEurekaClient
 @EnableDiscoveryClient
