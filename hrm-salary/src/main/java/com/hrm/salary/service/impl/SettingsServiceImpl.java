@@ -26,6 +26,6 @@ public class SettingsServiceImpl implements SettingsService {
 
     @Override
     public void save(Settings settings) {
-
+        this.settingsDao.save(settings);
     }
 }

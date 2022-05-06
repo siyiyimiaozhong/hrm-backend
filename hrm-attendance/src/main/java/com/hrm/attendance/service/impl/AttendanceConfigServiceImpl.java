@@ -47,7 +47,11 @@ public class AttendanceConfigServiceImpl implements AttendanceConfigService {
     @Override
     public AttendanceConfig getAtteConfig(String companyId, String departmentId) {
         AttendanceConfig ac = attendanceConfigDao.findByCompanyIdAndDepartmentId(companyId, departmentId);
-        return ac == null ? new AttendanceConfig() : ac;
+        if (null == ac) {
+            ac = new AttendanceConfig();
+            ac.setDepartmentId(departmentId);
+        }
+        return ac;
     }
 
     /**

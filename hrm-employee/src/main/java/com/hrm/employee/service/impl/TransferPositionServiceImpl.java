@@ -5,6 +5,8 @@ import com.hrm.employee.service.TransferPositionService;
 import com.hrm.model.employee.entity.TransferPosition;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 /**
  * @Author: 敬学
  * @CreateTime: Created in 2022-03-19 14:57
@@ -22,6 +24,8 @@ public class TransferPositionServiceImpl implements TransferPositionService {
     @Override
     public void save(String userId, TransferPosition transferPosition) {
         transferPosition.setUserId(userId);
+        transferPosition.setEstatus(1);
+        transferPosition.setCreateTime(new Date());
         this.transferPositionDao.save(transferPosition);
     }
 }

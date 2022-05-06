@@ -5,6 +5,7 @@ import com.hrm.attendance.service.AttendanceConfigService;
 import com.hrm.common.controller.BaseController;
 import com.hrm.core.pojo.Result;
 import com.hrm.model.attendance.entity.AttendanceConfig;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -28,7 +29,7 @@ public class AttendanceConfigController extends BaseController implements Attend
     }
 
     @Override
-    public Result<Object> updateAtteConfig(AttendanceConfig attendanceConfig) {
+    public Result<Object> updateAtteConfig(@RequestBody AttendanceConfig attendanceConfig) {
         this.attendanceConfigService.saveAndUpdateAtteConfig(companyId, attendanceConfig);
         return Result.success();
     }

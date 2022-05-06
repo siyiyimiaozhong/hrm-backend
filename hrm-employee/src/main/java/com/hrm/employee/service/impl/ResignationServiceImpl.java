@@ -34,7 +34,7 @@ public class ResignationServiceImpl implements ResignationService {
     public Resignation get(String userId) {
         Resignation resignation = this.resignationDao.findByUserId(userId);
         if (null == resignation) {
-            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
+            return new Resignation();
         }
         return resignation;
     }

@@ -36,9 +36,6 @@ public class UserCompanyJobsServiceImpl implements UserCompanyJobsService {
     @Override
     public UserCompanyJobs get(String userId) {
         Optional<UserCompanyJobs> userCompanyJobs = this.userCompanyJobsDao.findById(userId);
-        if (!userCompanyJobs.isPresent()) {
-            throw new BusinessException(ResultCode.PARAMETER_VALIDATION_FAILED);
-        }
-        return userCompanyJobs.get();
+        return userCompanyJobs.orElseGet(UserCompanyJobs::new);
     }
 }
