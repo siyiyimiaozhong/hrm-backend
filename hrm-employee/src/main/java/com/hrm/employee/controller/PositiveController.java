@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/positive")
 public class PositiveController implements PositiveControllerApi {
     private final PositiveService positiveService;
 
@@ -29,7 +28,6 @@ public class PositiveController implements PositiveControllerApi {
      * @return
      * @throws Exception
      */
-    @PostMapping("/{id}")
     @Override
     public Result<Object> savePositive(@PathVariable("id") String userId, @RequestBody Positive positive) {
         this.positiveService.save(userId, positive);
@@ -43,7 +41,6 @@ public class PositiveController implements PositiveControllerApi {
      * @return
      * @throws Exception
      */
-    @GetMapping("/{id}")
     @Override
     public Result<Object> get(@PathVariable("id") String userId) {
         Positive positive = positiveService.get(userId);

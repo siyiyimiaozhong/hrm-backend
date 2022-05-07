@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/jobs")
 public class JobsController extends BaseController implements JobsControllerApi {
 
     private final UserCompanyJobsService userCompanyJobsService;
@@ -26,7 +25,6 @@ public class JobsController extends BaseController implements JobsControllerApi 
     /**
      * 员工岗位信息保存
      */
-    @PutMapping("/{id}")
     @Override
     public Result<Object> saveJobsInfo(@PathVariable("id") String userId, @RequestBody UserCompanyJobs sourceInfo) {
         this.userCompanyJobsService.save(userId, super.companyId, sourceInfo);
@@ -36,7 +34,6 @@ public class JobsController extends BaseController implements JobsControllerApi 
     /**
      * 员工岗位信息读取
      */
-    @GetMapping("/{id}")
     @Override
     public Result<UserCompanyJobs> get(@PathVariable("id") String userId) {
         UserCompanyJobs info = userCompanyJobsService.get(userId);

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/archives")
 public class ArchivesController extends BaseController implements ArchivesControllerApi {
     private final ArchiveService archiveService;
 
@@ -31,7 +30,6 @@ public class ArchivesController extends BaseController implements ArchivesContro
      * @return
      * @throws Exception
      */
-    @GetMapping("/{month}")
     @Override
     public Result<Object> archives(@PathVariable("month") String month, @RequestParam(name = "type") Integer type) {
         return Result.success();
@@ -44,7 +42,6 @@ public class ArchivesController extends BaseController implements ArchivesContro
      * @return
      * @throws Exception
      */
-    @PutMapping("/{month}")
     @Override
     public Result<Object> saveArchives(@PathVariable("month") String month) {
         return Result.success();
@@ -59,7 +56,6 @@ public class ArchivesController extends BaseController implements ArchivesContro
      * @return
      * @throws Exception
      */
-    @GetMapping("/list")
     @Override
     public Result<PageResult<Archive>> list(@RequestParam("pagesize") Integer pageSize, @RequestParam("page") Integer page, @RequestParam("year") String year) {
         PageResult<Archive> pr = this.archiveService.list(super.companyId, pageSize, page, year);

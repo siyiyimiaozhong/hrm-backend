@@ -55,7 +55,7 @@ public class UserController extends BaseController implements UserControllerApi 
      */
     @Override
     public Result<PageResult<User>> page(@RequestBody UserDto userDto) {
-        userDto.setCompanyId(this.companyId);
+        userDto.setCompanyId(super.companyId);
         PageResult<User> userPage = this.userService.findAll(userDto);
         return Result.success(userPage);
     }

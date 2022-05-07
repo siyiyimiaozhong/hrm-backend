@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/transferPosition")
 public class TransferPositionController implements TransferPositionControllerApi {
 
     private final TransferPositionService transferPositionService;
@@ -34,7 +33,6 @@ public class TransferPositionController implements TransferPositionControllerApi
      * @return
      * @throws Exception
      */
-    @PostMapping("/{id}")
     @Override
     public Result<Object> saveTransferPosition(@PathVariable("id") String userId, @RequestBody TransferPosition transferPosition) {
         this.transferPositionService.save(userId, transferPosition);
@@ -48,7 +46,6 @@ public class TransferPositionController implements TransferPositionControllerApi
      * @return
      * @throws Exception
      */
-    @GetMapping("/{id}")
     @Override
     public Result<UserCompanyJobs> get(@PathVariable("id") String userId) {
         UserCompanyJobs jobsInfo = this.userCompanyJobsService.get(userId);

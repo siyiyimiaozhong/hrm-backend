@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Author: 敬学
@@ -96,11 +97,15 @@ public class ArchiveServiceImpl implements ArchiveService {
         archive.setPersonalPayment(personMoney);
         archive.setTotal(enterMoney.add(personMoney));
         archiveDao.save(archive);
-        for (ArchiveDetail archiveDetail : archiveDetails) {
+
+        Archive finalArchive = archive;
+        archiveDetails = archiveDetails.stream().peek(archiveDetail -> {
             archiveDetail.setId(idWorker.nextId() + "");
-            archiveDetail.setArchiveId(archive.getId());
-            archiveDetailDao.save(archiveDetail);
-        }
+            archiveDetail.setArchiveId(finalArchive.getId());
+        }).collect(Collectors.toList());
+        this.archiveDetailDao.saveAll(archiveDetails);
+        // 删除用户缴纳信息数据
+        this.userSocialSecurityDao.deleteAll();
     }
 
     @Override

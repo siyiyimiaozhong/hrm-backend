@@ -3,14 +3,14 @@ package com.hrm.api.employee;
 import com.hrm.core.pojo.PageResult;
 import com.hrm.core.pojo.Result;
 import com.hrm.model.employee.entity.Archive;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: 敬学
  * @CreateTime: Created in 2022-03-20 12:50
  * @Description: 归档Api
  */
+@RequestMapping("/employees/archives")
 public interface ArchivesControllerApi {
 
     /**
@@ -20,6 +20,7 @@ public interface ArchivesControllerApi {
      * @param type
      * @return
      */
+    @GetMapping("/{month}")
     Result<Object> archives(@PathVariable("month") String month, @RequestParam(name = "type") Integer type);
 
     /**
@@ -28,6 +29,7 @@ public interface ArchivesControllerApi {
      * @param month
      * @return
      */
+    @PutMapping("/{month}")
     Result<Object> saveArchives(@PathVariable("month") String month);
 
     /**
@@ -38,5 +40,6 @@ public interface ArchivesControllerApi {
      * @param year
      * @return
      */
+    @GetMapping("/list")
     Result<PageResult<Archive>> list(@RequestParam("pagesize") Integer pageSize, @RequestParam("page") Integer page, @RequestParam("year") String year);
 }

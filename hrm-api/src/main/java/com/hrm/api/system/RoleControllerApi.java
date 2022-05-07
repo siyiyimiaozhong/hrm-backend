@@ -5,8 +5,7 @@ import com.hrm.core.pojo.Result;
 import com.hrm.model.system.entity.Role;
 import com.hrm.model.system.dto.RoleDto;
 import com.hrm.model.system.vo.RoleVo;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,6 +14,7 @@ import java.util.List;
  * @CreateTime: Created in 2022-03-20 16:49
  * @Description: 角色Api
  */
+@RequestMapping("/sys/role")
 public interface RoleControllerApi {
     /**
      * 分配权限
@@ -22,6 +22,7 @@ public interface RoleControllerApi {
      * @param roleDto
      * @return
      */
+    @PutMapping("/assignPerm")
     Result<Object> assignPerm(@RequestBody RoleDto roleDto);
 
     /**
@@ -30,6 +31,7 @@ public interface RoleControllerApi {
      * @param role
      * @return
      */
+    @PostMapping
     Result<Object> add(@RequestBody Role role);
 
     /**
@@ -39,6 +41,7 @@ public interface RoleControllerApi {
      * @param role
      * @return
      */
+    @PutMapping("/{id}")
     Result<Object> update(@PathVariable("id") String id, @RequestBody Role role);
 
     /**
@@ -47,6 +50,7 @@ public interface RoleControllerApi {
      * @param ids
      * @return
      */
+    @DeleteMapping("/{ids}")
     Result<Object> delete(@PathVariable("ids") String... ids);
 
     /**
@@ -55,6 +59,7 @@ public interface RoleControllerApi {
      * @param id
      * @return
      */
+    @GetMapping("/{id}")
     Result<RoleVo> get(@PathVariable("id") String id);
 
     /**
@@ -64,6 +69,7 @@ public interface RoleControllerApi {
      * @param size
      * @return
      */
+    @GetMapping("/page")
     Result<PageResult<Role>> page(int page, int size);
 
     /**
@@ -71,5 +77,6 @@ public interface RoleControllerApi {
      *
      * @return
      */
+    @GetMapping("/list")
     Result<List<Role>> list();
 }

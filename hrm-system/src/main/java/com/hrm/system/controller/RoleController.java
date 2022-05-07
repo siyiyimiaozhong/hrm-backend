@@ -19,7 +19,6 @@ import java.util.List;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/sys/role")
 public class RoleController extends BaseController implements RoleControllerApi {
     private final RoleService roleService;
 
@@ -33,7 +32,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param roleDto
      * @return
      */
-    @PutMapping("/assignPerm")
     @Override
     public Result<Object> assignPerm(@RequestBody RoleDto roleDto) {
         this.roleService.assignPerms(roleDto);
@@ -46,7 +44,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param role
      * @return
      */
-    @PostMapping
     @Override
     public Result<Object> add(@RequestBody Role role) {
         role.setCompanyId(this.companyId);
@@ -61,7 +58,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param role
      * @return
      */
-    @PutMapping("/{id}")
     @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Role role) {
         this.roleService.checkAndUpdate(id, role);
@@ -74,7 +70,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param ids
      * @return
      */
-    @DeleteMapping("/{ids}")
     @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.roleService.delete(ids);
@@ -87,7 +82,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
     @Override
     public Result<RoleVo> get(@PathVariable("id") String id) {
         RoleVo role = this.roleService.findRoleVoById(id);
@@ -101,7 +95,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      * @param size
      * @return
      */
-    @GetMapping("/page")
     @Override
     public Result<PageResult<Role>> page(int page, int size) {
         PageResult<Role> pageResult = this.roleService.page(this.companyId, page, size);
@@ -113,7 +106,6 @@ public class RoleController extends BaseController implements RoleControllerApi 
      *
      * @return
      */
-    @GetMapping("/list")
     @Override
     public Result<List<Role>> list() {
         List<Role> roles = this.roleService.findAllByCompanyId(this.companyId);

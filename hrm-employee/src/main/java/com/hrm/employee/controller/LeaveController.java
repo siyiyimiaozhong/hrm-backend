@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/employees/leave")
 public class LeaveController implements LeaveControllerApi {
 
     private final ResignationService resignationService;
@@ -30,7 +29,6 @@ public class LeaveController implements LeaveControllerApi {
      * @return
      * @throws Exception
      */
-    @PostMapping("/{id}")
     @Override
     public Result<Object> saveLeave(@PathVariable("id") String userId, @RequestBody Resignation resignation) {
         this.resignationService.save(userId, resignation);
@@ -44,7 +42,6 @@ public class LeaveController implements LeaveControllerApi {
      * @return
      * @throws Exception
      */
-    @GetMapping("/{id}")
     @Override
     public Result<Resignation> findLeave(@PathVariable("id") String uid) {
         Resignation resignation = resignationService.get(uid);

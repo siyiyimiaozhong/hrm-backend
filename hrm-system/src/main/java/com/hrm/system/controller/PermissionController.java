@@ -16,7 +16,6 @@ import java.util.Map;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/sys/perm")
 public class PermissionController implements PermissionControllerApi {
     private final PermissionService permissionService;
 
@@ -30,7 +29,6 @@ public class PermissionController implements PermissionControllerApi {
      * @param map
      * @return
      */
-    @PostMapping
     @Override
     public Result<Object> save(@RequestBody Map<String, Object> map) throws Exception {
         this.permissionService.checkAndInsert(map);
@@ -44,7 +42,6 @@ public class PermissionController implements PermissionControllerApi {
      * @param map
      * @return
      */
-    @PutMapping("/{id}")
     @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Map<String, Object> map) throws Exception {
         this.permissionService.checkAndUpdate(id, map);
@@ -57,7 +54,6 @@ public class PermissionController implements PermissionControllerApi {
      * @param map
      * @return
      */
-    @GetMapping
     @Override
     public Result<List<Permission>> findAll(@RequestParam Map<String, Object> map) {
         List<Permission> list = this.permissionService.findAll(map);
@@ -70,7 +66,6 @@ public class PermissionController implements PermissionControllerApi {
      * @param id
      * @return
      */
-    @GetMapping("/{id}")
     @Override
     public Result<Map<String, Object>> get(@PathVariable("id") String id) {
         Map<String, Object> map = this.permissionService.findById(id);
@@ -83,7 +78,6 @@ public class PermissionController implements PermissionControllerApi {
      * @param ids
      * @return
      */
-    @DeleteMapping("/{ids}")
     @Override
     public Result<Object> delete(@PathVariable("ids") String... ids) {
         this.permissionService.delete(ids);

@@ -15,7 +15,6 @@ import java.util.List;
  */
 @CrossOrigin
 @RestController
-@RequestMapping("/company")
 public class CompanyController implements CompanyControllerApi {
     private final CompanyService companyService;
 
@@ -23,35 +22,30 @@ public class CompanyController implements CompanyControllerApi {
         this.companyService = companyService;
     }
 
-    @PostMapping
     @Override
     public Result<Object> save(@RequestBody Company company) {
         this.companyService.save(company);
         return Result.success();
     }
 
-    @DeleteMapping("/{id}")
     @Override
     public Result<Object> delete(@PathVariable("id") String id) {
         this.companyService.deleteById(id);
         return Result.success();
     }
 
-    @PutMapping("/{id}")
     @Override
     public Result<Object> update(@PathVariable("id") String id, @RequestBody Company company) {
         this.companyService.update(id, company);
         return Result.success();
     }
 
-    @GetMapping("/{id}")
     @Override
     public Result<Company> get(@PathVariable("id") String id) {
         Company company = this.companyService.get(id);
         return Result.success(company);
     }
 
-    @GetMapping
     @Override
     public Result<List<Company>> list() {
         List<Company> all = this.companyService.findAll();

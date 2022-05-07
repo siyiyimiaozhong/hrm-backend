@@ -59,7 +59,7 @@ public class SocialSecurityController extends BaseController implements SocialSe
      * @return
      */
     @Override
-    public Result<Object> updateSettings(String yearMonth) {
+    public Result<Object> updateSettings(@PathVariable("yearMonth") String yearMonth) {
         this.companySettingsService.updateSettings(super.companyId, yearMonth);
         return Result.success();
     }
@@ -71,9 +71,9 @@ public class SocialSecurityController extends BaseController implements SocialSe
      * @return
      */
     @Override
-    public Result<Object> saveSettings(CompanySettings companySettings) {
+    public Result<Object> saveSettings(@RequestBody CompanySettings companySettings) {
         this.companySettingsService.saveSettings(super.companyId, companySettings);
-        return null;
+        return Result.success();
     }
 
     /**
@@ -148,7 +148,7 @@ public class SocialSecurityController extends BaseController implements SocialSe
      * @return
      */
     @Override
-    public Result<Object> historysDetail(String yearMonth) {
+    public Result<Object> historysDetail(@PathVariable("yearMonth") String yearMonth) {
         archiveService.archive(yearMonth, companyId);
         return Result.success();
     }
